@@ -26,6 +26,37 @@ let session = null;
 let submitted = false;
 let audioContext = null;
 
+function discardAudioContext() {
+  const staleContext = audioContext;
+  audioContext = null;
+  if (!staleContext || staleContext.state === "closed") return;
+  try {
+    const closing = staleContext.close();
+    if (closing?.catch) closing.catch(() => {});
+  } catch {
+    // Some browsers reject close while restoring a sleeping page.
+  }
+}
+
+async function runningAudioContext() {
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return null;
+  if (audioContext?.state === "closed") audioContext = null;
+  audioContext ??= new AudioContextClass();
+  if (audioContext.state !== "running") {
+    try {
+      await audioContext.resume();
+    } catch {
+      // A stale context is replaced below.
+    }
+  }
+  if (audioContext.state === "running") return audioContext;
+  discardAudioContext();
+  audioContext = new AudioContextClass();
+  if (audioContext.state !== "running") await audioContext.resume();
+  return audioContext.state === "running" ? audioContext : null;
+}
+
 function scheduleTone(context, frequency, start, duration, type = "sine", endFrequency = frequency) {
   const oscillator = context.createOscillator();
   const gain = context.createGain();
@@ -42,23 +73,27 @@ function scheduleTone(context, frequency, start, duration, type = "sine", endFre
 
 async function playFeedbackSound(isCorrect) {
   try {
-    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextClass) return;
-    audioContext ??= new AudioContextClass();
-    if (audioContext.state === "suspended") await audioContext.resume();
-    if (audioContext.state !== "running") return;
-    const start = audioContext.currentTime + 0.01;
+    const context = await runningAudioContext();
+    if (!context) return;
+    const start = context.currentTime + 0.01;
     if (isCorrect) {
-      scheduleTone(audioContext, 523.25, start, 0.16);
-      scheduleTone(audioContext, 659.25, start + 0.09, 0.18);
-      scheduleTone(audioContext, 783.99, start + 0.18, 0.22);
+      scheduleTone(context, 523.25, start, 0.16);
+      scheduleTone(context, 659.25, start + 0.09, 0.18);
+      scheduleTone(context, 783.99, start + 0.18, 0.22);
     } else {
-      scheduleTone(audioContext, 220, start, 0.3, "triangle", 130);
+      scheduleTone(context, 220, start, 0.3, "triangle", 130);
     }
   } catch {
     // Quiz feedback remains usable when Web Audio is unavailable.
   }
 }
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") discardAudioContext();
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) discardAudioContext();
+});
 
 function escapeHtml(value) {
   return String(value)

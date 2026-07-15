@@ -146,6 +146,11 @@ if (process.env.REAL_AUDIO === "1" && !audioStates.includes("running")) {
 await new Promise((resolve) => setTimeout(resolve, 800));
 const advancedProgress = await evaluate("document.querySelector('#progress-label').innerText");
 if (advancedProgress === initialProgress) throw new Error("Correct answer did not auto-advance");
+const contextsBeforeWake = process.env.REAL_AUDIO === "1"
+  ? await evaluate("window.__audioContexts.length")
+  : 0;
+await evaluate("window.dispatchEvent(new PageTransitionEvent('pageshow', { persisted: true })); true");
+await new Promise((resolve) => setTimeout(resolve, 50));
 
 await evaluate(`(async () => {
   const source = document.querySelector('.source').innerText.split('·').map(value => value.trim());
@@ -162,9 +167,18 @@ await new Promise((resolve) => setTimeout(resolve, 400));
 const wrongFeedback = await evaluate("document.querySelector('.answer-feedback')?.innerText || ''");
 const wrongProgress = await evaluate("document.querySelector('#progress-label').innerText");
 const finalToneCount = await evaluate("window.__toneCount");
+const contextsAfterWake = process.env.REAL_AUDIO === "1"
+  ? await evaluate("window.__audioContexts.length")
+  : 0;
+const finalAudioState = process.env.REAL_AUDIO === "1"
+  ? await evaluate("window.__audioContexts.at(-1).state")
+  : "mock";
 if (!wrongFeedback.startsWith("Sai.")) throw new Error(`Wrong feedback is missing: ${wrongFeedback}`);
 if (wrongProgress !== advancedProgress) throw new Error("Wrong answer should remain on the current group");
 if (finalToneCount !== toneCount + 1) throw new Error("Wrong feedback should play one warning tone");
+if (process.env.REAL_AUDIO === "1" && (contextsAfterWake !== contextsBeforeWake + 1 || finalAudioState !== "running")) {
+  throw new Error(`Audio context was not recreated after wake: ${contextsBeforeWake}->${contextsAfterWake}, ${finalAudioState}`);
+}
 
 const ordersBeforeReload = await evaluate("JSON.stringify(JSON.parse(localStorage.getItem('toeic:mixed-quiz')).choiceOrders)");
 await evaluate("history.replaceState({}, '', '/practice'); true");
@@ -185,6 +199,6 @@ for (let attempt = 0; attempt < 30; attempt += 1) {
 const ordersAfterReload = await evaluate("JSON.stringify(JSON.parse(localStorage.getItem('toeic:mixed-quiz')).choiceOrders)");
 if (ordersAfterReload !== ordersBeforeReload) throw new Error("Choice order changed after reloading and resuming the session");
 
-console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} orders=${choiceOrderAudit.count} stable=reload next=${nextLabel} progress=${initialProgress}->${advancedProgress} tones=${toneCount}+1 audio=${audioStates.join('/') || 'mock'}`);
+console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} orders=${choiceOrderAudit.count} stable=reload wake=${contextsBeforeWake}->${contextsAfterWake} next=${nextLabel} progress=${initialProgress}->${advancedProgress} tones=${toneCount}+1 audio=${finalAudioState}`);
 console.log(feedback[0]);
 socket.close();
