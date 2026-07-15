@@ -1,0 +1,4 @@
+PyMuPDF==1.26.3
+Pillow==11.3.0
+rapidocr==3.9.1
+onnxruntime==1.27.0

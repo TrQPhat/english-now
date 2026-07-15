@@ -1,0 +1,9 @@
+{
+  "name": "english-now-toeic",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "npx --yes serve .",
+    "validate": "node scripts/validate_quizzes.mjs && node scripts/validate_structured.mjs && node scripts/validate_quiz_groups.mjs"
+  }
+}

@@ -1,0 +1,49 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #19231d; background: #e9eee9; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { min-height: 88px; padding: 18px clamp(18px, 4vw, 56px); display: flex; align-items: center; justify-content: space-between; gap: 24px; color: white; background: #173f2e; }
+h1, p { margin: 0; }
+h1 { font-family: Georgia, serif; font-size: clamp(25px, 3vw, 38px); }
+.eyebrow { color: #c3dfb7; font-size: 11px; font-weight: 800; letter-spacing: .18em; }
+select, button { border: 0; border-radius: 9px; padding: 11px 15px; font: inherit; font-weight: 700; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.practice-link { padding: 10px 14px; color: #173f2e; background: #c3dfb7; border-radius: 9px; font-size: 14px; font-weight: 800; text-decoration: none; }
+select { min-width: 130px; }
+button { color: white; background: #c95f38; cursor: pointer; }
+main { height: calc(100vh - 88px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(330px, 28vw); }
+.paper { overflow: auto; padding: clamp(12px, 2.5vw, 32px); }
+.pages { display: grid; gap: 18px; max-width: 1050px; margin: auto; }
+.pages img { display: block; width: 100%; height: auto; background: white; box-shadow: 0 5px 24px #17251c24; }
+.question-card { max-width: 920px; margin: auto; padding: clamp(18px, 3vw, 38px); background: white; border-radius: 14px; box-shadow: 0 5px 24px #17251c24; }
+.question-meta { display: flex; justify-content: space-between; color: #567062; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.question-card h2 { margin: 24px 0 18px; font: 600 clamp(19px, 2vw, 25px)/1.45 Georgia, serif; }
+.question-asset, .source-page img { display: block; max-width: 100%; width: auto; max-height: 58vh; margin: 22px auto; object-fit: contain; box-shadow: none; }
+.source-page { margin: 20px 0; border: 1px solid #d8e0d9; border-radius: 10px; padding: 12px; }
+.source-page summary { cursor: pointer; font-weight: 750; color: #285c43; }
+.question-choices { display: grid; gap: 10px; }
+.question-choice { display: grid; grid-template-columns: 34px 1fr; align-items: start; gap: 8px; padding: 13px; border: 1px solid #dce3dd; border-radius: 10px; cursor: pointer; }
+.question-choice input { position: absolute; opacity: 0; }
+.question-choice b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: #285c43; background: #e8f1eb; }
+.question-choice:has(input:checked) { border-color: #28704b; background: #eff8f2; }
+.question-choice.is-correct { border-color: #278254; background: #e8f7ee; }
+.question-choice.is-wrong { border-color: #c14e3b; background: #fff0ed; }
+.question-actions { display: flex; justify-content: space-between; margin-top: 24px; }
+button.secondary { color: #285c43; background: #e6eee8; }
+button:disabled { cursor: not-allowed; opacity: .45; }
+.number-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.number { padding: 8px 2px; color: #405048; background: #edf1ee; border-radius: 7px; font-size: 12px; }
+.number.answered { color: white; background: #56896c; }
+.number.active { outline: 2px solid #c95f38; outline-offset: 1px; }
+.number.correct { color: white; background: #278254; }
+.number.wrong { color: white; background: #c14e3b; }
+.conversion-note { margin-top: 24px; padding: 14px; color: #72521c; background: #fff5d7; border-radius: 9px; font-size: 14px; line-height: 1.5; }
+.answer-panel { overflow: auto; padding: 0 18px 28px; background: #fff; border-left: 1px solid #ccd5cd; }
+.panel-heading { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 16px 0; background: #fff; border-bottom: 1px solid #dfe5df; }
+.part h2 { margin: 22px 0 8px; font: 700 20px Georgia, serif; color: #285c43; }
+fieldset { display: grid; grid-template-columns: 38px repeat(4, 1fr); align-items: center; min-width: 0; margin: 0; padding: 7px 0; border: 0; border-bottom: 1px solid #edf0ed; }
+legend { float: left; width: 38px; font-size: 13px; font-weight: 800; }
+fieldset label { display: flex; gap: 5px; align-items: center; font-size: 13px; cursor: pointer; }
+.result { position: sticky; bottom: 0; display: grid; gap: 3px; padding: 16px; color: white; background: #173f2e; border-radius: 12px; box-shadow: 0 7px 25px #0004; }
+.result strong { font-size: 22px; }
+.result span { font-size: 13px; color: #dbe8de; }
+@media (max-width: 850px) { main { height: auto; display: block; } .paper { max-height: 58vh; } .answer-panel { border: 0; } .header-actions { align-items: stretch; flex-direction: column; } }

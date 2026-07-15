@@ -1,0 +1,17 @@
+{
+  "id": "test-02",
+  "title": "TOEIC Actual Test 02",
+  "sourcePdf": "test-02.pdf",
+  "answerSourcePdf": "result-02.pdf",
+  "pageCount": 47,
+  "pagePattern": "assets/test-02/page-{page}.webp",
+  "parts": [
+    { "id": 1, "from": 1, "to": 6, "answers": "BDBCAC" },
+    { "id": 2, "from": 7, "to": 31, "answers": "ABCAACBBCCACBBCBCBBACAACA" },
+    { "id": 3, "from": 32, "to": 70, "answers": "CABCBADCACBDCDADCBCABADBBAACCAADCBAADBC" },
+    { "id": 4, "from": 71, "to": 100, "answers": "ABBCAABAAACDBBADACBCABDBCADCDC" },
+    { "id": 5, "from": 101, "to": 130, "answers": "ACCDCCABAABCCBDBADCBBACBDBACCA" },
+    { "id": 6, "from": 131, "to": 146, "answers": "BACDADBCCBAACCAC" },
+    { "id": 7, "from": 147, "to": 200, "answers": "CACBBACC DDAABBADBCBACBDBDDBCCBDDBADCCABBCDBBCCACBACBDC", "normalize": "remove-spaces" }
+  ]
+}

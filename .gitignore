@@ -1,0 +1,37 @@
+# Source documents and local extraction inputs
+*.pdf
+
+# Local OCR/build workspace and agent memory
+.work/
+.agent/
+.venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node dependencies, logs, tests and generated build output
+node_modules/
+dist/
+coverage/
+*.log
+npm-debug.log*
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~

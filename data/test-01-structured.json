@@ -1,0 +1,3215 @@
+{
+  "id": "test-01",
+  "title": "TOEIC Actual Test 01",
+  "sourcePdf": "test-01.pdf",
+  "answerSourcePdf": "result-01.pdf",
+  "pagePattern": "assets/test-01/page-{page}.webp",
+  "questions": [
+    {
+      "number": 1,
+      "sourcePage": 3,
+      "text": "Choose the statement that best describes the photograph.",
+      "choices": {
+        "A": "A lecture is being given in a boardroom.",
+        "B": "The woman has gotten up from the chair.",
+        "C": "A diagram is being drawn on the board by the woman.",
+        "D": "Some documents have been placed on the table."
+      },
+      "part": 1,
+      "correctAnswer": "D",
+      "contextPages": [
+        3
+      ],
+      "asset": "assets/test-01/questions/question-01.webp"
+    },
+    {
+      "number": 2,
+      "sourcePage": 3,
+      "text": "Choose the statement that best describes the photograph.",
+      "choices": {
+        "A": "Several passengers are getting off the train.",
+        "B": "The subway has arrived at the station.",
+        "C": "Tickets are being sold to passengers.",
+        "D": "There are no seats available in any of the cars."
+      },
+      "part": 1,
+      "correctAnswer": "B",
+      "contextPages": [
+        3
+      ],
+      "asset": "assets/test-01/questions/question-02.webp"
+    },
+    {
+      "number": 3,
+      "sourcePage": 4,
+      "text": "Choose the statement that best describes the photograph.",
+      "choices": {
+        "A": "Customers are trying on some new shirts in the store.",
+        "B": "A large number of shirts are being displayed on hangers.",
+        "C": "The clothes are currently on sale for low prices.",
+        "D": "A picture is hanging from the wall above the clothes."
+      },
+      "part": 1,
+      "correctAnswer": "B",
+      "contextPages": [
+        4
+      ],
+      "asset": "assets/test-01/questions/question-03.webp"
+    },
+    {
+      "number": 4,
+      "sourcePage": 4,
+      "text": "Choose the statement that best describes the photograph.",
+      "choices": {
+        "A": "Several participants in the meeting appear to be bored.",
+        "B": "All of the chairs have been pushed under the table.",
+        "C": "A computer has been placed in the center of the table.",
+        "D": "The decision to hold the meeting has been tabled."
+      },
+      "part": 1,
+      "correctAnswer": "B",
+      "contextPages": [
+        4
+      ],
+      "asset": "assets/test-01/questions/question-04.webp"
+    },
+    {
+      "number": 5,
+      "sourcePage": 5,
+      "text": "Choose the statement that best describes the photograph.",
+      "choices": {
+        "A": "There are several sheep in the field.",
+        "B": "One of the ships is sailing beneath the bridge.",
+        "C": "People are getting on board the ship.",
+        "D": "Pedestrians are walking alongside the waterway."
+      },
+      "part": 1,
+      "correctAnswer": "D",
+      "contextPages": [
+        5
+      ],
+      "asset": "assets/test-01/questions/question-05.webp"
+    },
+    {
+      "number": 6,
+      "sourcePage": 5,
+      "text": "Choose the statement that best describes the photograph.",
+      "choices": {
+        "A": "The seated people are all facing the same direction.",
+        "B": "The outdoor dining area at the café is completely full.",
+        "C": "One man is walking in front of the seated individuals.",
+        "D": "Waiters are bringing plates of food to the diners."
+      },
+      "part": 1,
+      "correctAnswer": "C",
+      "contextPages": [
+        5
+      ],
+      "asset": "assets/test-01/questions/question-06.webp"
+    },
+    {
+      "number": 7,
+      "sourcePage": 6,
+      "text": "How much longer do you need on this project?",
+      "choices": {
+        "A": "About ten pages long.",
+        "B": "Roughly half an hour.",
+        "C": "In my office soon."
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 8,
+      "sourcePage": 6,
+      "text": "Why hasn't anyone responded to that complaint?",
+      "choices": {
+        "A": "That's the response she gave us.",
+        "B": "Yes, it looks a bit plain to me.",
+        "C": "I thought Ted already handled it."
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 9,
+      "sourcePage": 6,
+      "text": "Do you want me to see if the item is still in stock?",
+      "choices": {
+        "A": "I would appreciate that a lot.",
+        "B": "I don't have stock in that company.",
+        "C": "This is the item that I purchased."
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 10,
+      "sourcePage": 2,
+      "text": "The picnic has been postponed until next week, hasn't it?",
+      "choices": {
+        "A": "Sometime last Friday.",
+        "B": "That's what I heard.",
+        "C": "I'm going to the picnic."
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 11,
+      "sourcePage": 2,
+      "text": "You'd better be on your best behavior at the meeting.",
+      "choices": {
+        "A": "You should ask Jane for it.",
+        "B": "She called a while ago.",
+        "C": "No, I'm not on the phone."
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 12,
+      "sourcePage": 1,
+      "text": "Nobody can remember Ms. Carlyle's phone number, right?",
+      "choices": {
+        "A": "You should ask Jane for it.",
+        "B": "She called a while ago.",
+        "C": "No, I'm not on the phone."
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        1
+      ]
+    },
+    {
+      "number": 13,
+      "sourcePage": 2,
+      "text": "Where is the nearest gas station in this neighborhood?",
+      "choices": {
+        "A": "I'll fill up the car later today.",
+        "B": "We're in the Coldwater neighborhood.",
+        "C": "There's one right down the street."
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 14,
+      "sourcePage": 2,
+      "text": "What time should we expect Ms. Carter to arrive?",
+      "choices": {
+        "A": "On Monday or Tuesday.",
+        "B": "Sometime after six.",
+        "C": "Around forty minutes ago."
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 15,
+      "sourcePage": 2,
+      "text": "I believe you ought to see a doctor about that cough.",
+      "choices": {
+        "A": "That's what my husband said.",
+        "B": "He's been coughing all day.",
+        "C": "No, I don't want any coffee."
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 16,
+      "sourcePage": 2,
+      "text": "Who should we send on the business trip to Tokyo?",
+      "choices": {
+        "A": "About two weeks from now.",
+        "B": "To negotiate a new contract.",
+        "C": "How about Mark or Anna?"
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 17,
+      "sourcePage": 2,
+      "text": "Can you give me directions to the Wishbone Café?",
+      "choices": {
+        "A": "Yes, this is the map you asked for.",
+        "B": "You'll love the selection of teas there.",
+        "C": "Sorry, but I've never heard of it."
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 18,
+      "sourcePage": 2,
+      "text": "Which of these three proposals are we thinking of accepting?",
+      "choices": {
+        "A": "Actually, Peter will be doing them.",
+        "B": "Probably the second one.",
+        "C": "We will accept the offer tomorrow. 19Will Martin conduct the interviews, or is John doing them?"
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 19,
+      "sourcePage": 6,
+      "text": "Will Martin conduct the interviews, or is John doing them?",
+      "choices": {
+        "A": "Actually, Peter will be doing them.",
+        "B": "Martin and John are coworkers.",
+        "C": "Yes, that's correct."
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 20,
+      "sourcePage": 2,
+      "text": "There appears to be a problem with your car's engine.",
+      "choices": {
+        "A": "She's in Mr. Wilkin's office now.",
+        "B": "It's in the building by the Sultan Theater.",
+        "C": "No, I haven't located her yet."
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 21,
+      "sourcePage": 6,
+      "text": "I can't recall where Ms. Hamilton's office is located.",
+      "choices": {
+        "A": "She's in Mr. Wilkin's office now.",
+        "B": "It's in the building by the Sultan Theater.",
+        "C": "No, I haven't located her yet."
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 22,
+      "sourcePage": 2,
+      "text": "The agenda for the staff meeting is already settled, isn't it?",
+      "choices": {
+        "A": "Five or six times an hour.",
+        "B": "On the number three line.",
+        "C": "Go out exit number nine."
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 23,
+      "sourcePage": 6,
+      "text": "How often does the subway come to this station?",
+      "choices": {
+        "A": "Five or six times an hour.",
+        "B": "On the number three line.",
+        "C": "Go out exit number nine."
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 24,
+      "sourcePage": 2,
+      "text": "Would you prefer taking the train or flying to the conference?",
+      "choices": {
+        "A": "Yes, I remember what they look like.",
+        "B": "Oh, no. I totally forgot.",
+        "C": "No, I haven't left the office yet."
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 25,
+      "sourcePage": 6,
+      "text": "Did you remember to turn off the lights before you left?",
+      "choices": {
+        "A": "Yes, I remember what they look like.",
+        "B": "Oh, no. I totally forgot.",
+        "C": "No, I haven't left the office yet."
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 26,
+      "sourcePage": 2,
+      "text": "The interviews won't begin until this Friday, will they?",
+      "choices": {
+        "A": "I believe that's correct.",
+        "B": "Fred's going to interview then.",
+        "C": "Friday's a busy day for her."
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 27,
+      "sourcePage": 2,
+      "text": "Would you mind picking up a sandwich from the deli for me?",
+      "choices": {
+        "A": "They are delighted to see you.",
+        "B": "Sure, I can share my lunch with you.",
+        "C": "Not at all. What would you like?"
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 28,
+      "sourcePage": 2,
+      "text": "I suggest calling the customer service hotline immediately.",
+      "choices": {
+        "A": "Yes, you can borrow my telephone.",
+        "B": "I'm expecting to get good service.",
+        "C": "Do you know the telephone number?"
+      },
+      "part": 2,
+      "correctAnswer": "B",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 29,
+      "sourcePage": 2,
+      "text": "What do I need to do to open a new bank account here?",
+      "choices": {
+        "A": "No, I haven't reserved a car yet.",
+        "B": "We could just take public transportation.",
+        "C": "On the morning of the thirtieth. 3"
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        2
+      ]
+    },
+    {
+      "number": 30,
+      "sourcePage": 6,
+      "text": "Shouldn't we reserve a car for our trip to Los Angeles?",
+      "choices": {
+        "A": "No, I haven't reserved a car yet.",
+        "B": "We could just take public transportation.",
+        "C": "On the morning of the thirtieth."
+      },
+      "part": 2,
+      "correctAnswer": "C",
+      "contextPages": [
+        6
+      ]
+    },
+    {
+      "number": 31,
+      "sourcePage": 3,
+      "text": "We need to get in touch with the caterer regarding the event.",
+      "choices": {
+        "A": "I'll instruct Ms. Johnson to do that.",
+        "B": "Please be sure not to touch it.",
+        "C": "I catered several meals in the past. PART 3 [32-34] WHello, Mr. Sanders. This is Julie Maple calling. I contacted you by e-mail this morning about a condo l'd like to look at. Do you have time to show me the place today? M I sure do, Ms. Maple. You mentioned you'd prefer to check it out around 3:30. Is that time still satisfactory for you? W Oh, no, it isn't. I've got a meeting scheduled at 4:00, so I'd like to see the place around 2:00 instead. That should give me plenty of time to check out the property. M Fortunately, I've got time then, so I can comply with your request. Why don't we meet at 52 Jackson Avenue at that time? [35-37] M I'm pleased we finally completed the interviews with the job candidates. I had no idea they were going to take nearly the entire day. W I know what you mean. I was on the intern search committee last year, and the interviews only required about half the time that this year's did. So which of the applicants did you like the most? I thought Sarah Carpenter was impressive and believe we should strongly consider her for a position. M She's definitely one of the leading candidates in my mind. We'll have to be sure to invite her back to conduct a second interview. [38-40] M Lara, how is the work on the redesign of the Fargo Building progressing? Do you think that you're going to be able to finish everything by tomorrow's deadline? W I'm afraid not, Mr. Ito. The work is taking much longer than I expected it to. However, I've started making good progress, so I am positive that I can submit the blueprints to you no later than noon on Friday. M All right. I'll call the client now and request an extension. But you had better finish everything by the new due date. The client is eager to get a look at the plans, and I don't want to disappoint him. [41-43] M Did you happen to read the news about promotions on the bulletin board? The list was just posted a few minutes ago. I can't believe Alice Milton got promoted to director. WYou've got to be kidding me. I heard she was probably going to get transferred to another branch or maybe even fired. Do you mean she's going to be our boss now? 4"
+      },
+      "part": 2,
+      "correctAnswer": "A",
+      "contextPages": [
+        3
+      ]
+    },
+    {
+      "number": 32,
+      "sourcePage": 7,
+      "text": "Who most likely is the man?",
+      "choices": {
+        "A": "A real estate agent",
+        "B": "A tour guide",
+        "C": "A travel agent",
+        "D": "An airline employee"
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        7
+      ]
+    },
+    {
+      "number": 33,
+      "sourcePage": 7,
+      "text": "What does the woman want to do?",
+      "choices": {
+        "A": "Sign a contract",
+        "B": "Look at a home",
+        "C": "Furnish her office",
+        "D": "Make an order"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        7
+      ]
+    },
+    {
+      "number": 34,
+      "sourcePage": 7,
+      "text": "When are the speakers going to meet?",
+      "choices": {
+        "A": "At 2:00",
+        "B": "At 3:30",
+        "C": "At 4:00",
+        "D": "At 5:20"
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        7
+      ]
+    },
+    {
+      "number": 35,
+      "sourcePage": 7,
+      "text": "What are the speakers discussing?",
+      "choices": {
+        "A": "The company's new interns",
+        "B": "Their feelings about their new boss",
+        "C": "The performance of another employee",
+        "D": "The results of some interviews"
+      },
+      "part": 3,
+      "correctAnswer": "D",
+      "contextPages": [
+        7
+      ]
+    },
+    {
+      "number": 36,
+      "sourcePage": 7,
+      "text": "What does the woman say about last year's activities?",
+      "choices": {
+        "A": "They took less time to finish.",
+        "B": "They had better applicants.",
+        "C": "They required two days to complete.",
+        "D": "They were difficult to conduct."
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        7
+      ]
+    },
+    {
+      "number": 37,
+      "sourcePage": 7,
+      "text": "What is the man's opinion of Sarah Carpenter?",
+      "choices": {
+        "A": "She should be hired immediately.",
+        "B": "She is worth being interviewed again.",
+        "C": "She performed better than he had expected.",
+        "D": "She was the best of all the job candidates."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        7
+      ]
+    },
+    {
+      "number": 38,
+      "sourcePage": 8,
+      "text": "What are the speakers mainly discussing?",
+      "choices": {
+        "A": "The results of a test",
+        "B": "A design the man finished",
+        "C": "A report the woman wrote",
+        "D": "The due date for a project"
+      },
+      "part": 3,
+      "correctAnswer": "D",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 39,
+      "sourcePage": 8,
+      "text": "Where most likely do the speakers work?",
+      "choices": {
+        "A": "At a construction company",
+        "B": "At an architectural firm",
+        "C": "At a home decorating firm",
+        "D": "At a computer design company"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 40,
+      "sourcePage": 8,
+      "text": "What does the woman mention about her work?",
+      "choices": {
+        "A": "She needs someone else to help her with it.",
+        "B": "She is unable to finish it by tomorrow.",
+        "C": "She wants to speak to the client about it.",
+        "D": "She requires a larger budget to complete it."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 41,
+      "sourcePage": 8,
+      "text": "What is being discussed?",
+      "choices": {
+        "A": "The promotion of a colleague",
+        "B": "The opening of another branch",
+        "C": "A special offer at a store",
+        "D": "How to request a transfer"
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 42,
+      "sourcePage": 8,
+      "text": "What do the speakers say about Alice Milton?",
+      "choices": {
+        "A": "She is the company's new CEO.",
+        "B": "She recently transferred from another branch.",
+        "C": "She was fired from her previous job.",
+        "D": "She is going to be their supervisor."
+      },
+      "part": 3,
+      "correctAnswer": "D",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 43,
+      "sourcePage": 8,
+      "text": "How does the man feel?",
+      "choices": {
+        "A": "He is worried about his job.",
+        "B": "He is nervous about what is happening.",
+        "C": "He is displeased with the news.",
+        "D": "He is satisfied with the results."
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 44,
+      "sourcePage": 8,
+      "text": "Where does the conversation take place?",
+      "choices": {
+        "A": "In a library",
+        "B": "At a bank",
+        "C": "At a school",
+        "D": "At a driver's license testing center"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 45,
+      "sourcePage": 8,
+      "text": "What kind of identification does the woman suggest?",
+      "choices": {
+        "A": "A passport",
+        "B": "A driver's license",
+        "C": "A library card",
+        "D": "A student ID card"
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 46,
+      "sourcePage": 8,
+      "text": "What does the man give the woman?",
+      "choices": {
+        "A": "A utilities bill",
+        "B": "A registration form",
+        "C": "A copy of his lease",
+        "D": "A canceled check"
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        8
+      ]
+    },
+    {
+      "number": 47,
+      "sourcePage": 9,
+      "text": "Why does the man say, \"You can say that again\"?",
+      "choices": {
+        "A": "To express his agreement with the woman",
+        "B": "To confirm that a person made a mistake",
+        "C": "To ask the woman to repeat her previous comment",
+        "D": "To express his desire to have attended the ceremony"
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        9
+      ]
+    },
+    {
+      "number": 48,
+      "sourcePage": 9,
+      "text": "Why are the speakers surprised?",
+      "choices": {
+        "A": "A company event was canceled on short notice.",
+        "B": "Someone they did not expect won an award.",
+        "C": "The company failed to land a new contract.",
+        "D": "A person in the IT Department made a mistake."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        9
+      ]
+    },
+    {
+      "number": 49,
+      "sourcePage": 9,
+      "text": "What does the woman say about Andrew Simmons?",
+      "choices": {
+        "A": "He resigned to work at a rival firm.",
+        "B": "He won a million dollars in the lottery.",
+        "C": "He announced that he just signed a big contract.",
+        "D": "He was the winner of an award at the company."
+      },
+      "part": 3,
+      "correctAnswer": "D",
+      "contextPages": [
+        9
+      ]
+    },
+    {
+      "number": 50,
+      "sourcePage": 9,
+      "text": "Why is the man asking for assistance?",
+      "choices": {
+        "A": "He would like to get his money back.",
+        "B": "He is interested in exchanging something.",
+        "C": "He wants to buy a present for a friend.",
+        "D": "He cannot find a shirt that he is looking for."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        9
+      ]
+    },
+    {
+      "number": 51,
+      "sourcePage": 9,
+      "text": "Why does the man dislike the item?",
+      "choices": {
+        "A": "It does not fit him well.",
+        "B": "The sleeves are too short.",
+        "C": "The style does not suit him.",
+        "D": "It is too formal."
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        9
+      ]
+    },
+    {
+      "number": 52,
+      "sourcePage": 9,
+      "text": "What will the speakers probably do next?",
+      "choices": {
+        "A": "Process a refund",
+        "B": "Look at some clothes",
+        "C": "Open the plastic wrapping",
+        "D": "Search for the receipt"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        9
+      ]
+    },
+    {
+      "number": 53,
+      "sourcePage": 10,
+      "text": "What are the speakers mainly discussing?",
+      "choices": {
+        "A": "Their work performance",
+        "B": "A recent lunch meeting",
+        "C": "An incoming supervisor",
+        "D": "The restructuring of a department"
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        10
+      ]
+    },
+    {
+      "number": 54,
+      "sourcePage": 10,
+      "text": "What does the woman mean when she says, \"It's hard to tell”?",
+      "choices": {
+        "A": "She does not want to answer the question.",
+        "B": "She is not sure what Mr. Thompson will be like.",
+        "C": "She is not allowed to tell the men anything.",
+        "D": "She is not sure when she will meet Mr. Thompson."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        10
+      ]
+    },
+    {
+      "number": 55,
+      "sourcePage": 10,
+      "text": "What are the speakers concerned about?",
+      "choices": {
+        "A": "The employees may have their salaries reduced.",
+        "B": "They are in danger of getting demoted.",
+        "C": "None of the employees will receive bonuses.",
+        "D": "Some of them might lose their jobs soon."
+      },
+      "part": 3,
+      "correctAnswer": "D",
+      "contextPages": [
+        10
+      ]
+    },
+    {
+      "number": 56,
+      "sourcePage": 10,
+      "text": "Why does the man call the woman?",
+      "choices": {
+        "A": "To cancel his order",
+        "B": "To complain about a missing delivery",
+        "C": "To renew his subscription",
+        "D": "To find out how to pay a bill"
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        10
+      ]
+    },
+    {
+      "number": 57,
+      "sourcePage": 10,
+      "text": "Why does the woman say the man's address?",
+      "choices": {
+        "A": "To confirm his identity",
+        "B": "To find out where to send his order",
+        "C": "To make sure she knows his new address",
+        "D": "To ask where to mail a bill"
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        10
+      ]
+    },
+    {
+      "number": 58,
+      "sourcePage": 10,
+      "text": "What does the woman tell the man about?",
+      "choices": {
+        "A": "A free magazine",
+        "B": "A discounted price",
+        "C": "An online service",
+        "D": "A complimentary gift"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        10
+      ]
+    },
+    {
+      "number": 59,
+      "sourcePage": 11,
+      "text": "What is the problem?",
+      "choices": {
+        "A": "Some parts that were delivered were poorly made.",
+        "B": "A shipment was sent late due to the weather.",
+        "C": "A snowstorm kept employees from getting to work.",
+        "D": "The assembly line was shut down for three days."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        11
+      ]
+    },
+    {
+      "number": 60,
+      "sourcePage": 11,
+      "text": "Why does the woman say, \"That's a relief\"?",
+      "choices": {
+        "A": "To request that the man double-check the results",
+        "B": "To show that she is pleased with the man's comment",
+        "C": "To express her disappointment with some news",
+        "D": "To state that there is nothing she can do about a problem"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        11
+      ]
+    },
+    {
+      "number": 61,
+      "sourcePage": 11,
+      "text": "What does the woman request that the man ¿op",
+      "choices": {
+        "A": "Get in touch with a supplier",
+        "B": "Renegotiate a contract",
+        "C": "Contact the post office",
+        "D": "Speak to the assembly line workers"
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        11
+      ]
+    },
+    {
+      "number": 62,
+      "sourcePage": 11,
+      "text": "What is being discussed?",
+      "choices": {
+        "A": "How to attract more customers",
+        "B": "Which individuals gave good interviews",
+        "C": "Which company should be selected",
+        "D": "What should be said in a proposal"
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        11
+      ]
+    },
+    {
+      "number": 63,
+      "sourcePage": 11,
+      "text": "What does the man say about the Powell Corporation?",
+      "choices": {
+        "A": "It provides good support to its customers.",
+        "B": "He has worked with the company in the past.",
+        "C": "The prices it offers are lower than its competitors'.",
+        "D": "The company is having financial difficulties."
+      },
+      "part": 3,
+      "correctAnswer": "A",
+      "contextPages": [
+        11
+      ]
+    },
+    {
+      "number": 64,
+      "sourcePage": 11,
+      "text": "What will happen at 5:00 P.M.?",
+      "choices": {
+        "A": "A presentation will be given.",
+        "B": "A decision will be made.",
+        "C": "An interview will be scheduled.",
+        "D": "A contract will be signed."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        11
+      ]
+    },
+    {
+      "number": 65,
+      "sourcePage": 12,
+      "text": "What does the woman indicate about the blender by Nelson Electronics?",
+      "choices": {
+        "A": "It is the store's bestselling model.",
+        "B": "It costs less than other blenders.",
+        "C": "It is useful for professional chefs.",
+        "D": "It comes with a money-back guarantee."
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        12
+      ]
+    },
+    {
+      "number": 66,
+      "sourcePage": 12,
+      "text": "How often will the man use his blender?",
+      "choices": {
+        "A": "Every day",
+        "B": "Two or three times a week",
+        "C": "Once or twice a month",
+        "D": "Only on special occasions"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        12
+      ]
+    },
+    {
+      "number": 67,
+      "sourcePage": 12,
+      "text": "Look at the graphic. How much will the man spend on the item?",
+      "choices": {
+        "A": "$1-$50",
+        "B": "$51-$100",
+        "C": "$101-$200",
+        "D": "$201 or more"
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        12
+      ]
+    },
+    {
+      "number": 68,
+      "sourcePage": 12,
+      "text": "Where most likely are the speakers?",
+      "choices": {
+        "A": "At a hospital",
+        "B": "At a medical conference",
+        "C": "At a medical school",
+        "D": "At a healthcare clinic"
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        12
+      ]
+    },
+    {
+      "number": 69,
+      "sourcePage": 12,
+      "text": "Look at the graphic. Which room will the woman be in?",
+      "choices": {
+        "A": "Room 106",
+        "B": "Room 210",
+        "C": "Room 309",
+        "D": "Room 404"
+      },
+      "part": 3,
+      "correctAnswer": "C",
+      "contextPages": [
+        12
+      ]
+    },
+    {
+      "number": 70,
+      "sourcePage": 12,
+      "text": "What does the man suggest about Dr. Probst?",
+      "choices": {
+        "A": "He works as a doctor at the local hospital.",
+        "B": "The two of them are personally acquainted.",
+        "C": "He retired from his teaching duties recently.",
+        "D": "A new medical procedure was made by him."
+      },
+      "part": 3,
+      "correctAnswer": "B",
+      "contextPages": [
+        12
+      ]
+    },
+    {
+      "number": 71,
+      "sourcePage": 13,
+      "text": "Where most likely does the talk take place?",
+      "choices": {
+        "A": "In an office",
+        "B": "In a laboratory",
+        "C": "In a store",
+        "D": "In a factory"
+      },
+      "part": 4,
+      "correctAnswer": "A",
+      "contextPages": [
+        13
+      ]
+    },
+    {
+      "number": 72,
+      "sourcePage": 13,
+      "text": "What does the speaker say about the Dayton facility?",
+      "choices": {
+        "A": "An explosion was reported there.",
+        "B": "Several people have been hired there.",
+        "C": "People have been sent there to look at the problems.",
+        "D": "It is going to close in the near future."
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        13
+      ]
+    },
+    {
+      "number": 73,
+      "sourcePage": 13,
+      "text": "What does the speaker tell the listeners to ¿op",
+      "choices": {
+        "A": "Start finishing their work more quickly",
+        "B": "Work more closely with their supervisors",
+        "C": "Report problems when they see them",
+        "D": "Show up for work earlier than normal"
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        13
+      ]
+    },
+    {
+      "number": 74,
+      "sourcePage": 13,
+      "text": "What does the speaker ask Mr. Russellto ¿op",
+      "choices": {
+        "A": "Make a payment",
+        "B": "Call her back",
+        "C": "Give some feedback",
+        "D": "Visit the store"
+      },
+      "part": 4,
+      "correctAnswer": "D",
+      "contextPages": [
+        13
+      ]
+    },
+    {
+      "number": 75,
+      "sourcePage": 13,
+      "text": "What time will Winston's open tomorrow?",
+      "choices": {
+        "A": "At 8:00 A.M.",
+        "B": "At 8:30 A.M.",
+        "C": "At 9:00 A.M.",
+        "D": "At 9:30 A.M."
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        13
+      ]
+    },
+    {
+      "number": 76,
+      "sourcePage": 13,
+      "text": "According to the speaker, how was the problem solved?",
+      "choices": {
+        "A": "By installing a new speaker",
+        "B": "By putting some software back onto the computer",
+        "C": "By cleaning the computer thoroughly",
+        "D": "By replacing the computer's hard drive"
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        13
+      ]
+    },
+    {
+      "number": 77,
+      "sourcePage": 14,
+      "text": "What is the restaurant celebrating?",
+      "choices": {
+        "A": "The opening of a new branch",
+        "B": "The finishing of some renovations",
+        "C": "The completion of its first year in business",
+        "D": "The serving of more than 5,000 customers"
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 78,
+      "sourcePage": 14,
+      "text": "When is the restaurant having a sale?",
+      "choices": {
+        "A": "From Monday to Friday",
+        "B": "On the weekend",
+        "C": "All next week",
+        "D": "During the entire month"
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 79,
+      "sourcePage": 14,
+      "text": "What can customers get during the sale period?",
+      "choices": {
+        "A": "Free meals",
+        "B": "Gift certificates",
+        "C": "Special prizes",
+        "D": "Coupons for free drinks"
+      },
+      "part": 4,
+      "correctAnswer": "A",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 80,
+      "sourcePage": 14,
+      "text": "What caused the delay?",
+      "choices": {
+        "A": "A mechanical problem",
+        "B": "Ice on the wings",
+        "C": "A missing passenger",
+        "D": "Snow on the runway"
+      },
+      "part": 4,
+      "correctAnswer": "D",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 81,
+      "sourcePage": 14,
+      "text": "What does the speaker ask the passengers to do?",
+      "choices": {
+        "A": "Put their seats in the upright position",
+        "B": "Listen carefully to the flight attendants",
+        "C": "Fasten their seatbelts",
+        "D": "Turn off their electric devices"
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 82,
+      "sourcePage": 14,
+      "text": "What does the speaker mean when he says, \"After that, I expect to make up for lost time\"?",
+      "choices": {
+        "A": "The plane is going to take off on time.",
+        "B": "The flight will be quicker than usual.",
+        "C": "The pilot will take a faster route.",
+        "D": "The flight should arrive in a few hours."
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 83,
+      "sourcePage": 14,
+      "text": "What happened to the bridge?",
+      "choices": {
+        "A": "A part of it fell into the river.",
+        "B": "It just opened to all motorists.",
+        "C": "It developed some cracks.",
+        "D": "Two vehicles collided on it."
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 84,
+      "sourcePage": 14,
+      "text": "What does the speaker indicate about traffic?",
+      "choices": {
+        "A": "It is moving slowly.",
+        "B": "It is improving.",
+        "C": "It is normal.",
+        "D": "It is better than usual."
+      },
+      "part": 4,
+      "correctAnswer": "A",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 85,
+      "sourcePage": 14,
+      "text": "What will listeners hear next?",
+      "choices": {
+        "A": "A commercial",
+        "B": "A breaking news update",
+        "C": "Local news",
+        "D": "Sports news"
+      },
+      "part": 4,
+      "correctAnswer": "D",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 86,
+      "sourcePage": 14,
+      "text": "What is the main purpose of the talk?",
+      "choices": {
+        "A": "To congratulate the listeners for the performance",
+        "B": "To encourage the listeners to work hard",
+        "C": "To criticize the listeners for not working hard enough",
+        "D": "To warn the listeners about some complaints"
+      },
+      "part": 4,
+      "correctAnswer": "A",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 87,
+      "sourcePage": 14,
+      "text": "What did the attendees mention about the event?",
+      "choices": {
+        "A": "They wanted it to be a bit longer.",
+        "B": "They learned a great deal at it.",
+        "C": "They thought the price was worth it.",
+        "D": "They wanted more feedback from the lecturers."
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 88,
+      "sourcePage": 14,
+      "text": "What will the speaker most likely do next?",
+      "choices": {
+        "A": "Have the listeners fill out some forms",
+        "B": "Pass out some handouts",
+        "C": "Present some awards to the listeners",
+        "D": "Talk about an upcoming seminar"
+      },
+      "part": 4,
+      "correctAnswer": "D",
+      "contextPages": [
+        14
+      ]
+    },
+    {
+      "number": 89,
+      "sourcePage": 15,
+      "text": "What is the speaker mainly discussing?",
+      "choices": {
+        "A": "How some new stores are doing",
+        "B": "The company's future plans",
+        "C": "Where the company is expanding",
+        "D": "The company's most recent profits"
+      },
+      "part": 4,
+      "correctAnswer": "A",
+      "contextPages": [
+        15
+      ]
+    },
+    {
+      "number": 90,
+      "sourcePage": 15,
+      "text": "What does the speaker mean when she says, \"They're performing according to our expectations\"?",
+      "choices": {
+        "A": "The new products are popular with customers.",
+        "B": "The Asian branches are doing well.",
+        "C": "The products are selling well everywhere.",
+        "D": "The stores in Europe have many customers."
+      },
+      "part": 4,
+      "correctAnswer": "D",
+      "contextPages": [
+        15
+      ]
+    },
+    {
+      "number": 91,
+      "sourcePage": 15,
+      "text": "What did the company do this week?",
+      "choices": {
+        "A": "It announced its plans for next year.",
+        "B": "It released some commercials.",
+        "C": "It employed an ad agency.",
+        "D": "It canceled a contract with its marketer."
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        15
+      ]
+    },
+    {
+      "number": 92,
+      "sourcePage": 15,
+      "text": "Why did the speaker call Mr. Jackson?",
+      "choices": {
+        "A": "To cancel a reservation",
+        "B": "To provide an upgrade",
+        "C": "To offer an apology",
+        "D": "To make a suggestion"
+      },
+      "part": 4,
+      "correctAnswer": "D",
+      "contextPages": [
+        15
+      ]
+    },
+    {
+      "number": 93,
+      "sourcePage": 15,
+      "text": "Look at the graphic. How much more for a room must Mr. Jackson pay?",
+      "choices": {
+        "A": "$20",
+        "B": "$30",
+        "C": "$40",
+        "D": "$50"
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        15
+      ]
+    },
+    {
+      "number": 94,
+      "sourcePage": 15,
+      "text": "Why does the speaker tell Mr. Jackson to call her back?",
+      "choices": {
+        "A": "The special offer is going to end today.",
+        "B": "The hotel will have no space left soon.",
+        "C": "He did not complete his reservation form properly.",
+        "D": "He forgot to indicate when he is arriving."
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        15
+      ]
+    },
+    {
+      "number": 95,
+      "sourcePage": 16,
+      "text": "What is the man's job?",
+      "choices": {
+        "A": "A ticket seller",
+        "B": "A guide",
+        "C": "A curator",
+        "D": "A translator"
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        16
+      ]
+    },
+    {
+      "number": 96,
+      "sourcePage": 16,
+      "text": "Look at the graphic. Where can visitors buy tickets to the special exhibit?",
+      "choices": {
+        "A": "At booth 1",
+        "B": "At booth 2",
+        "C": "At booth 3",
+        "D": "At booth 4"
+      },
+      "part": 4,
+      "correctAnswer": "A",
+      "contextPages": [
+        16
+      ]
+    },
+    {
+      "number": 97,
+      "sourcePage": 16,
+      "text": "What will the speaker do next?",
+      "choices": {
+        "A": "Provide the listeners with tickets",
+        "B": "Talk about a display",
+        "C": "Hand out some pamphlets",
+        "D": "Visit an exhibit on colonial times This is the end of the Listening test. Turn to Part 5 in your test book."
+      },
+      "part": 4,
+      "correctAnswer": "B",
+      "contextPages": [
+        16
+      ]
+    },
+    {
+      "number": 98,
+      "sourcePage": 16,
+      "text": "Look at the graphic. What product will the speaker talk about first?",
+      "choices": {
+        "A": "Microwave ovens",
+        "B": "Blenders",
+        "C": "Gas ovens",
+        "D": "Toasters"
+      },
+      "part": 4,
+      "correctAnswer": "C",
+      "contextPages": [
+        16
+      ]
+    },
+    {
+      "number": 99,
+      "sourcePage": 16,
+      "text": "Who is Sheila Roberts?",
+      "choices": {
+        "A": "An intern",
+        "B": "A salesperson",
+        "C": "The company CEO",
+        "D": "A new employee"
+      },
+      "part": 4,
+      "correctAnswer": "D",
+      "contextPages": [
+        16
+      ]
+    },
+    {
+      "number": 100,
+      "sourcePage": 16,
+      "text": "What will probably happen next?",
+      "choices": {
+        "A": "A person will greet the others at the meeting.",
+        "B": "The contents of the graph will be discussed.",
+        "C": "Suggestions on improving sales will be made.",
+        "D": "An interview with a job candidate will be conducted."
+      },
+      "part": 4,
+      "correctAnswer": "A",
+      "contextPages": [
+        16
+      ]
+    },
+    {
+      "number": 101,
+      "sourcePage": 18,
+      "text": "The plant is running at full _____ now that the machinery on the assembly lines has been repaired.",
+      "choices": {
+        "A": "availability",
+        "B": "capacity",
+        "C": "appearance",
+        "D": "resemblance"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        18
+      ]
+    },
+    {
+      "number": 102,
+      "sourcePage": 18,
+      "text": "_____ guarantee the timely delivery of the product, it should be paid for at the time it is purchased.",
+      "choices": {
+        "A": "With respect to",
+        "B": "In tune with",
+        "C": "Regarding",
+        "D": "In order to"
+      },
+      "part": 5,
+      "correctAnswer": "D",
+      "contextPages": [
+        18
+      ]
+    },
+    {
+      "number": 103,
+      "sourcePage": 18,
+      "text": "Wilson Florists extended its operating hours during February for the purpose of _____ the increase in customers.",
+      "choices": {
+        "A": "accommodate",
+        "B": "accommodation",
+        "C": "accommodating",
+        "D": "accommodatingly"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        18
+      ]
+    },
+    {
+      "number": 104,
+      "sourcePage": 18,
+      "text": "Ms. Wellman, one of the members of the board of directors, _____ given an update regarding progress on the newest line of products.",
+      "choices": {
+        "A": "has",
+        "B": "was",
+        "C": "be",
+        "D": "have"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        18
+      ]
+    },
+    {
+      "number": 105,
+      "sourcePage": 18,
+      "text": "George Thacker applied for a job with Ellison Construction but was _____ due to a lack of experience.",
+      "choices": {
+        "A": "hired",
+        "B": "considered",
+        "C": "rejected",
+        "D": "interviewed"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        18
+      ]
+    },
+    {
+      "number": 106,
+      "sourcePage": 18,
+      "text": "The passengers _____ offered to assist the bus driver in changing the deflated tire.",
+      "choices": {
+        "A": "they",
+        "B": "themselves",
+        "C": "their",
+        "D": "them"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        18
+      ]
+    },
+    {
+      "number": 107,
+      "sourcePage": 19,
+      "text": "_____ fined the owner of the meat plant on account of the unsanitary conditions inside the facility.",
+      "choices": {
+        "A": "Inspectors",
+        "B": "Reporters",
+        "C": "Assemblers",
+        "D": "Politicians"
+      },
+      "part": 5,
+      "correctAnswer": "A",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 108,
+      "sourcePage": 19,
+      "text": "Mr. Hamilton was supposed to attend the conference in Boise but was unable to make it there due to a scheduling _____.",
+      "choices": {
+        "A": "conflict",
+        "B": "confliction",
+        "C": "conflicted",
+        "D": "conflictive"
+      },
+      "part": 5,
+      "correctAnswer": "A",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 109,
+      "sourcePage": 19,
+      "text": "Of all the customers who were polled, only a _____ of them thought the prices at Shop Right were too high.",
+      "choices": {
+        "A": "proportion",
+        "B": "variable",
+        "C": "fraction",
+        "D": "piece"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 110,
+      "sourcePage": 19,
+      "text": "Many diners had to wait to be seated for more than an hour _____ the establishment was so busy on its opening night.",
+      "choices": {
+        "A": "therefore",
+        "B": "since",
+        "C": "where",
+        "D": "if"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 111,
+      "sourcePage": 19,
+      "text": "It appears as though the machine suffered a major _____ and cannot be repaired at all.",
+      "choices": {
+        "A": "malfunction",
+        "B": "malfunctioned",
+        "C": "malfunctions",
+        "D": "malfunctioning"
+      },
+      "part": 5,
+      "correctAnswer": "A",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 112,
+      "sourcePage": 19,
+      "text": "The customer _____ for more than an hour before someone at the store offered to assist her.",
+      "choices": {
+        "A": "will wait",
+        "B": "are waiting",
+        "C": "had been waiting",
+        "D": "have waited"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 113,
+      "sourcePage": 19,
+      "text": "Although she _____ her application in July, Erica still has not heard anything back from the firm.",
+      "choices": {
+        "A": "received",
+        "B": "approved",
+        "C": "submitted",
+        "D": "responded"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 114,
+      "sourcePage": 19,
+      "text": "Library _____ are permitted to borrow up to six books at a time for no longer than two weeks.",
+      "choices": {
+        "A": "donors",
+        "B": "patrons",
+        "C": "shoppers",
+        "D": "diners"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 115,
+      "sourcePage": 19,
+      "text": "_____ complaints from customers is one of the duties that the new intern was given.",
+      "choices": {
+        "A": "Handle",
+        "B": "Handled",
+        "C": "Handles",
+        "D": "Handling"
+      },
+      "part": 5,
+      "correctAnswer": "D",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 116,
+      "sourcePage": 19,
+      "text": "When the deliveryman arrived with the package, there was nobody in the office able to _____ for it.",
+      "choices": {
+        "A": "pack",
+        "B": "open",
+        "C": "receive",
+        "D": "sign"
+      },
+      "part": 5,
+      "correctAnswer": "D",
+      "contextPages": [
+        19
+      ]
+    },
+    {
+      "number": 117,
+      "sourcePage": 20,
+      "text": "At the awards ceremony, Ms. Trellis thanked her entire staff for the assistance they had provided _____.",
+      "choices": {
+        "A": "she",
+        "B": "her",
+        "C": "they",
+        "D": "them"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 118,
+      "sourcePage": 20,
+      "text": "It appears that the negotiations between the two sides _____ their completion.",
+      "choices": {
+        "A": "are neared",
+        "B": "will have neared",
+        "C": "are nearing",
+        "D": "nears"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 119,
+      "sourcePage": 20,
+      "text": "_____ the weather starts to clear up in the next few hours, the company's annual outing will be moved indoors.",
+      "choices": {
+        "A": "Unless",
+        "B": "Despite",
+        "C": "Although",
+        "D": "Consequently"
+      },
+      "part": 5,
+      "correctAnswer": "A",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 120,
+      "sourcePage": 20,
+      "text": "Taking the vehicle for a _____ drive is a common action for a person looking to purchase a new car.",
+      "choices": {
+        "A": "test",
+        "B": "testing",
+        "C": "tester",
+        "D": "tested"
+      },
+      "part": 5,
+      "correctAnswer": "A",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 121,
+      "sourcePage": 20,
+      "text": "There was a water leak on the top floor that caused a great amount of _____ to the electronic items in one office.",
+      "choices": {
+        "A": "injury",
+        "B": "wound",
+        "C": "damage",
+        "D": "impairment"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 122,
+      "sourcePage": 20,
+      "text": "The exhibition of modern art at the Leo Gallery is going to _____ from August 2 to September 14.",
+      "choices": {
+        "A": "hold",
+        "B": "holding",
+        "C": "be held",
+        "D": "have been holding"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 123,
+      "sourcePage": 20,
+      "text": "As a result of the rainy weather, the summer fruit harvest in the area is expected to be _____ poorer than usual.",
+      "choices": {
+        "A": "some",
+        "B": "very",
+        "C": "much",
+        "D": "so"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 124,
+      "sourcePage": 20,
+      "text": "The museum is going to host an _____ of relics from ancient China starting in September.",
+      "choices": {
+        "A": "exhibits",
+        "B": "exhibition",
+        "C": "exhibiting",
+        "D": "exhibited"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 125,
+      "sourcePage": 20,
+      "text": "The owners of the building made it more handicapped _____ by adding ramps and other facilities on each floor.",
+      "choices": {
+        "A": "approachable",
+        "B": "apparent",
+        "C": "accessible",
+        "D": "available"
+      },
+      "part": 5,
+      "correctAnswer": "C",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 126,
+      "sourcePage": 20,
+      "text": "All qualified individuals are encouraged to apply for the position _____ of their age, gender, or race.",
+      "choices": {
+        "A": "regarding",
+        "B": "regardless",
+        "C": "regarded",
+        "D": "regards"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        20
+      ]
+    },
+    {
+      "number": 127,
+      "sourcePage": 21,
+      "text": "Because there were so many problems with the project, a new manager was _____ to run everything.",
+      "choices": {
+        "A": "revealed",
+        "B": "conceived",
+        "C": "invested",
+        "D": "appointed"
+      },
+      "part": 5,
+      "correctAnswer": "D",
+      "contextPages": [
+        21
+      ]
+    },
+    {
+      "number": 128,
+      "sourcePage": 21,
+      "text": "Even though the country was suffering _____, sales at Vertigo, Inc. had never been better.",
+      "choices": {
+        "A": "economics",
+        "B": "economical",
+        "C": "economists",
+        "D": "economically"
+      },
+      "part": 5,
+      "correctAnswer": "D",
+      "contextPages": [
+        21
+      ]
+    },
+    {
+      "number": 129,
+      "sourcePage": 21,
+      "text": "The outdoor performance by the Centerville Orchestra has been postponed _____ next week due to the rain.",
+      "choices": {
+        "A": "by",
+        "B": "until",
+        "C": "for",
+        "D": "still"
+      },
+      "part": 5,
+      "correctAnswer": "B",
+      "contextPages": [
+        21
+      ]
+    },
+    {
+      "number": 130,
+      "sourcePage": 21,
+      "text": "The city council intends to vote on whether or not to _____ the company to build some apartments downtown.",
+      "choices": {
+        "A": "permit",
+        "B": "grant",
+        "C": "consent",
+        "D": "agree"
+      },
+      "part": 5,
+      "correctAnswer": "A",
+      "contextPages": [
+        21
+      ]
+    },
+    {
+      "number": 131,
+      "sourcePage": 22,
+      "text": "Choose the best option for blank 131.",
+      "choices": {
+        "A": "designing",
+        "B": "expanding",
+        "C": "planning",
+        "D": "financing"
+      },
+      "part": 6,
+      "correctAnswer": "B",
+      "contextPages": [
+        22
+      ]
+    },
+    {
+      "number": 132,
+      "sourcePage": 22,
+      "text": "Choose the best option for blank 132.",
+      "choices": {
+        "A": "Please do not contact us by phone to get more information.",
+        "B": "All the information that is necessary to know may be found there.",
+        "C": "Suppliers can learn about the needed materials by calling us.",
+        "D": "The bidding process will be closed in the month of November."
+      },
+      "part": 6,
+      "correctAnswer": "B",
+      "contextPages": [
+        22
+      ]
+    },
+    {
+      "number": 133,
+      "sourcePage": 22,
+      "text": "Choose the best option for blank 133.",
+      "choices": {
+        "A": "Win",
+        "B": "Winner",
+        "C": "Winning",
+        "D": "Winners"
+      },
+      "part": 6,
+      "correctAnswer": "C",
+      "contextPages": [
+        22
+      ]
+    },
+    {
+      "number": 134,
+      "sourcePage": 22,
+      "text": "Choose the best option for blank 134.",
+      "choices": {
+        "A": "began",
+        "B": "have begun",
+        "C": "are beginning",
+        "D": "must begin"
+      },
+      "part": 6,
+      "correctAnswer": "D",
+      "contextPages": [
+        22
+      ]
+    },
+    {
+      "number": 135,
+      "sourcePage": 23,
+      "text": "Choose the best option for blank 135.",
+      "choices": {
+        "A": "respect",
+        "B": "require",
+        "C": "await",
+        "D": "intend"
+      },
+      "part": 6,
+      "correctAnswer": "D",
+      "contextPages": [
+        23
+      ]
+    },
+    {
+      "number": 136,
+      "sourcePage": 23,
+      "text": "Choose the best option for blank 136.",
+      "choices": {
+        "A": "from",
+        "B": "within",
+        "C": "than",
+        "D": "by"
+      },
+      "part": 6,
+      "correctAnswer": "C",
+      "contextPages": [
+        23
+      ]
+    },
+    {
+      "number": 137,
+      "sourcePage": 23,
+      "text": "Choose the best option for blank 137.",
+      "choices": {
+        "A": "For instance, an electricity bill with your name on it is acceptable.",
+        "B": "To make payments to these businesses, simply call us for more information.",
+        "C": "In order to get paid, be sure that you have the proper identification on you.",
+        "D": "In most cases, a driver's license is considered acceptable by vendors."
+      },
+      "part": 6,
+      "correctAnswer": "D",
+      "contextPages": [
+        23
+      ]
+    },
+    {
+      "number": 138,
+      "sourcePage": 23,
+      "text": "Choose the best option for blank 138.",
+      "choices": {
+        "A": "beneficial",
+        "B": "apparent",
+        "C": "respective",
+        "D": "suspicious"
+      },
+      "part": 6,
+      "correctAnswer": "A",
+      "contextPages": [
+        23
+      ]
+    },
+    {
+      "number": 139,
+      "sourcePage": 24,
+      "text": "Choose the best option for blank 139.",
+      "choices": {
+        "A": "They",
+        "B": "Them",
+        "C": "These",
+        "D": "Those"
+      },
+      "part": 6,
+      "correctAnswer": "D",
+      "contextPages": [
+        24
+      ]
+    },
+    {
+      "number": 140,
+      "sourcePage": 24,
+      "text": "Choose the best option for blank 140.",
+      "choices": {
+        "A": "You will be paid well for the time that you spend with us.",
+        "B": "So are people who would like to coach sports teams or act as referees.",
+        "C": "We would also like someone to replace Ms. Ashford, who recently resigned.",
+        "D": "There will not be any arts and crafts classes taught this summer."
+      },
+      "part": 6,
+      "correctAnswer": "B",
+      "contextPages": [
+        24
+      ]
+    },
+    {
+      "number": 141,
+      "sourcePage": 24,
+      "text": "Choose the best option for blank 141.",
+      "choices": {
+        "A": "finance",
+        "B": "financial",
+        "C": "financing",
+        "D": "financier"
+      },
+      "part": 6,
+      "correctAnswer": "B",
+      "contextPages": [
+        24
+      ]
+    },
+    {
+      "number": 142,
+      "sourcePage": 24,
+      "text": "Choose the best option for blank 142.",
+      "choices": {
+        "A": "improve",
+        "B": "donate",
+        "C": "dedicate",
+        "D": "approach"
+      },
+      "part": 6,
+      "correctAnswer": "A",
+      "contextPages": [
+        24
+      ]
+    },
+    {
+      "number": 143,
+      "sourcePage": 25,
+      "text": "Choose the best option for blank 143.",
+      "choices": {
+        "A": "transferred",
+        "B": "altered",
+        "C": "suspended",
+        "D": "resigned"
+      },
+      "part": 6,
+      "correctAnswer": "D",
+      "contextPages": [
+        25
+      ]
+    },
+    {
+      "number": 144,
+      "sourcePage": 25,
+      "text": "Choose the best option for blank 144.",
+      "choices": {
+        "A": "is filling",
+        "B": "will fill",
+        "C": "has been filled",
+        "D": "will be filled"
+      },
+      "part": 6,
+      "correctAnswer": "D",
+      "contextPages": [
+        25
+      ]
+    },
+    {
+      "number": 145,
+      "sourcePage": 25,
+      "text": "Choose the best option for blank 145.",
+      "choices": {
+        "A": "I anticipate that it will last for at least 2 hours.",
+        "B": "The agenda for the meeting has not yet been set.",
+        "C": "Please try to make it to the meeting if you have the time.",
+        "D": "I will be the only one who will be speaking at the meeting."
+      },
+      "part": 6,
+      "correctAnswer": "A",
+      "contextPages": [
+        25
+      ]
+    },
+    {
+      "number": 146,
+      "sourcePage": 25,
+      "text": "Choose the best option for blank 146.",
+      "choices": {
+        "A": "schedules",
+        "B": "workloads",
+        "C": "appointments",
+        "D": "jobs"
+      },
+      "part": 6,
+      "correctAnswer": "B",
+      "contextPages": [
+        25
+      ]
+    },
+    {
+      "number": 147,
+      "sourcePage": 26,
+      "text": "Why is the restaurant having a special offer?",
+      "choices": {
+        "A": "It is having its grand opening.",
+        "B": "The restaurant has a brand-new owner.",
+        "C": "It is celebrating its tenth anniversary.",
+        "D": "The food being offered has just changed."
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        26
+      ]
+    },
+    {
+      "number": 148,
+      "sourcePage": 26,
+      "text": "What is NOT mentioned as a part of the meal being offered?",
+      "choices": {
+        "A": "An entrée",
+        "B": "A salad",
+        "C": "An appetizer",
+        "D": "A dessert"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        26
+      ]
+    },
+    {
+      "number": 149,
+      "sourcePage": 27,
+      "text": "At 4:28 P.M., why does Mr. Cooper write, \"This is the kind of contract we've been trying to get for the past three years\"?",
+      "choices": {
+        "A": "To congratulate Ms. Irwin for her work on the project",
+        "B": "To express his happiness at being awarded the deal",
+        "C": "To state that the company will turn a profit soon",
+        "D": "To mention how hard the last three years have been"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        27
+      ]
+    },
+    {
+      "number": 150,
+      "sourcePage": 27,
+      "text": "What is going to happen around 5:30?",
+      "choices": {
+        "A": "A contract will be signed.",
+        "B": "A bid will be made.",
+        "C": "Assignments will be given.",
+        "D": "A meeting will be held."
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        27
+      ]
+    },
+    {
+      "number": 151,
+      "sourcePage": 28,
+      "text": "According to the memo, what is going to happen?",
+      "choices": {
+        "A": "A new department is going to be formed.",
+        "B": "George Jenkins will become the CEO.",
+        "C": "All employees in a department will be fired.",
+        "D": "The company will lay off 25% of its workforce."
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        28
+      ]
+    },
+    {
+      "number": 152,
+      "sourcePage": 28,
+      "text": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? “Some of you will be laid off while others will receive promotions or transfers.”",
+      "choices": {
+        "A": "[1]",
+        "B": "[2]",
+        "C": "[3]",
+        "D": "[4]"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        28
+      ]
+    },
+    {
+      "number": 153,
+      "sourcePage": 29,
+      "text": "Which flight departs in the morning?",
+      "choices": {
+        "A": "FA95",
+        "B": "FA211",
+        "C": "FA394",
+        "D": "FA575"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        29
+      ]
+    },
+    {
+      "number": 154,
+      "sourcePage": 29,
+      "text": "How many kilograms of luggage may a passenger check in for free?",
+      "choices": {
+        "A": "7 kilograms",
+        "B": "20 kilograms",
+        "C": "40 kilograms",
+        "D": "50 kilograms"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        29
+      ]
+    },
+    {
+      "number": 155,
+      "sourcePage": 29,
+      "text": "According to the ticket, which statement is correct?",
+      "choices": {
+        "A": "The passenger will sit in the same cabin on every flight.",
+        "B": "The passenger is traveling with another person.",
+        "C": "The passenger may change a flight on the ticket.",
+        "D": "The passenger can get a full refund on the ticket."
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        29
+      ]
+    },
+    {
+      "number": 156,
+      "sourcePage": 30,
+      "text": "Where most likely would these instructions be found?",
+      "choices": {
+        "A": "On a website",
+        "B": "In an instruction manual",
+        "C": "In a newspaper",
+        "D": "In a letter"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        30
+      ]
+    },
+    {
+      "number": 157,
+      "sourcePage": 30,
+      "text": "What is NOT true according to the instructions?",
+      "choices": {
+        "A": "A child should be able to move from side to side in the seat.",
+        "B": "It is unacceptable for a child in the seat to have a jacket on.",
+        "C": "A child weighing 7 kilograms should sit facing the rear.",
+        "D": "There should not be any twists in the seatbelt when it is fastened."
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        30
+      ]
+    },
+    {
+      "number": 158,
+      "sourcePage": 30,
+      "text": "What should a person do to get access to a video of the car seat being installed?",
+      "choices": {
+        "A": "Call a telephone number",
+        "B": "Watch a videotape",
+        "C": "Visit a website",
+        "D": "Send a text message"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        30
+      ]
+    },
+    {
+      "number": 159,
+      "sourcePage": 31,
+      "text": "Why did Ms. Trent write to Mr. Walker?",
+      "choices": {
+        "A": "To praise him for some work done",
+        "B": "To ask him to send a bill to her",
+        "C": "To inform him about a problem",
+        "D": "To complain about the weather"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        31
+      ]
+    },
+    {
+      "number": 160,
+      "sourcePage": 31,
+      "text": "The word “concentrate\" in line 7 is closest in meaning to:",
+      "choices": {
+        "A": "decide",
+        "B": "focus",
+        "C": "practice",
+        "D": "stress"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        31
+      ]
+    },
+    {
+      "number": 161,
+      "sourcePage": 31,
+      "text": "What does Ms. Trent request Mr. Walker to do?",
+      "choices": {
+        "A": "Replace an air conditioning unit",
+        "B": "Send a team to deal with the noise",
+        "C": "Tell her how to solve a problem",
+        "D": "Call her to set up an appointment"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        31
+      ]
+    },
+    {
+      "number": 162,
+      "sourcePage": 32,
+      "text": "What is the purpose of the announcement?",
+      "choices": {
+        "A": "To describe some renovations in detail",
+        "B": "To discuss how to get to a resort",
+        "C": "To advertise a place of business",
+        "D": "To compare a resort with other places"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        32
+      ]
+    },
+    {
+      "number": 163,
+      "sourcePage": 32,
+      "text": "What is mentioned about the Green Mountain Run?",
+      "choices": {
+        "A": "Beginners should ski on it.",
+        "B": "Ricardo's is at the bottom of it.",
+        "C": "The new ski lift leads to it.",
+        "D": "It was built recently."
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        32
+      ]
+    },
+    {
+      "number": 164,
+      "sourcePage": 32,
+      "text": "What can visitors do at the Bendburg Ski Resort?",
+      "choices": {
+        "A": "Rent rooms with a mountain view",
+        "B": "Go on hiking tours of the region",
+        "C": "Take lessons to improve their skiing abilities",
+        "D": "Reserve rooms on the resort's website"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        32
+      ]
+    },
+    {
+      "number": 165,
+      "sourcePage": 33,
+      "text": "What does Mr. Babson mention about Business Today?",
+      "choices": {
+        "A": "It has an article written by Kristin.",
+        "B": "He reads the magazine every week.",
+        "C": "He has an annual subscription to it.",
+        "D": "There is an article about Kristin in it."
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        33
+      ]
+    },
+    {
+      "number": 166,
+      "sourcePage": 33,
+      "text": "Where does Kristin currently work?",
+      "choices": {
+        "A": "At Ceti Heavy Industries",
+        "B": "At Pinewood, Inc.",
+        "C": "At Business Today",
+        "D": "At the Tristan Corporation"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        33
+      ]
+    },
+    {
+      "number": 167,
+      "sourcePage": 33,
+      "text": "What is indicated about Mr. Babson?",
+      "choices": {
+        "A": "He currently resides in Omaha.",
+        "B": "He used to work at Pinewood, Inc.",
+        "C": "He works at a real estate agency.",
+        "D": "He recently met Kristin."
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        33
+      ]
+    },
+    {
+      "number": 168,
+      "sourcePage": 34,
+      "text": "What is the online message chain mainly about?",
+      "choices": {
+        "A": "A plane trip that will be taken soon",
+        "B": "The schedule for the next day's events",
+        "C": "Preparations for the arrival of some visitors",
+        "D": "The meetings each person will attend"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        34
+      ]
+    },
+    {
+      "number": 169,
+      "sourcePage": 34,
+      "text": "At 1:35 P.M., what does Mr. Alderson mean when he writes, \"Same here\"?",
+      "choices": {
+        "A": "He agrees with Mr. Bergeron's opinion.",
+        "B": "He is looking forward to meeting the clients.",
+        "C": "He did everything he was supposed to.",
+        "D": "He is presently with Mr. Bergeron."
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        34
+      ]
+    },
+    {
+      "number": 170,
+      "sourcePage": 34,
+      "text": "What is suggested about Mr. Messier?",
+      "choices": {
+        "A": "He is coming in from Toronto.",
+        "B": "He is good friends with Mr. Alderson.",
+        "C": "He is going to Costa Rica soon.",
+        "D": "He is meeting Ms. Cash tomorrow morning."
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        34
+      ]
+    },
+    {
+      "number": 171,
+      "sourcePage": 34,
+      "text": "What will Mr. Alderson probably do next?",
+      "choices": {
+        "A": "Inspect a factory",
+        "B": "Go to the airport",
+        "C": "Check his e-mail",
+        "D": "Talk to Mr. Bergeron"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        34
+      ]
+    },
+    {
+      "number": 172,
+      "sourcePage": 35,
+      "text": "Where does the article most likely appear?",
+      "choices": {
+        "A": "In a weekly newsletter",
+        "B": "In a history book",
+        "C": "In a national newspaper",
+        "D": "In a recruiting pamphlet"
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        35
+      ]
+    },
+    {
+      "number": 173,
+      "sourcePage": 35,
+      "text": "What has been happening during Literacy Awareness Month?",
+      "choices": {
+        "A": "Free books have been given to poor individuals.",
+        "B": "Famous people have read books to children.",
+        "C": "Reading classes for adults have been held.",
+        "D": "Fundraisers have been held to help buy books."
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        35
+      ]
+    },
+    {
+      "number": 174,
+      "sourcePage": 35,
+      "text": "Who is Joseph Stack?",
+      "choices": {
+        "A": "The founder of the city of Kent",
+        "B": "A Literacy Awareness Month volunteer",
+        "C": "An original member of the RCK",
+        "D": "A worker at Kent Public Library"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        35
+      ]
+    },
+    {
+      "number": 175,
+      "sourcePage": 35,
+      "text": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"More than 220 people have donated their time and effort to helping others learn to read this month.\"",
+      "choices": {
+        "A": "[1]",
+        "B": "[2]",
+        "C": "[3]",
+        "D": "[4]"
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        35
+      ]
+    },
+    {
+      "number": 176,
+      "sourcePage": 37,
+      "text": "What is NOT mentioned on the invoice?",
+      "choices": {
+        "A": "The method of payment",
+        "B": "The receiver's address",
+        "C": "The number of each item bought",
+        "D": "The phone number of the company"
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        36,
+        37
+      ]
+    },
+    {
+      "number": 177,
+      "sourcePage": 37,
+      "text": "Which item did Mr. Heckbert pay the most money for?",
+      "choices": {
+        "A": "204-994",
+        "B": "606-544",
+        "C": "653-476",
+        "D": "766-121"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        36,
+        37
+      ]
+    },
+    {
+      "number": 178,
+      "sourcePage": 37,
+      "text": "What does Mr. Heckbert suggest about one of the items he ordered?",
+      "choices": {
+        "A": "He was overcharged for it.",
+        "B": "He cannot fit in it.",
+        "C": "He bought it on sale.",
+        "D": "He purchased it for his wife."
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        36,
+        37
+      ]
+    },
+    {
+      "number": 179,
+      "sourcePage": 37,
+      "text": "How much money would Mr. Heckbert like back?",
+      "choices": {
+        "A": "$15.00",
+        "B": "$14.69",
+        "C": "$22.00",
+        "D": "$27.20"
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        36,
+        37
+      ]
+    },
+    {
+      "number": 180,
+      "sourcePage": 37,
+      "text": "What does Mr. Heckbert send with his e-mail?",
+      "choices": {
+        "A": "A new clothing order",
+        "B": "A copy of his bill",
+        "C": "A picture of the faulty merchandise",
+        "D": "A file containing his credit card bill"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        36,
+        37
+      ]
+    },
+    {
+      "number": 181,
+      "sourcePage": 39,
+      "text": "What is the purpose of the notice?",
+      "choices": {
+        "A": "To mention a change in a schedule",
+        "B": "To invite company employees to an event",
+        "C": "To provide the contact information of some employees",
+        "D": "To announce the winners of some awards"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        38,
+        39
+      ]
+    },
+    {
+      "number": 182,
+      "sourcePage": 39,
+      "text": "The word \"confirm\" in line 15 of the notice is closest in meaning to:",
+      "choices": {
+        "A": "certify",
+        "B": "refute",
+        "C": "purchase",
+        "D": "admit"
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        38,
+        39
+      ]
+    },
+    {
+      "number": 183,
+      "sourcePage": 39,
+      "text": "According to the memo, when will the awards be given?",
+      "choices": {
+        "A": "At 6:30",
+        "B": "At 7:00",
+        "C": "At 8:30",
+        "D": "At 9:00"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        38,
+        39
+      ]
+    },
+    {
+      "number": 184,
+      "sourcePage": 39,
+      "text": "What does Mr. Wilson ask Ms. Standish to do?",
+      "choices": {
+        "A": "Go to the Garden Hotel in his place",
+        "B": "Send an e-mail to Ms. Snyder",
+        "C": "Arrange for a schedule to be changed",
+        "D": "Coordinate withMs. Parker"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        38,
+        39
+      ]
+    },
+    {
+      "number": 185,
+      "sourcePage": 39,
+      "text": "What is suggested about Todd Seager?",
+      "choices": {
+        "A": "He performed his duties poorly last year.",
+        "B": "He is one of this year's award winners.",
+        "C": "He is employed at the Garden Hotel.",
+        "D": "He works closely with Ms. Parker."
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        38,
+        39
+      ]
+    },
+    {
+      "number": 186,
+      "sourcePage": 41,
+      "text": "What kind of offer is being advertised?",
+      "choices": {
+        "A": "An opportunity to get a free service",
+        "B": "A discount on selected items",
+        "C": "A chance to exchange old items for new ones",
+        "D": "A free consultation regarding purchases"
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        40,
+        41
+      ]
+    },
+    {
+      "number": 187,
+      "sourcePage": 41,
+      "text": "What is mentioned about the offer?",
+      "choices": {
+        "A": "It is not applied to some types of items.",
+        "B": "It will last for the entire month of May.",
+        "C": "It requires shoppers to make a purchase.",
+        "D": "It is only being offered to members."
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        40,
+        41
+      ]
+    },
+    {
+      "number": 188,
+      "sourcePage": 41,
+      "text": "What is suggested on the invoice?",
+      "choices": {
+        "A": "Mr. Simpson can exchange the items that he bought.",
+        "B": "The toaster was purchased at a discounted price.",
+        "C": "A shipping fee was charged to deliver the items.",
+        "D": "The repairs on the video game console were worth less than $50."
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        40,
+        41
+      ]
+    },
+    {
+      "number": 189,
+      "sourcePage": 41,
+      "text": "Why did Mr. Simpson write the letter?",
+      "choices": {
+        "A": "To ask about getting an item he owns repaired",
+        "B": "To express his pleasure with the service he received",
+        "C": "To find out how his video game machine was fixed",
+        "D": "To complain about the quality of some repairs"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        40,
+        41
+      ]
+    },
+    {
+      "number": 190,
+      "sourcePage": 41,
+      "text": "What does Mr. Simpson indicate about Al's Electronics?",
+      "choices": {
+        "A": "It will have another special sale soon.",
+        "B": "It employs Jason Hampton as a manager.",
+        "C": "It was unable to repair his tape recorder.",
+        "D": "It overcharged him for an item that he bought."
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        40,
+        41
+      ]
+    },
+    {
+      "number": 191,
+      "sourcePage": 43,
+      "text": "For whom is the announcement most likely intended?",
+      "choices": {
+        "A": "Residents of St. Louis",
+        "B": "Bank employees",
+        "C": "Bank customers",
+        "D": "Mr. Brown's family"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        42,
+        43
+      ]
+    },
+    {
+      "number": 192,
+      "sourcePage": 43,
+      "text": "What is NOT mentioned about Mr. Brown?",
+      "choices": {
+        "A": "The employees at the bank like him.",
+        "B": "He has worked at the bank for four decades.",
+        "C": "He founded the branch in St. Louis.",
+        "D": "The bank has done well since he became vice president."
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        42,
+        43
+      ]
+    },
+    {
+      "number": 193,
+      "sourcePage": 43,
+      "text": "According to the memo, when will the retirement party be held?",
+      "choices": {
+        "A": "On November 7",
+        "B": "On November 21",
+        "C": "On November 27",
+        "D": "On November 28"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        42,
+        43
+      ]
+    },
+    {
+      "number": 194,
+      "sourcePage": 43,
+      "text": "Why did Ms. Walters write the e-mail?",
+      "choices": {
+        "A": "To suggest using express shipping",
+        "B": "To offer a discount on an ordered item",
+        "C": "To discuss a problem with an item",
+        "D": "To note that some items have been shipped"
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        42,
+        43
+      ]
+    },
+    {
+      "number": 195,
+      "sourcePage": 43,
+      "text": "What is suggested about the employees at the bank?",
+      "choices": {
+        "A": "They donated $3,500 for Mr. Brown's gift.",
+        "B": "They will all attend Mr. Brown's retirement party.",
+        "C": "They suggested what to buy to Ms. Rudolph.",
+        "D": "They are eager to meet their new vice president."
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        42,
+        43
+      ]
+    },
+    {
+      "number": 196,
+      "sourcePage": 45,
+      "text": "What is the purpose of the instructions?",
+      "choices": {
+        "A": "To describe how to repair a product",
+        "B": "To show how to assemble the product",
+        "C": "To demonstrate how to take apart a product",
+        "D": "To explain how to use a product"
+      },
+      "part": 7,
+      "correctAnswer": "D",
+      "contextPages": [
+        44,
+        45
+      ]
+    },
+    {
+      "number": 197,
+      "sourcePage": 45,
+      "text": "According to the first e-mail, how did Ms. Russell use the bowl improperly?",
+      "choices": {
+        "A": "She turned the handle the wrong way.",
+        "B": "She washed the bowl in her dishwasher.",
+        "C": "She added vegetables that were not cut.",
+        "D": "She failed to clean the bowl properly."
+      },
+      "part": 7,
+      "correctAnswer": "C",
+      "contextPages": [
+        44,
+        45
+      ]
+    },
+    {
+      "number": 198,
+      "sourcePage": 45,
+      "text": "What does Ms. Russell send along with her e-mail?",
+      "choices": {
+        "A": "A copy of a receipt",
+        "B": "A picture of the bowl",
+        "C": "A completed customer survey",
+        "D": "A copy of the instruction manual Stop! This is the end of the test. If you finish before time is called, you may go back to Parts 5, 6, and 7 and check your work."
+      },
+      "part": 7,
+      "correctAnswer": "A",
+      "contextPages": [
+        44,
+        45
+      ]
+    },
+    {
+      "number": 199,
+      "sourcePage": 45,
+      "text": "Why does Mr. Martin refuse to refund Ms. Russell's money?",
+      "choices": {
+        "A": "She did not buy the item from Sussex's website.",
+        "B": "Her use of the bowl voided the warranty.",
+        "C": "Sussex has a policy banning giving refunds.",
+        "D": "She bought the item more than one month ago."
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        44,
+        45
+      ]
+    },
+    {
+      "number": 200,
+      "sourcePage": 45,
+      "text": "What does Mr. Martin suggest that Ms. Russell do?",
+      "choices": {
+        "A": "Call him if she has any future problems",
+        "B": "Use a coupon to purchase another item",
+        "C": "Visit the store and request a refund",
+        "D": "Attempt to repair the bowl herself 73"
+      },
+      "part": 7,
+      "correctAnswer": "B",
+      "contextPages": [
+        44,
+        45
+      ]
+    }
+  ]
+}

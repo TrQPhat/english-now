@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOEIC Practice Tests</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">ENGLISH NOW</p>
+        <h1>Luyện đề TOEIC</h1>
+      </div>
+      <div class="header-actions">
+        <a class="practice-link" href="practice.html">Ôn tập xáo trộn</a>
+        <select id="test-picker" aria-label="Chọn bộ đề"></select>
+      </div>
+    </header>
+    <main>
+      <section class="paper" aria-label="Nội dung đề thi">
+        <div id="pages" class="pages"></div>
+      </section>
+      <aside class="answer-panel">
+        <div class="panel-heading">
+          <div><span id="answered-count">0</span>/200 câu đã làm</div>
+          <button id="submit" type="button">Nộp bài</button>
+        </div>
+        <div id="answers"></div>
+        <div id="result" class="result" hidden></div>
+      </aside>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
