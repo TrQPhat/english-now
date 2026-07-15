@@ -143,7 +143,10 @@ function renderGroup() {
             ? letter === question.correctAnswer ? " correct" : checked ? " wrong" : ""
             : "";
           const visibleText = group.part === 2 ? "" : `<span>${escapeHtml(text)}</span>`;
-          return `<label class="choice${resultClass}${group.part === 2 ? " listening-choice" : ""}"><input type="radio" name="${key}" value="${letter}" ${checked}><b>${letter}</b>${visibleText}</label>`;
+          const resultMarker = revealAnswers && checked
+            ? `<span class="result-marker ${letter === question.correctAnswer ? "marker-correct" : "marker-wrong"}" aria-label="${letter === question.correctAnswer ? "Đúng" : "Sai"}">${letter === question.correctAnswer ? "✓" : "✕"}</span>`
+            : "";
+          return `<label class="choice${resultClass}${group.part === 2 ? " listening-choice" : ""}"><input type="radio" name="${key}" value="${letter}" ${checked}><b>${letter}</b>${visibleText}${resultMarker}</label>`;
         }).join("")}</div>${revealAnswers ? (() => {
           const selected = session.answers[key];
           const isCorrect = selected === question.correctAnswer;
