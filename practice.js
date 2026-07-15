@@ -6,6 +6,7 @@ const testOptionsRoot = document.querySelector("#test-options");
 const startButton = document.querySelector("#start");
 const resumeButton = document.querySelector("#resume");
 const finishButton = document.querySelector("#finish");
+const soundToggle = document.querySelector("#sound-toggle");
 const previousButton = document.querySelector("#previous");
 const nextButton = document.querySelector("#next");
 const groupCard = document.querySelector("#group-card");
@@ -15,6 +16,7 @@ const progressBar = document.querySelector("#progress-bar");
 const errorRoot = document.querySelector("#setup-error");
 
 const STORAGE_KEY = "toeic:mixed-quiz";
+const SOUND_KEY = "toeic:feedback-sound";
 const partNames = {
   1: "Photographs", 2: "Question–Response", 3: "Conversations",
   4: "Talks", 5: "Incomplete Sentences", 6: "Text Completion", 7: "Reading",
@@ -24,6 +26,47 @@ let groups = [];
 let questionsByTest = {};
 let session = null;
 let submitted = false;
+let soundEnabled = localStorage.getItem(SOUND_KEY) !== "off";
+let audioContext = null;
+
+function updateSoundToggle() {
+  soundToggle.textContent = soundEnabled ? "🔊" : "🔇";
+  soundToggle.title = soundEnabled ? "Tắt âm thanh" : "Bật âm thanh";
+  soundToggle.setAttribute("aria-label", soundToggle.title);
+  soundToggle.setAttribute("aria-pressed", String(soundEnabled));
+}
+
+function scheduleTone(context, frequency, start, duration, type = "sine", endFrequency = frequency) {
+  const oscillator = context.createOscillator();
+  const gain = context.createGain();
+  oscillator.type = type;
+  oscillator.frequency.setValueAtTime(frequency, start);
+  oscillator.frequency.exponentialRampToValueAtTime(endFrequency, start + duration);
+  gain.gain.setValueAtTime(0.0001, start);
+  gain.gain.exponentialRampToValueAtTime(0.12, start + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+  oscillator.connect(gain).connect(context.destination);
+  oscillator.start(start);
+  oscillator.stop(start + duration + 0.02);
+}
+
+function playFeedbackSound(isCorrect) {
+  if (!soundEnabled) return;
+  try {
+    audioContext ??= new (window.AudioContext || window.webkitAudioContext)();
+    if (audioContext.state === "suspended") audioContext.resume();
+    const start = audioContext.currentTime + 0.01;
+    if (isCorrect) {
+      scheduleTone(audioContext, 523.25, start, 0.16);
+      scheduleTone(audioContext, 659.25, start + 0.09, 0.18);
+      scheduleTone(audioContext, 783.99, start + 0.18, 0.22);
+    } else {
+      scheduleTone(audioContext, 220, start, 0.3, "triangle", 130);
+    }
+  } catch {
+    // Quiz feedback remains usable when Web Audio is unavailable.
+  }
+}
 
 function escapeHtml(value) {
   return String(value)
@@ -296,8 +339,12 @@ previousButton.addEventListener("click", () => {
 nextButton.addEventListener("click", () => {
   const group = currentGroup();
   if (!session.checkedGroups.includes(group.id)) {
+    const allCorrect = questionsFor(group).every((question) =>
+      session.answers[questionKey(group.testId, question.number)] === question.correctAnswer
+    );
     session.checkedGroups.push(group.id);
     saveSession();
+    playFeedbackSound(allCorrect);
     renderGroup();
   } else if (session.currentIndex < session.unitIds.length - 1) {
     session.currentIndex += 1;
@@ -306,6 +353,12 @@ nextButton.addEventListener("click", () => {
   } else {
     finishQuiz();
   }
+});
+
+soundToggle.addEventListener("click", () => {
+  soundEnabled = !soundEnabled;
+  localStorage.setItem(SOUND_KEY, soundEnabled ? "on" : "off");
+  updateSoundToggle();
 });
 
 finishButton.addEventListener("click", () => {
@@ -325,6 +378,7 @@ const [groupData, ...testData] = await Promise.all([
 groups = groupData.groups;
 questionsByTest = Object.fromEntries(testData.map((data) => [data.id, data.questions.map((question) => ({ ...question, pagePattern: data.pagePattern }))]));
 renderOptions();
+updateSoundToggle();
 
 const requestedParts = new URLSearchParams(window.location.search).get("parts");
 const requestedTests = new URLSearchParams(window.location.search).get("tests");

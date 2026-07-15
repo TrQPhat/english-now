@@ -39,15 +39,23 @@ for (let attempt = 0; attempt < 30; attempt += 1) {
 const labels = await evaluate("[...document.querySelectorAll('.choice')].map(item => item.innerText.trim())");
 if (labels.join("") !== "ABC") throw new Error(`Part 2 leaked answer text: ${JSON.stringify(labels)}`);
 
+await evaluate(`window.__toneCount = 0; window.AudioContext = class {
+  constructor() { this.state = 'running'; this.currentTime = 0; this.destination = {}; }
+  resume() {}
+  createOscillator() { return { frequency: { setValueAtTime() {}, exponentialRampToValueAtTime() {} }, connect(target) { return target; }, start() { window.__toneCount += 1; }, stop() {} }; }
+  createGain() { return { gain: { setValueAtTime() {}, exponentialRampToValueAtTime() {} }, connect() { return this; } }; }
+}; true`);
 await evaluate("document.querySelector('.choice input').click(); document.querySelector('#next').click(); true");
 const feedback = await evaluate("document.querySelector('.answer-feedback')?.innerText || ''");
 const nextLabel = await evaluate("document.querySelector('#next').innerText");
 const disabled = await evaluate("[...document.querySelectorAll('.choice input')].every(item => item.disabled)");
+const toneCount = await evaluate("window.__toneCount");
 
 if (!feedback.includes("Đáp án đúng:")) throw new Error(`Feedback is missing: ${feedback}`);
 if (nextLabel !== "Nhóm tiếp") throw new Error(`Unexpected next label: ${nextLabel}`);
 if (!disabled) throw new Error("Answers remain editable after checking");
+if (toneCount < 1) throw new Error("Feedback sound was not played");
 
-console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} next=${nextLabel}`);
+console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} next=${nextLabel} tones=${toneCount}`);
 console.log(feedback);
 socket.close();
