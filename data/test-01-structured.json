@@ -192,7 +192,7 @@
         "C": "No, I'm not on the phone."
       },
       "part": 2,
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "contextPages": [
         1
       ]
@@ -207,7 +207,7 @@
         "C": "There's one right down the street."
       },
       "part": 2,
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "contextPages": [
         2
       ]
@@ -222,7 +222,7 @@
         "C": "Around forty minutes ago."
       },
       "part": 2,
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "contextPages": [
         2
       ]
@@ -237,7 +237,7 @@
         "C": "No, I don't want any coffee."
       },
       "part": 2,
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "contextPages": [
         2
       ]
@@ -267,7 +267,7 @@
         "C": "Sorry, but I've never heard of it."
       },
       "part": 2,
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "contextPages": [
         2
       ]
@@ -282,7 +282,7 @@
         "C": "We will accept the offer tomorrow. 19Will Martin conduct the interviews, or is John doing them?"
       },
       "part": 2,
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "contextPages": [
         2
       ]
@@ -297,7 +297,7 @@
         "C": "Yes, that's correct."
       },
       "part": 2,
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "contextPages": [
         6
       ]
@@ -327,7 +327,7 @@
         "C": "No, I haven't located her yet."
       },
       "part": 2,
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "contextPages": [
         6
       ]
@@ -357,7 +357,7 @@
         "C": "Go out exit number nine."
       },
       "part": 2,
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "contextPages": [
         6
       ]
@@ -372,7 +372,7 @@
         "C": "No, I haven't left the office yet."
       },
       "part": 2,
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "contextPages": [
         2
       ]
@@ -387,7 +387,7 @@
         "C": "No, I haven't left the office yet."
       },
       "part": 2,
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "contextPages": [
         6
       ]
@@ -402,7 +402,7 @@
         "C": "Friday's a busy day for her."
       },
       "part": 2,
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "contextPages": [
         2
       ]
@@ -432,7 +432,7 @@
         "C": "Do you know the telephone number?"
       },
       "part": 2,
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "contextPages": [
         2
       ]
@@ -462,7 +462,7 @@
         "C": "On the morning of the thirtieth."
       },
       "part": 2,
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "contextPages": [
         6
       ]
