@@ -5,8 +5,6 @@ const optionsRoot = document.querySelector("#part-options");
 const testOptionsRoot = document.querySelector("#test-options");
 const startButton = document.querySelector("#start");
 const resumeButton = document.querySelector("#resume");
-const finishButton = document.querySelector("#finish");
-const soundToggle = document.querySelector("#sound-toggle");
 const previousButton = document.querySelector("#previous");
 const nextButton = document.querySelector("#next");
 const groupCard = document.querySelector("#group-card");
@@ -16,7 +14,6 @@ const progressBar = document.querySelector("#progress-bar");
 const errorRoot = document.querySelector("#setup-error");
 
 const STORAGE_KEY = "toeic:mixed-quiz";
-const SOUND_KEY = "toeic:feedback-sound";
 const partNames = {
   1: "Photographs", 2: "Question–Response", 3: "Conversations",
   4: "Talks", 5: "Incomplete Sentences", 6: "Text Completion", 7: "Reading",
@@ -26,15 +23,7 @@ let groups = [];
 let questionsByTest = {};
 let session = null;
 let submitted = false;
-let soundEnabled = localStorage.getItem(SOUND_KEY) !== "off";
 let audioContext = null;
-
-function updateSoundToggle() {
-  soundToggle.textContent = soundEnabled ? "🔊" : "🔇";
-  soundToggle.title = soundEnabled ? "Tắt âm thanh" : "Bật âm thanh";
-  soundToggle.setAttribute("aria-label", soundToggle.title);
-  soundToggle.setAttribute("aria-pressed", String(soundEnabled));
-}
 
 function scheduleTone(context, frequency, start, duration, type = "sine", endFrequency = frequency) {
   const oscillator = context.createOscillator();
@@ -43,18 +32,20 @@ function scheduleTone(context, frequency, start, duration, type = "sine", endFre
   oscillator.frequency.setValueAtTime(frequency, start);
   oscillator.frequency.exponentialRampToValueAtTime(endFrequency, start + duration);
   gain.gain.setValueAtTime(0.0001, start);
-  gain.gain.exponentialRampToValueAtTime(0.12, start + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.18, start + 0.015);
   gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
   oscillator.connect(gain).connect(context.destination);
   oscillator.start(start);
   oscillator.stop(start + duration + 0.02);
 }
 
-function playFeedbackSound(isCorrect) {
-  if (!soundEnabled) return;
+async function playFeedbackSound(isCorrect) {
   try {
-    audioContext ??= new (window.AudioContext || window.webkitAudioContext)();
-    if (audioContext.state === "suspended") audioContext.resume();
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) return;
+    audioContext ??= new AudioContextClass();
+    if (audioContext.state === "suspended") await audioContext.resume();
+    if (audioContext.state !== "running") return;
     const start = audioContext.currentTime + 0.01;
     if (isCorrect) {
       scheduleTone(audioContext, 523.25, start, 0.16);
@@ -235,8 +226,6 @@ function showRunner() {
   setup.hidden = true;
   results.hidden = true;
   runner.hidden = false;
-  finishButton.hidden = false;
-  finishButton.textContent = "Nộp bài";
   submitted = false;
   renderGroup();
 }
@@ -256,7 +245,6 @@ function finishQuiz() {
   const total = Object.values(breakdown).reduce((sum, item) => sum + item.total, 0);
   localStorage.removeItem(STORAGE_KEY);
   runner.hidden = true;
-  finishButton.hidden = true;
   results.hidden = false;
   results.innerHTML = `<p class="kicker">KẾT QUẢ</p><h2>Hoàn thành phiên ôn tập</h2>
     <div class="score">${correct}/${total}</div>
@@ -268,8 +256,6 @@ function finishQuiz() {
     session.currentIndex = 0;
     results.hidden = true;
     runner.hidden = false;
-    finishButton.hidden = false;
-    finishButton.textContent = "Xem kết quả";
     renderGroup();
   });
   document.querySelector("#new-quiz").addEventListener("click", () => {
@@ -344,29 +330,13 @@ nextButton.addEventListener("click", () => {
     );
     session.checkedGroups.push(group.id);
     saveSession();
-    playFeedbackSound(allCorrect);
+    void playFeedbackSound(allCorrect);
     renderGroup();
   } else if (session.currentIndex < session.unitIds.length - 1) {
     session.currentIndex += 1;
     saveSession();
     renderGroup();
   } else {
-    finishQuiz();
-  }
-});
-
-soundToggle.addEventListener("click", () => {
-  soundEnabled = !soundEnabled;
-  localStorage.setItem(SOUND_KEY, soundEnabled ? "on" : "off");
-  updateSoundToggle();
-});
-
-finishButton.addEventListener("click", () => {
-  if (submitted) {
-    runner.hidden = true;
-    results.hidden = false;
-    finishButton.hidden = true;
-  } else if (window.confirm("Nộp bài và xem kết quả phiên ôn tập?")) {
     finishQuiz();
   }
 });
@@ -378,7 +348,6 @@ const [groupData, ...testData] = await Promise.all([
 groups = groupData.groups;
 questionsByTest = Object.fromEntries(testData.map((data) => [data.id, data.questions.map((question) => ({ ...question, pagePattern: data.pagePattern }))]));
 renderOptions();
-updateSoundToggle();
 
 const requestedParts = new URLSearchParams(window.location.search).get("parts");
 const requestedTests = new URLSearchParams(window.location.search).get("tests");
