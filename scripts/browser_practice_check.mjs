@@ -1,12 +1,14 @@
 const cdpPort = process.env.CDP_PORT || "9222";
 const pages = await fetch(`http://127.0.0.1:${cdpPort}/json`).then((response) => response.json());
+const targetParts = process.env.TARGET_PARTS;
 const practicePages = pages.filter((item) => {
   if (item.type !== "page") return false;
   const pathname = new URL(item.url).pathname;
   return pathname.endsWith("/practice.html") || pathname.endsWith("/practice");
 });
-const page = practicePages.find((item) => item.url.includes("parts=2")) || practicePages[0];
+const page = practicePages.find((item) => !targetParts || new URL(item.url).searchParams.get("parts") === targetParts) || practicePages[0];
 if (!page) throw new Error("Practice page was not found in Edge debugging targets");
+const selectedParts = new URL(page.url).searchParams.get("parts")?.split(",").map(Number) || [];
 
 const socket = new WebSocket(page.webSocketDebuggerUrl);
 await new Promise((resolve, reject) => {
@@ -42,10 +44,48 @@ for (let attempt = 0; attempt < 30; attempt += 1) {
   await new Promise((resolve) => setTimeout(resolve, 100));
 }
 
-const labels = await evaluate("[...document.querySelectorAll('.choice')].map(item => item.innerText.trim())");
-if (labels.join("") !== "ABC") throw new Error(`Part 2 leaked answer text: ${JSON.stringify(labels)}`);
+const labels = await evaluate("[...document.querySelector('.quiz-question').querySelectorAll('.choice b')].map(item => item.innerText.trim())");
+const expectedLabels = selectedParts[0] === 2 ? "ABC" : "ABCD";
+if (labels.join("") !== expectedLabels) throw new Error(`Unexpected choice labels: ${JSON.stringify(labels)}`);
+if (selectedParts[0] === 2) {
+  const visibleChoiceText = await evaluate("document.querySelectorAll('.choice > span:not(.result-marker)').length");
+  if (visibleChoiceText) throw new Error("Part 2 leaked answer text");
+}
 const removedControls = await evaluate("Boolean(document.querySelector('#sound-toggle, #finish'))");
 if (removedControls) throw new Error("Removed sound or submit control is still rendered");
+
+const choiceOrderAudit = await evaluate(`(async () => {
+  const storedSession = JSON.parse(localStorage.getItem('toeic:mixed-quiz'));
+  const entries = Object.entries(storedSession.choiceOrders || {});
+  if (!entries.length) return { count: 0, valid: true, allChanged: true };
+  const tests = await Promise.all(['01', '02', '03'].map(id =>
+    fetch(\`data/test-\${id}-structured.json\`).then(response => response.json())
+  ));
+  const questions = Object.fromEntries(tests.flatMap(test =>
+    test.questions.map(question => [\`\${test.id}-question-\${question.number}\`, question])
+  ));
+  return {
+    count: entries.length,
+    valid: entries.every(([key, order]) => {
+      const letters = Object.keys(questions[key].choices);
+      return order.length === letters.length && new Set(order).size === letters.length
+        && order.every(letter => letters.includes(letter));
+    }),
+    allChanged: entries.every(([key, order]) => {
+      const letters = Object.keys(questions[key].choices);
+      return order.some((letter, index) => letter !== letters[index]);
+    }),
+  };
+})()`);
+if (!choiceOrderAudit.valid || !choiceOrderAudit.allChanged) {
+  throw new Error(`Invalid choice-order audit: ${JSON.stringify(choiceOrderAudit)}`);
+}
+if (selectedParts.some((part) => part >= 3) && !choiceOrderAudit.count) {
+  throw new Error("Parts 3-7 did not create shuffled choice orders");
+}
+if (selectedParts.every((part) => part < 3) && choiceOrderAudit.count) {
+  throw new Error("Parts 1-2 should retain their original choice order");
+}
 
 if (process.env.REAL_AUDIO === "1") {
   await evaluate(`window.__toneCount = 0; window.__audioContexts = [];
@@ -68,16 +108,24 @@ if (process.env.REAL_AUDIO === "1") {
   }; true`);
 }
 const initialProgress = await evaluate("document.querySelector('#progress-label').innerText");
-await evaluate(`(async () => {
-  const number = Number(document.querySelector('.source').innerText.split('·').pop().trim());
-  const data = await fetch('data/test-01-structured.json').then(response => response.json());
-  const correctAnswer = data.questions.find(question => question.number === number).correctAnswer;
-  document.querySelector(\`.choice input[value="\${correctAnswer}"]\`).click();
+const correctDisplayLetters = await evaluate(`(async () => {
+  const sections = [...document.querySelectorAll('.quiz-question')];
+  const displayLetters = [];
+  for (const section of sections) {
+    const source = section.querySelector('.source').innerText.split('·').map(value => value.trim());
+    const testId = source[0].match(/\\d+/)[0].padStart(2, '0');
+    const number = Number(source[1]);
+    const data = await fetch(\`data/test-\${testId}-structured.json\`).then(response => response.json());
+    const correctAnswer = data.questions.find(question => question.number === number).correctAnswer;
+    const input = section.querySelector(\`.choice input[value="\${correctAnswer}"]\`);
+    displayLetters.push(input.closest('.choice').querySelector('b').innerText);
+    input.click();
+  }
   document.querySelector('#next').click();
-  return true;
+  return displayLetters;
 })()`, true);
 await new Promise((resolve) => setTimeout(resolve, 300));
-const feedback = await evaluate("document.querySelector('.answer-feedback')?.innerText || ''");
+const feedback = await evaluate("[...document.querySelectorAll('.answer-feedback')].map(item => item.innerText)");
 const nextLabel = await evaluate("document.querySelector('#next').innerText");
 const disabled = await evaluate("[...document.querySelectorAll('.choice input')].every(item => item.disabled)");
 const toneCount = await evaluate("window.__toneCount");
@@ -85,7 +133,9 @@ const audioStates = process.env.REAL_AUDIO === "1"
   ? await evaluate("window.__audioContexts.map(context => context.state)")
   : [];
 
-if (!feedback.includes("Đáp án đúng:")) throw new Error(`Feedback is missing: ${feedback}`);
+if (!feedback.every((text, index) => text.includes(`Đáp án đúng: ${correctDisplayLetters[index]}`))) {
+  throw new Error(`Feedback/display mapping is wrong: ${JSON.stringify(feedback)}`);
+}
 if (nextLabel !== "Đang chuyển…") throw new Error(`Unexpected next label: ${nextLabel}`);
 if (!disabled) throw new Error("Answers remain editable after checking");
 if (toneCount !== 3) throw new Error(`Correct feedback should play three tones, got ${toneCount}`);
@@ -98,10 +148,12 @@ const advancedProgress = await evaluate("document.querySelector('#progress-label
 if (advancedProgress === initialProgress) throw new Error("Correct answer did not auto-advance");
 
 await evaluate(`(async () => {
-  const number = Number(document.querySelector('.source').innerText.split('·').pop().trim());
-  const data = await fetch('data/test-01-structured.json').then(response => response.json());
+  const source = document.querySelector('.source').innerText.split('·').map(value => value.trim());
+  const testId = source[0].match(/\\d+/)[0].padStart(2, '0');
+  const number = Number(source[1]);
+  const data = await fetch(\`data/test-\${testId}-structured.json\`).then(response => response.json());
   const correctAnswer = data.questions.find(question => question.number === number).correctAnswer;
-  const wrongAnswer = ['A', 'B', 'C'].find(letter => letter !== correctAnswer);
+  const wrongAnswer = [...document.querySelectorAll('.choice input')].map(input => input.value).find(letter => letter !== correctAnswer);
   document.querySelector(\`.choice input[value="\${wrongAnswer}"]\`).click();
   document.querySelector('#next').click();
   return true;
@@ -114,6 +166,25 @@ if (!wrongFeedback.startsWith("Sai.")) throw new Error(`Wrong feedback is missin
 if (wrongProgress !== advancedProgress) throw new Error("Wrong answer should remain on the current group");
 if (finalToneCount !== toneCount + 1) throw new Error("Wrong feedback should play one warning tone");
 
-console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} next=${nextLabel} progress=${initialProgress}->${advancedProgress} tones=${toneCount}+1 audio=${audioStates.join('/') || 'mock'}`);
-console.log(feedback);
+const ordersBeforeReload = await evaluate("JSON.stringify(JSON.parse(localStorage.getItem('toeic:mixed-quiz')).choiceOrders)");
+await evaluate("history.replaceState({}, '', '/practice'); true");
+await command("Page.reload");
+for (let attempt = 0; attempt < 50; attempt += 1) {
+  try {
+    if (await evaluate("document.readyState === 'complete' && Boolean(document.querySelector('#resume'))")) break;
+  } catch {
+    // The execution context is briefly unavailable while the page reloads.
+  }
+  await new Promise((resolve) => setTimeout(resolve, 100));
+}
+await evaluate("document.querySelector('#resume').click(); true", true);
+for (let attempt = 0; attempt < 30; attempt += 1) {
+  if (await evaluate("document.querySelectorAll('.choice').length")) break;
+  await new Promise((resolve) => setTimeout(resolve, 100));
+}
+const ordersAfterReload = await evaluate("JSON.stringify(JSON.parse(localStorage.getItem('toeic:mixed-quiz')).choiceOrders)");
+if (ordersAfterReload !== ordersBeforeReload) throw new Error("Choice order changed after reloading and resuming the session");
+
+console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} orders=${choiceOrderAudit.count} stable=reload next=${nextLabel} progress=${initialProgress}->${advancedProgress} tones=${toneCount}+1 audio=${audioStates.join('/') || 'mock'}`);
+console.log(feedback[0]);
 socket.close();

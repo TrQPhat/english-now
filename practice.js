@@ -113,13 +113,48 @@ function selectedTests() {
   return [...testOptionsRoot.querySelectorAll("input:checked")].map((input) => input.value);
 }
 
+function buildChoiceOrders(unitIds, seed, existingOrders = {}) {
+  const orders = {};
+  for (const id of unitIds) {
+    const group = groups.find((item) => item.id === id);
+    if (group.part < 3) continue;
+    for (const question of questionsFor(group)) {
+      const key = questionKey(group.testId, question.number);
+      const letters = Object.keys(question.choices);
+      const savedOrder = existingOrders[key];
+      const isValid = Array.isArray(savedOrder)
+        && savedOrder.length === letters.length
+        && savedOrder.every((letter) => letters.includes(letter))
+        && new Set(savedOrder).size === letters.length;
+      if (isValid) {
+        orders[key] = savedOrder;
+        continue;
+      }
+      const order = shuffled(letters, randomGenerator(`${seed}:choices:${key}`));
+      if (order.every((letter, index) => letter === letters[index])) order.push(order.shift());
+      orders[key] = order;
+    }
+  }
+  return orders;
+}
+
 function buildSession(parts, tests) {
   const seed = `${Date.now()}-${Math.random()}`;
   const random = randomGenerator(seed);
   const unitIds = parts.sort((a, b) => a - b).flatMap((part) =>
     shuffled(groups.filter((group) => group.part === part && tests.includes(group.testId)), random).map((group) => group.id)
   );
-  return { version: 3, seed, selectedParts: parts, selectedTests: tests, unitIds, currentIndex: 0, answers: {}, checkedGroups: [] };
+  return {
+    version: 4,
+    seed,
+    selectedParts: parts,
+    selectedTests: tests,
+    unitIds,
+    currentIndex: 0,
+    answers: {},
+    checkedGroups: [],
+    choiceOrders: buildChoiceOrders(unitIds, seed),
+  };
 }
 
 function currentGroup() {
@@ -130,6 +165,17 @@ function currentGroup() {
 function questionsFor(group) {
   const source = questionsByTest[group.testId];
   return group.questionNumbers.map((number) => source[number - 1]);
+}
+
+function choiceOrderFor(group, question) {
+  const originalOrder = Object.keys(question.choices);
+  if (group.part < 3) return originalOrder;
+  return session.choiceOrders[questionKey(group.testId, question.number)] || originalOrder;
+}
+
+function displayLetterFor(group, question, originalLetter) {
+  const index = choiceOrderFor(group, question).indexOf(originalLetter);
+  return String.fromCharCode(65 + index);
 }
 
 function pageUrl(group, page) {
@@ -172,21 +218,24 @@ function renderGroup() {
       const key = questionKey(group.testId, question.number);
       return `<section class="quiz-question">
         <h3><span class="source">${testLabel} · ${question.number}</span><br>${escapeHtml(question.text)}</h3>
-        <div class="choices">${Object.entries(question.choices).map(([letter, text]) => {
-          const checked = session.answers[key] === letter ? "checked" : "";
+        <div class="choices">${choiceOrderFor(group, question).map((originalLetter, index) => {
+          const displayLetter = String.fromCharCode(65 + index);
+          const text = question.choices[originalLetter];
+          const checked = session.answers[key] === originalLetter ? "checked" : "";
           const resultClass = revealAnswers
-            ? letter === question.correctAnswer ? " correct" : checked ? " wrong" : ""
+            ? originalLetter === question.correctAnswer ? " correct" : checked ? " wrong" : ""
             : "";
           const visibleText = group.part === 2 ? "" : `<span>${escapeHtml(text)}</span>`;
           const resultMarker = revealAnswers && checked
-            ? `<span class="result-marker ${letter === question.correctAnswer ? "marker-correct" : "marker-wrong"}" aria-label="${letter === question.correctAnswer ? "Đúng" : "Sai"}">${letter === question.correctAnswer ? "✓" : "✕"}</span>`
+            ? `<span class="result-marker ${originalLetter === question.correctAnswer ? "marker-correct" : "marker-wrong"}" aria-label="${originalLetter === question.correctAnswer ? "Đúng" : "Sai"}">${originalLetter === question.correctAnswer ? "✓" : "✕"}</span>`
             : "";
-          return `<label class="choice${resultClass}${group.part === 2 ? " listening-choice" : ""}"><input type="radio" name="${key}" value="${letter}" ${checked}><b>${letter}</b>${visibleText}${resultMarker}</label>`;
+          return `<label class="choice${resultClass}${group.part === 2 ? " listening-choice" : ""}"><input type="radio" name="${key}" value="${originalLetter}" ${checked}><b>${displayLetter}</b>${visibleText}${resultMarker}</label>`;
         }).join("")}</div>${revealAnswers ? (() => {
           const selected = session.answers[key];
           const isCorrect = selected === question.correctAnswer;
           const status = isCorrect ? "Đúng" : selected ? "Sai" : "Chưa trả lời";
-          return `<p class="answer-feedback ${isCorrect ? "feedback-correct" : "feedback-wrong"}"><strong>${status}.</strong> Đáp án đúng: <b>${question.correctAnswer}</b> — ${escapeHtml(question.choices[question.correctAnswer])}</p>`;
+          const correctDisplayLetter = displayLetterFor(group, question, question.correctAnswer);
+          return `<p class="answer-feedback ${isCorrect ? "feedback-correct" : "feedback-wrong"}"><strong>${status}.</strong> Đáp án đúng: <b>${correctDisplayLetter}</b> — ${escapeHtml(question.choices[question.correctAnswer])}</p>`;
         })() : ""}
       </section>`;
     }).join("")}`;
@@ -312,6 +361,9 @@ startButton.addEventListener("click", () => {
 resumeButton.addEventListener("click", () => {
   session = JSON.parse(localStorage.getItem(STORAGE_KEY));
   session.checkedGroups ??= [];
+  session.choiceOrders = buildChoiceOrders(session.unitIds, session.seed, session.choiceOrders);
+  session.version = 4;
+  saveSession();
   showRunner();
 });
 
