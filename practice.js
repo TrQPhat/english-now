@@ -14,6 +14,7 @@ const progressBar = document.querySelector("#progress-bar");
 const errorRoot = document.querySelector("#setup-error");
 
 const STORAGE_KEY = "toeic:mixed-quiz";
+const AUTO_ADVANCE_DELAY = 900;
 const partNames = {
   1: "Photographs", 2: "Question–Response", 3: "Conversations",
   4: "Talks", 5: "Incomplete Sentences", 6: "Text Completion", 7: "Reading",
@@ -32,7 +33,7 @@ function scheduleTone(context, frequency, start, duration, type = "sine", endFre
   oscillator.frequency.setValueAtTime(frequency, start);
   oscillator.frequency.exponentialRampToValueAtTime(endFrequency, start + duration);
   gain.gain.setValueAtTime(0.0001, start);
-  gain.gain.exponentialRampToValueAtTime(0.18, start + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.26, start + 0.015);
   gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
   oscillator.connect(gain).connect(context.destination);
   oscillator.start(start);
@@ -332,6 +333,24 @@ nextButton.addEventListener("click", () => {
     saveSession();
     void playFeedbackSound(allCorrect);
     renderGroup();
+    if (allCorrect) {
+      previousButton.disabled = true;
+      nextButton.disabled = true;
+      nextButton.textContent = session.currentIndex === session.unitIds.length - 1
+        ? "Đang hoàn thành…"
+        : "Đang chuyển…";
+      const checkedGroupId = group.id;
+      window.setTimeout(() => {
+        if (currentGroup().id !== checkedGroupId) return;
+        if (session.currentIndex < session.unitIds.length - 1) {
+          session.currentIndex += 1;
+          saveSession();
+          renderGroup();
+        } else {
+          finishQuiz();
+        }
+      }, AUTO_ADVANCE_DELAY);
+    }
   } else if (session.currentIndex < session.unitIds.length - 1) {
     session.currentIndex += 1;
     saveSession();

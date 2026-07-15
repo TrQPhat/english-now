@@ -67,8 +67,16 @@ if (process.env.REAL_AUDIO === "1") {
     createGain() { return { gain: { setValueAtTime() {}, exponentialRampToValueAtTime() {} }, connect() { return this; } }; }
   }; true`);
 }
-await evaluate("document.querySelector('.choice input').click(); document.querySelector('#next').click(); true", true);
-await new Promise((resolve) => setTimeout(resolve, 500));
+const initialProgress = await evaluate("document.querySelector('#progress-label').innerText");
+await evaluate(`(async () => {
+  const number = Number(document.querySelector('.source').innerText.split('·').pop().trim());
+  const data = await fetch('data/test-01-structured.json').then(response => response.json());
+  const correctAnswer = data.questions.find(question => question.number === number).correctAnswer;
+  document.querySelector(\`.choice input[value="\${correctAnswer}"]\`).click();
+  document.querySelector('#next').click();
+  return true;
+})()`, true);
+await new Promise((resolve) => setTimeout(resolve, 300));
 const feedback = await evaluate("document.querySelector('.answer-feedback')?.innerText || ''");
 const nextLabel = await evaluate("document.querySelector('#next').innerText");
 const disabled = await evaluate("[...document.querySelectorAll('.choice input')].every(item => item.disabled)");
@@ -78,13 +86,34 @@ const audioStates = process.env.REAL_AUDIO === "1"
   : [];
 
 if (!feedback.includes("Đáp án đúng:")) throw new Error(`Feedback is missing: ${feedback}`);
-if (nextLabel !== "Nhóm tiếp") throw new Error(`Unexpected next label: ${nextLabel}`);
+if (nextLabel !== "Đang chuyển…") throw new Error(`Unexpected next label: ${nextLabel}`);
 if (!disabled) throw new Error("Answers remain editable after checking");
-if (toneCount < 1) throw new Error("Feedback sound was not played");
+if (toneCount !== 3) throw new Error(`Correct feedback should play three tones, got ${toneCount}`);
 if (process.env.REAL_AUDIO === "1" && !audioStates.includes("running")) {
   throw new Error(`AudioContext did not enter running state: ${audioStates.join(',')}`);
 }
 
-console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} next=${nextLabel} tones=${toneCount} audio=${audioStates.join('/') || 'mock'}`);
+await new Promise((resolve) => setTimeout(resolve, 800));
+const advancedProgress = await evaluate("document.querySelector('#progress-label').innerText");
+if (advancedProgress === initialProgress) throw new Error("Correct answer did not auto-advance");
+
+await evaluate(`(async () => {
+  const number = Number(document.querySelector('.source').innerText.split('·').pop().trim());
+  const data = await fetch('data/test-01-structured.json').then(response => response.json());
+  const correctAnswer = data.questions.find(question => question.number === number).correctAnswer;
+  const wrongAnswer = ['A', 'B', 'C'].find(letter => letter !== correctAnswer);
+  document.querySelector(\`.choice input[value="\${wrongAnswer}"]\`).click();
+  document.querySelector('#next').click();
+  return true;
+})()`, true);
+await new Promise((resolve) => setTimeout(resolve, 400));
+const wrongFeedback = await evaluate("document.querySelector('.answer-feedback')?.innerText || ''");
+const wrongProgress = await evaluate("document.querySelector('#progress-label').innerText");
+const finalToneCount = await evaluate("window.__toneCount");
+if (!wrongFeedback.startsWith("Sai.")) throw new Error(`Wrong feedback is missing: ${wrongFeedback}`);
+if (wrongProgress !== advancedProgress) throw new Error("Wrong answer should remain on the current group");
+if (finalToneCount !== toneCount + 1) throw new Error("Wrong feedback should play one warning tone");
+
+console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} next=${nextLabel} progress=${initialProgress}->${advancedProgress} tones=${toneCount}+1 audio=${audioStates.join('/') || 'mock'}`);
 console.log(feedback);
 socket.close();
