@@ -17,12 +17,14 @@ main { width: min(1100px, calc(100% - 28px)); margin: 30px auto 60px; }
 .card { padding: clamp(20px, 4vw, 42px); background: white; border: 1px solid #dce3dd; border-radius: 16px; box-shadow: 0 8px 30px #21352912; }
 .setup { max-width: 880px; margin: auto; }
 .intro { max-width: 680px; color: #5c6961; line-height: 1.6; }
-.part-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 26px 0; }
-.part-option { display: grid; grid-template-columns: auto 1fr; gap: 11px; padding: 16px; border: 1px solid #d8e0d9; border-radius: 11px; cursor: pointer; }
-.part-option:has(input:checked) { border-color: #3b7957; background: #eff7f1; }
-.part-option input { width: 19px; height: 19px; accent-color: #28704b; }
-.part-option strong, .part-option small { display: block; }
-.part-option small { margin-top: 4px; color: #69766e; }
+.option-section { min-width: 0; margin: 24px 0; padding: 0; border: 0; }
+.option-section legend { margin-bottom: 12px; font-weight: 850; }
+.part-options, .test-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.part-option, .test-option { display: grid; grid-template-columns: auto 1fr; gap: 11px; padding: 16px; border: 1px solid #d8e0d9; border-radius: 11px; cursor: pointer; }
+.part-option:has(input:checked), .test-option:has(input:checked) { border-color: #3b7957; background: #eff7f1; }
+.part-option input, .test-option input { width: 19px; height: 19px; accent-color: #28704b; }
+.part-option strong, .part-option small, .test-option strong, .test-option small { display: block; }
+.part-option small, .test-option small { margin-top: 4px; color: #69766e; }
 .setup-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .error { margin: 14px 0 0; color: #a43a2c; font-weight: 700; }
 .runner { display: grid; gap: 16px; }

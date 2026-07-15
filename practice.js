@@ -2,6 +2,7 @@ const setup = document.querySelector("#setup");
 const runner = document.querySelector("#runner");
 const results = document.querySelector("#results");
 const optionsRoot = document.querySelector("#part-options");
+const testOptionsRoot = document.querySelector("#test-options");
 const startButton = document.querySelector("#start");
 const resumeButton = document.querySelector("#resume");
 const finishButton = document.querySelector("#finish");
@@ -73,13 +74,17 @@ function selectedParts() {
   return [...optionsRoot.querySelectorAll("input:checked")].map((input) => Number(input.value));
 }
 
-function buildSession(parts) {
+function selectedTests() {
+  return [...testOptionsRoot.querySelectorAll("input:checked")].map((input) => input.value);
+}
+
+function buildSession(parts, tests) {
   const seed = `${Date.now()}-${Math.random()}`;
   const random = randomGenerator(seed);
   const unitIds = parts.sort((a, b) => a - b).flatMap((part) =>
-    shuffled(groups.filter((group) => group.part === part), random).map((group) => group.id)
+    shuffled(groups.filter((group) => group.part === part && tests.includes(group.testId)), random).map((group) => group.id)
   );
-  return { version: 2, seed, selectedParts: parts, unitIds, currentIndex: 0, answers: {}, checkedGroups: [] };
+  return { version: 3, seed, selectedParts: parts, selectedTests: tests, unitIds, currentIndex: 0, answers: {}, checkedGroups: [] };
 }
 
 function currentGroup() {
@@ -228,23 +233,45 @@ function finishQuiz() {
 }
 
 function renderOptions() {
+  testOptionsRoot.innerHTML = ["01", "02", "03"].map((id) =>
+    `<label class="test-option"><input type="checkbox" value="test-${id}" checked><span><strong>Test ${Number(id)}</strong><small>200 câu · 7 Part</small></span></label>`
+  ).join("");
   optionsRoot.innerHTML = Array.from({ length: 7 }, (_, index) => index + 1).map((part) => {
     const selectedGroups = groups.filter((group) => group.part === part);
     const count = selectedGroups.reduce((sum, group) => sum + group.questionNumbers.length, 0);
     const unitLabel = [3, 4, 6, 7].includes(part) ? `${selectedGroups.length} nhóm` : `${selectedGroups.length} câu đơn`;
     return `<label class="part-option"><input type="checkbox" value="${part}" ${part === 5 ? "checked" : ""}><span><strong>Part ${part} · ${partNames[part]}</strong><small>${unitLabel} · ${count} câu</small></span></label>`;
   }).join("");
+  testOptionsRoot.querySelectorAll("input").forEach((input) => input.addEventListener("change", updateOptionCounts));
   resumeButton.hidden = !localStorage.getItem(STORAGE_KEY);
+}
+
+function updateOptionCounts() {
+  const tests = selectedTests();
+  optionsRoot.querySelectorAll("input").forEach((input) => {
+    const part = Number(input.value);
+    const selectedGroups = groups.filter((group) => group.part === part && tests.includes(group.testId));
+    const count = selectedGroups.reduce((sum, group) => sum + group.questionNumbers.length, 0);
+    const unitLabel = [3, 4, 6, 7].includes(part) ? `${selectedGroups.length} nhóm` : `${selectedGroups.length} câu đơn`;
+    input.closest("label").querySelector("small").textContent = `${unitLabel} · ${count} câu`;
+  });
 }
 
 startButton.addEventListener("click", () => {
   const parts = selectedParts();
+  const tests = selectedTests();
+  if (!tests.length) {
+    errorRoot.textContent = "Hãy chọn ít nhất một Test.";
+    errorRoot.hidden = false;
+    return;
+  }
   if (!parts.length) {
+    errorRoot.textContent = "Hãy chọn ít nhất một Part.";
     errorRoot.hidden = false;
     return;
   }
   errorRoot.hidden = true;
-  session = buildSession(parts);
+  session = buildSession(parts, tests);
   saveSession();
   showRunner();
 });
@@ -297,6 +324,14 @@ questionsByTest = Object.fromEntries(testData.map((data) => [data.id, data.quest
 renderOptions();
 
 const requestedParts = new URLSearchParams(window.location.search).get("parts");
+const requestedTests = new URLSearchParams(window.location.search).get("tests");
+if (requestedTests) {
+  const tests = requestedTests.split(",").map((test) => `test-${test.padStart(2, "0")}`).filter((test) => questionsByTest[test]);
+  testOptionsRoot.querySelectorAll("input").forEach((input) => {
+    input.checked = tests.includes(input.value);
+  });
+  updateOptionCounts();
+}
 if (requestedParts) {
   const parts = requestedParts.split(",").map(Number).filter((part) => part >= 1 && part <= 7);
   optionsRoot.querySelectorAll("input").forEach((input) => {

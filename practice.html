@@ -19,14 +19,21 @@
     <main>
       <section id="setup" class="setup card">
         <p class="kicker">CHỌN NỘI DUNG ÔN TẬP</p>
-        <h2>Xáo câu hỏi từ cả 3 bộ đề</h2>
+        <h2>Tạo bộ câu hỏi theo ý bạn</h2>
         <p class="intro">Câu đơn được xáo độc lập. Part 3, 4, 6 và 7 được giữ nguyên theo nhóm hội thoại hoặc passage.</p>
+        <fieldset class="option-section">
+          <legend>Chọn bộ đề</legend>
+          <div id="test-options" class="test-options"></div>
+        </fieldset>
+        <fieldset class="option-section">
+          <legend>Chọn Part</legend>
         <div id="part-options" class="part-options"></div>
+        </fieldset>
         <div class="setup-actions">
           <button id="start" type="button">Bắt đầu quiz</button>
           <button id="resume" class="secondary" type="button" hidden>Tiếp tục phiên trước</button>
         </div>
-        <p id="setup-error" class="error" hidden>Hãy chọn ít nhất một Part.</p>
+        <p id="setup-error" class="error" hidden></p>
       </section>
 
       <section id="runner" class="runner" hidden>

@@ -18,16 +18,16 @@ Mở `http://localhost:4173` trên trình duyệt.
 ## Quiz ôn tập xáo trộn
 
 Mở `http://localhost:4173/practice.html` hoặc chọn **Ôn tập xáo trộn** trên
-trang làm đề. Có thể chọn một hoặc nhiều Part; dữ liệu của cả ba đề được trộn
-trong từng Part. Part 3, 4, 6 và 7 luôn được xáo theo nhóm, còn Part 1, 2 và 5
-được xáo theo từng câu. Phiên đang làm được lưu trong trình duyệt.
+trang làm đề. Có thể chọn một hoặc nhiều Test và Part; chỉ dữ liệu từ các Test
+đã chọn được trộn trong từng Part. Part 3, 4, 6 và 7 luôn được xáo theo nhóm,
+còn Part 1, 2 và 5 được xáo theo từng câu. Phiên đang làm được lưu trong trình duyệt.
 
 Trong Part 2, nội dung các lựa chọn được ẩn khi làm bài nghe. Nút **Kiểm tra
 đáp án** sẽ hiện đúng/sai và đáp án đúng trước khi cho phép chuyển sang nhóm
 tiếp theo; trạng thái đã kiểm tra cũng được lưu cùng phiên.
 
-Có thể mở trực tiếp một cấu hình bằng query, ví dụ `practice.html?parts=5` hoặc
-`practice.html?parts=3,4,6`.
+Có thể mở trực tiếp một cấu hình bằng query, ví dụ `practice.html?parts=5`,
+`practice.html?parts=3,4,6` hoặc `practice.html?tests=1,3&parts=5`.
 
 ## Kiểm tra dữ liệu
 
