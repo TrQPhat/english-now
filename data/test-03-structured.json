@@ -3129,7 +3129,7 @@
     {
       "number": 196,
       "sourcePage": 47,
-      "text": "What can customers receive for completing a survey? 1",
+      "text": "What can customers receive for completing a survey?",
       "choices": {
         "A": "A free gift",
         "B": "A discount coupon",
@@ -3168,7 +3168,7 @@
         "A": "Prices",
         "B": "Selection",
         "C": "Hours",
-        "D": "Employees Stop! This is the end of the test. If you finish before time is called, you may go back to Parts 5, 6, and 7 and check your work."
+        "D": "Employees"
       },
       "part": 7,
       "correctAnswer": "B",
@@ -3202,7 +3202,7 @@
         "A": "A Best Value manager",
         "B": "A Best Value customer",
         "C": "A Best Value employee",
-        "D": "The CEO of Best Value 169"
+        "D": "The CEO of Best Value"
       },
       "part": 7,
       "correctAnswer": "C",
