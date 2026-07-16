@@ -35,13 +35,19 @@ function command(method, params = {}) {
 
 async function evaluate(expression, userGesture = false) {
   const result = await command("Runtime.evaluate", { expression, returnByValue: true, awaitPromise: true, userGesture });
-  if (result.exceptionDetails) throw new Error(result.exceptionDetails.text);
+  if (result.exceptionDetails) {
+    throw new Error(result.exceptionDetails.exception?.description || result.exceptionDetails.text);
+  }
   return result.result.value;
 }
 
 for (let attempt = 0; attempt < 30; attempt += 1) {
   if (await evaluate("document.querySelectorAll('.choice').length")) break;
   await new Promise((resolve) => setTimeout(resolve, 100));
+}
+if (!await evaluate("document.querySelector('.quiz-question')")) {
+  const bodyText = await evaluate("document.body.innerText");
+  throw new Error(`Quiz did not render. Body: ${bodyText}`);
 }
 
 const labels = await evaluate("[...document.querySelector('.quiz-question').querySelectorAll('.choice b')].map(item => item.innerText.trim())");
@@ -53,6 +59,9 @@ if (selectedParts[0] === 2) {
 }
 const removedControls = await evaluate("Boolean(document.querySelector('#sound-toggle, #finish'))");
 if (removedControls) throw new Error("Removed sound or submit control is still rendered");
+const translationsBeforeCheck = await evaluate("document.querySelectorAll('.translation-details').length");
+if (translationsBeforeCheck) throw new Error("Translations must remain hidden before checking answers");
+const translationsAvailable = await evaluate("fetch('data/translations/test-01-vi.json').then(response => response.ok).catch(() => false)");
 
 const choiceOrderAudit = await evaluate(`(async () => {
   const storedSession = JSON.parse(localStorage.getItem('toeic:mixed-quiz'));
@@ -136,6 +145,35 @@ const audioStates = process.env.REAL_AUDIO === "1"
 if (!feedback.every((text, index) => text.includes(`Đáp án đúng: ${correctDisplayLetters[index]}`))) {
   throw new Error(`Feedback/display mapping is wrong: ${JSON.stringify(feedback)}`);
 }
+const translationState = translationsAvailable ? await evaluate(`(async () => {
+  const details = [...document.querySelectorAll('.translation-details')];
+  const initiallyClosed = details.every(item => !item.open);
+  const firstSection = document.querySelector('.quiz-question');
+  const source = firstSection.querySelector('.source').innerText.split('·').map(value => value.trim());
+  const testId = source[0].match(/\\d+/)[0].padStart(2, '0');
+  const number = Number(source[1]);
+  const data = await fetch(\`data/translations/test-\${testId}-vi.json\`).then(response => response.json());
+  const translated = data.questions.find(question => question.number === number);
+  const summary = firstSection.querySelector('.translation-details summary');
+  summary.click();
+  const expanded = summary.parentElement.open;
+  const originalLetters = [...firstSection.querySelectorAll('.choice input')].map(input => input.value);
+  const rows = [...firstSection.querySelectorAll('.translation-choice')];
+  const mapped = rows.every((row, index) =>
+    row.querySelector('b').innerText === String.fromCharCode(65 + index)
+      && row.querySelector('span').innerText === translated.choices[originalLetters[index]]
+  );
+  const questionMapped = firstSection.querySelector('.translation-content > p').innerText === translated.text;
+  summary.click();
+  const collapsed = !summary.parentElement.open;
+  return { count: details.length, initiallyClosed, mapped, questionMapped, expanded, collapsed };
+})()`) : { count: 0, initiallyClosed: true, mapped: true, questionMapped: true, expanded: true, collapsed: true };
+if (translationsAvailable && (translationState.count !== feedback.length || Object.values(translationState).some((value) => value === false))) {
+  throw new Error(`Translation UI/mapping failed: ${JSON.stringify(translationState)}`);
+}
+if (!translationsAvailable && await evaluate("document.querySelectorAll('.translation-details').length")) {
+  throw new Error("Translation UI should stay hidden when translation data is rolled back");
+}
 if (nextLabel !== "Đang chuyển…") throw new Error(`Unexpected next label: ${nextLabel}`);
 if (!disabled) throw new Error("Answers remain editable after checking");
 if (toneCount !== 3) throw new Error(`Correct feedback should play three tones, got ${toneCount}`);
@@ -199,6 +237,6 @@ for (let attempt = 0; attempt < 30; attempt += 1) {
 const ordersAfterReload = await evaluate("JSON.stringify(JSON.parse(localStorage.getItem('toeic:mixed-quiz')).choiceOrders)");
 if (ordersAfterReload !== ordersBeforeReload) throw new Error("Choice order changed after reloading and resuming the session");
 
-console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} orders=${choiceOrderAudit.count} stable=reload wake=${contextsBeforeWake}->${contextsAfterWake} next=${nextLabel} progress=${initialProgress}->${advancedProgress} tones=${toneCount}+1 audio=${finalAudioState}`);
+console.log(`BROWSER_INTERACTION_OK labels=${labels.join('/')} orders=${choiceOrderAudit.count} translations=${translationState.count} expand=ok stable=reload wake=${contextsBeforeWake}->${contextsAfterWake} next=${nextLabel} progress=${initialProgress}->${advancedProgress} tones=${toneCount}+1 audio=${finalAudioState}`);
 console.log(feedback[0]);
 socket.close();

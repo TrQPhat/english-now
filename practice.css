@@ -52,6 +52,14 @@ main { width: min(1100px, calc(100% - 28px)); margin: 30px auto 60px; }
 .answer-feedback { margin: 10px 0 0; padding: 11px 13px; border-radius: 8px; font-size: 14px; }
 .feedback-correct { color: #1f6843; background: #e8f7ee; }
 .feedback-wrong { color: #963b2e; background: #fff0ed; }
+.translation-details { margin-top: 9px; overflow: hidden; border: 1px solid #dce5de; border-radius: 9px; background: #fafcfb; }
+.translation-details summary { padding: 10px 13px; cursor: pointer; color: #315f47; font-size: 13px; font-weight: 850; user-select: none; }
+.translation-details[open] summary { border-bottom: 1px solid #e3e9e4; }
+.translation-content { padding: 12px 13px 13px; color: #3d4941; font-size: 14px; line-height: 1.5; }
+.translation-content > p { margin-bottom: 9px; font-weight: 700; }
+.translation-choices { display: grid; gap: 5px; }
+.translation-choice { display: grid; grid-template-columns: 22px 1fr; gap: 7px; }
+.translation-choice b { color: #2e6b4a; }
 .runner-actions { display: flex; justify-content: space-between; }
 .results { max-width: 760px; margin: auto; text-align: center; }
 .score { font: 800 54px Georgia, serif; color: #245d40; }

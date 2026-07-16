@@ -22,6 +22,7 @@ const partNames = {
 
 let groups = [];
 let questionsByTest = {};
+let translationsByTest = {};
 let session = null;
 let submitted = false;
 let audioContext = null;
@@ -213,6 +214,28 @@ function displayLetterFor(group, question, originalLetter) {
   return String.fromCharCode(65 + index);
 }
 
+function translationHtml(group, question) {
+  const translation = translationsByTest[group.testId]?.[question.number - 1];
+  if (!translation) return "";
+  const choices = choiceOrderFor(group, question).map((originalLetter, index) =>
+    `<div class="translation-choice"><b>${String.fromCharCode(65 + index)}</b><span>${escapeHtml(translation.choices[originalLetter])}</span></div>`
+  ).join("");
+  return `<details class="translation-details">
+    <summary>Xem bản dịch</summary>
+    <div class="translation-content"><p>${escapeHtml(translation.text)}</p><div class="translation-choices">${choices}</div></div>
+  </details>`;
+}
+
+async function loadTranslationData(id) {
+  try {
+    const response = await fetch(`data/translations/test-${id}-vi.json`);
+    if (!response.ok) return { id: `test-${id}`, questions: [] };
+    return await response.json();
+  } catch {
+    return { id: `test-${id}`, questions: [] };
+  }
+}
+
 function pageUrl(group, page) {
   const base = questionsByTest[group.testId][0];
   const pattern = base.pagePattern || `assets/${group.testId}/page-{page}.webp`;
@@ -271,7 +294,7 @@ function renderGroup() {
           const status = isCorrect ? "Đúng" : selected ? "Sai" : "Chưa trả lời";
           const correctDisplayLetter = displayLetterFor(group, question, question.correctAnswer);
           return `<p class="answer-feedback ${isCorrect ? "feedback-correct" : "feedback-wrong"}"><strong>${status}.</strong> Đáp án đúng: <b>${correctDisplayLetter}</b> — ${escapeHtml(question.choices[question.correctAnswer])}</p>`;
-        })() : ""}
+        })() : ""}${revealAnswers ? translationHtml(group, question) : ""}
       </section>`;
     }).join("")}`;
 
@@ -447,12 +470,14 @@ nextButton.addEventListener("click", () => {
   }
 });
 
-const [groupData, ...testData] = await Promise.all([
+const [groupData, testData, translationData] = await Promise.all([
   fetch("data/quiz-groups.json").then((response) => response.json()),
-  ...["01", "02", "03"].map((id) => fetch(`data/test-${id}-structured.json`).then((response) => response.json())),
+  Promise.all(["01", "02", "03"].map((id) => fetch(`data/test-${id}-structured.json`).then((response) => response.json()))),
+  Promise.all(["01", "02", "03"].map(loadTranslationData)),
 ]);
 groups = groupData.groups;
 questionsByTest = Object.fromEntries(testData.map((data) => [data.id, data.questions.map((question) => ({ ...question, pagePattern: data.pagePattern }))]));
+translationsByTest = Object.fromEntries(translationData.map((data) => [data.id, data.questions]));
 renderOptions();
 
 const requestedParts = new URLSearchParams(window.location.search).get("parts");
