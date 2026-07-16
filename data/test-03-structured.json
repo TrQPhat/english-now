@@ -294,7 +294,7 @@
       "choices": {
         "A": "That's what the courier told me.",
         "B": "You can go ahead and sign for it.",
-        "C": "Yes, let's have a pizza delivered. 14"
+        "C": "Yes, let's have a pizza delivered."
       },
       "part": 2,
       "correctAnswer": "C",
@@ -1578,7 +1578,7 @@
         "A": "At 10:30",
         "B": "At 11:15",
         "C": "At 1:00",
-        "D": "At 2:00 This is the end of the Listening test. Turn to Part 5 in your test book."
+        "D": "At 2:00"
       },
       "part": 4,
       "correctAnswer": "D",

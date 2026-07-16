@@ -444,7 +444,7 @@
       "choices": {
         "A": "No, I haven't reserved a car yet.",
         "B": "We could just take public transportation.",
-        "C": "On the morning of the thirtieth. 3"
+        "C": "On the morning of the thirtieth."
       },
       "part": 2,
       "correctAnswer": "A",
@@ -474,7 +474,7 @@
       "choices": {
         "A": "I'll instruct Ms. Johnson to do that.",
         "B": "Please be sure not to touch it.",
-        "C": "I catered several meals in the past. PART 3 [32-34] WHello, Mr. Sanders. This is Julie Maple calling. I contacted you by e-mail this morning about a condo l'd like to look at. Do you have time to show me the place today? M I sure do, Ms. Maple. You mentioned you'd prefer to check it out around 3:30. Is that time still satisfactory for you? W Oh, no, it isn't. I've got a meeting scheduled at 4:00, so I'd like to see the place around 2:00 instead. That should give me plenty of time to check out the property. M Fortunately, I've got time then, so I can comply with your request. Why don't we meet at 52 Jackson Avenue at that time? [35-37] M I'm pleased we finally completed the interviews with the job candidates. I had no idea they were going to take nearly the entire day. W I know what you mean. I was on the intern search committee last year, and the interviews only required about half the time that this year's did. So which of the applicants did you like the most? I thought Sarah Carpenter was impressive and believe we should strongly consider her for a position. M She's definitely one of the leading candidates in my mind. We'll have to be sure to invite her back to conduct a second interview. [38-40] M Lara, how is the work on the redesign of the Fargo Building progressing? Do you think that you're going to be able to finish everything by tomorrow's deadline? W I'm afraid not, Mr. Ito. The work is taking much longer than I expected it to. However, I've started making good progress, so I am positive that I can submit the blueprints to you no later than noon on Friday. M All right. I'll call the client now and request an extension. But you had better finish everything by the new due date. The client is eager to get a look at the plans, and I don't want to disappoint him. [41-43] M Did you happen to read the news about promotions on the bulletin board? The list was just posted a few minutes ago. I can't believe Alice Milton got promoted to director. WYou've got to be kidding me. I heard she was probably going to get transferred to another branch or maybe even fired. Do you mean she's going to be our boss now? 4"
+        "C": "I catered several meals in the past."
       },
       "part": 2,
       "correctAnswer": "A",
@@ -1530,7 +1530,7 @@
         "A": "Provide the listeners with tickets",
         "B": "Talk about a display",
         "C": "Hand out some pamphlets",
-        "D": "Visit an exhibit on colonial times This is the end of the Listening test. Turn to Part 5 in your test book."
+        "D": "Visit an exhibit on colonial times"
       },
       "part": 4,
       "correctAnswer": "B",

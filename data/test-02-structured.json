@@ -474,7 +474,7 @@
       "choices": {
         "A": "It was a bit too spicy for me.",
         "B": "I look forward to trying the food there.",
-        "C": "Jeff paid for everyone's meal. PART p.81 [32-34] M We've just arrived at the Cumberland House. This was the home of John Cumberland, who founded our city more than 200 years ago. It's now been turned into a museum. Why don't you all take a look around it for an hour or so? 9"
+        "C": "Jeff paid for everyone's meal."
       },
       "part": 2,
       "correctAnswer": "A",
@@ -1530,7 +1530,7 @@
         "A": "17",
         "B": "31",
         "C": "37",
-        "D": "51 This is the end of the Listening test. Turn to Part 5 in your test book."
+        "D": "51"
       },
       "part": 4,
       "correctAnswer": "D",

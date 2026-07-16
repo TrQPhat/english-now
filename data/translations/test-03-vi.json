@@ -1,0 +1,1983 @@
+{
+  "version": 1,
+  "id": "test-03",
+  "language": "vi",
+  "source": "data/test-03-structured.json",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Chọn câu mô tả đúng nhất về bức ảnh.",
+      "choices": {
+        "A": "Người nông dân đang gieo một số loại cây trồng trên cánh đồng.",
+        "B": "Máy may đang được sử dụng.",
+        "C": "Người phụ nữ đang dùng kéo cắt một thứ gì đó.",
+        "D": "Quần áo đang được người phụ nữ khâu."
+      }
+    },
+    {
+      "number": 2,
+      "text": "Chọn câu mô tả đúng nhất về bức ảnh.",
+      "choices": {
+        "A": "Các nhân viên đang đỗ xe.",
+        "B": "Một số xe đang chờ đèn tín hiệu thay đổi.",
+        "C": "Ô tô đã được đỗ dọc bên đường.",
+        "D": "Một số ô tô đang được đặt xuống bên đường."
+      }
+    },
+    {
+      "number": 3,
+      "text": "Chọn câu mô tả đúng nhất về bức ảnh.",
+      "choices": {
+        "A": "Mọi người đang cầm ly trong tay.",
+        "B": "Họ đang ăn bánh mì nướng tại bàn ăn.",
+        "C": "Thực khách đang tự lấy thức ăn tại quầy buffet.",
+        "D": "Một số người đang than phiền về bữa ăn."
+      }
+    },
+    {
+      "number": 4,
+      "text": "Chọn câu mô tả đúng nhất về bức ảnh.",
+      "choices": {
+        "A": "Các thùng đang được chất lên xe giao hàng.",
+        "B": "Nhiều mặt hàng đang được nhân viên đóng vào thùng.",
+        "C": "Công nhân đang di chuyển các thùng hàng từ nơi này sang nơi khác.",
+        "D": "Các gói hàng đã được xếp chồng lên nhau."
+      }
+    },
+    {
+      "number": 5,
+      "text": "Chọn câu mô tả đúng nhất về bức ảnh.",
+      "choices": {
+        "A": "Khách hàng đang nhận tiền thừa từ nhân viên.",
+        "B": "Thu ngân đang đưa một số túi cho khách hàng.",
+        "C": "Người mua sắm đang xem các mặt hàng trong cửa hàng.",
+        "D": "Tất cả mặt hàng đã được đặt vào một túi."
+      }
+    },
+    {
+      "number": 6,
+      "text": "Chọn câu mô tả đúng nhất về bức ảnh.",
+      "choices": {
+        "A": "Đá đang được công nhân xây dựng di chuyển.",
+        "B": "Các nghệ sĩ biểu diễn đều đang di chuyển đồng bộ.",
+        "C": "Mọi người đang tập trung trước sân khấu.",
+        "D": "Một dàn nhạc đang biểu diễn cho khán giả."
+      }
+    },
+    {
+      "number": 7,
+      "text": "Ai muốn làm thêm giờ vào cuối tuần này?",
+      "choices": {
+        "A": "Điều đó sẽ không được họ đón nhận tốt.",
+        "B": "Tôi không ngại đến làm vào thứ Bảy.",
+        "C": "Jason sẽ gặp bạn vào cuối tuần."
+      }
+    },
+    {
+      "number": 8,
+      "text": "Có vẻ đường này đang có giao thông đông đúc.",
+      "choices": {
+        "A": "Món đồ nặng hơn tôi nghĩ.",
+        "B": "Vậy chúng ta nên đi đường vòng.",
+        "C": "Tôi đã đi tàu lượn siêu tốc ở đó."
+      }
+    },
+    {
+      "number": 9,
+      "text": "Bạn có thể gửi lá thư này qua bưu điện trước buổi trưa không?",
+      "choices": {
+        "A": "Cô ấy viết rằng mình vẫn khỏe.",
+        "B": "Khoảng mười hai giờ kém mười.",
+        "C": "Tôi sẽ xử lý ngay bây giờ."
+      }
+    },
+    {
+      "number": 10,
+      "text": "Người không phải thành viên phải đặt chỗ bằng cách nào?",
+      "choices": {
+        "A": "Hãy thử gọi phòng vé.",
+        "B": "Chúng ta ở hàng ghế đầu.",
+        "C": "Tôi sẽ đặt xe vào cuối hôm nay."
+      }
+    },
+    {
+      "number": 11,
+      "text": "Tại sao bạn không trả lời điện thoại khi tôi gọi?",
+      "choices": {
+        "A": "Vâng, việc đó khá rắc rối.",
+        "B": "Anh ấy không năng động lắm.",
+        "C": "Cô ấy đã ứng tuyển vị trí đó."
+      }
+    },
+    {
+      "number": 12,
+      "text": "Có vẻ thực tập sinh mới gặp vấn đề gì?",
+      "choices": {
+        "A": "Vâng, việc đó khá rắc rối.",
+        "B": "Anh ấy không năng động lắm.",
+        "C": "Cô ấy đã ứng tuyển vị trí đó."
+      }
+    },
+    {
+      "number": 13,
+      "text": "Có thể tôi nhầm, nhưng tôi tin hội thảo sẽ bắt đầu lúc ba giờ.",
+      "choices": {
+        "A": "Bít tết và khoai tây cho bữa tối.",
+        "B": "Ít nhất thêm ba người.",
+        "C": "Vâng, có vẻ đúng vậy."
+      }
+    },
+    {
+      "number": 14,
+      "text": "Bạn đã nghe ai sẽ được thăng chức trong quý này chưa?",
+      "choices": {
+        "A": "Tina hoặc May.",
+        "B": "Một chương trình khuyến mãi hoàn toàn mới.",
+        "C": "Một số sản phẩm của chúng ta."
+      }
+    },
+    {
+      "number": 15,
+      "text": "Buổi định hướng nhân viên mới được tổ chức khi nào?",
+      "choices": {
+        "A": "Trong khoảng vài giờ.",
+        "B": "Buổi đó do ông Morrison chủ trì.",
+        "C": "Sáng thứ Năm này."
+      }
+    },
+    {
+      "number": 16,
+      "text": "Tôi có thể mượn một ít tiền để thanh toán những món đồ này không?",
+      "choices": {
+        "A": "Bạn đã mượn tiền từ ai?",
+        "B": "Được, tôi sẽ trả cho mọi thứ.",
+        "C": "Được. Bạn cần bao nhiêu?"
+      }
+    },
+    {
+      "number": 17,
+      "text": "Chẳng phải Washington Consulting đang giúp chúng ta thực hiện chiến dịch quảng cáo sao?",
+      "choices": {
+        "A": "Quảng cáo sẽ được phát sóng lần đầu tối nay.",
+        "B": "Không, chúng ta không thể đạt được thỏa thuận với họ.",
+        "C": "Anh ấy là một người mới gia nhập lực lượng lao động."
+      }
+    },
+    {
+      "number": 18,
+      "text": "Lý do doanh số giảm mạnh là gì?",
+      "choices": {
+        "A": "Chất lượng của sản phẩm.",
+        "B": "Đó là một bộ phim truyền hình.",
+        "C": "Xin lỗi vì đã làm rơi nó."
+      }
+    },
+    {
+      "number": 19,
+      "text": "Thị trường bất động sản ở các vùng ngoại ô quanh thành phố thế nào?",
+      "choices": {
+        "A": "Đó là điều nhân viên chuyển phát đã nói với tôi.",
+        "B": "Bạn cứ ký nhận đi.",
+        "C": "Vâng, hãy gọi giao một chiếc pizza."
+      }
+    },
+    {
+      "number": 20,
+      "text": "Gói hàng sẽ được giao trước cuối ngày chứ?",
+      "choices": {
+        "A": "Đó là điều nhân viên chuyển phát đã nói với tôi.",
+        "B": "Bạn cứ ký nhận đi.",
+        "C": "Vâng, hãy gọi giao một chiếc pizza."
+      }
+    },
+    {
+      "number": 21,
+      "text": "Bạn có muốn đăng ký thẻ thành viên không?",
+      "choices": {
+        "A": "Anh ấy là thành viên của phòng tập này.",
+        "B": "Đây là mẫu đơn đăng ký.",
+        "C": "Thực ra, tôi đã có một thẻ rồi."
+      }
+    },
+    {
+      "number": 22,
+      "text": "Ông Thomas sẽ sớm gọi cho bạn, phải không?",
+      "choices": {
+        "A": "Được, cứ làm đi.",
+        "B": "Gọi cho tôi sau.",
+        "C": "Tôi thực sự hy vọng vậy."
+      }
+    },
+    {
+      "number": 23,
+      "text": "Chúng ta nên đặt tất cả những chai rỗng này ở đâu?",
+      "choices": {
+        "A": "Cho tôi một chai nước ngọt.",
+        "B": "Trong thùng tái chế đằng kia.",
+        "C": "Tôi vừa đặt chúng ở đằng kia."
+      }
+    },
+    {
+      "number": 24,
+      "text": "Lá thư ông Daniels gửi được đề địa chỉ cho ai?",
+      "choices": {
+        "A": "Tôi không chắc cách đánh vần tên đó.",
+        "B": "Tôi nghĩ là Alice Kenworth.",
+        "C": "Địa chỉ của ông ấy là 22 Wilson Street."
+      }
+    },
+    {
+      "number": 25,
+      "text": "Chúng ta nên tham dự hội nghị ở New Orleans trong tháng này.",
+      "choices": {
+        "A": "Đó là điều tôi đã nói với ông Barnes.",
+        "B": "Từ ngày 10 đến ngày 14 tháng 8.",
+        "C": "Về các kỹ thuật tiếp thị mới."
+      }
+    },
+    {
+      "number": 26,
+      "text": "Bạn có thể giúp tôi xử lý tất cả các mẫu đơn đặt hàng này vào chiều nay không?",
+      "choices": {
+        "A": "Tôi rất muốn, nhưng tôi có một cuộc họp.",
+        "B": "Tôi sẽ đặt chúng sau vài phút.",
+        "C": "Vâng, tôi luôn giúp cô ấy làm việc."
+      }
+    },
+    {
+      "number": 27,
+      "text": "Từ đây đến khu nhà hát mất bao lâu?",
+      "choices": {
+        "A": "Khoảng hai mươi phút.",
+        "B": "Cách không quá ba ki-lô-mét.",
+        "C": "Buổi diễn bắt đầu lúc bảy giờ mười lăm."
+      }
+    },
+    {
+      "number": 28,
+      "text": "Chẳng phải cô Carpenter sẽ tham gia ăn sáng cùng chúng ta sao?",
+      "choices": {
+        "A": "Thịt xông khói và trứng với bánh mì nướng.",
+        "B": "Không, vào bữa trưa chiều nay.",
+        "C": "Chúng tôi rất thích nó."
+      }
+    },
+    {
+      "number": 29,
+      "text": "Tôi nghe nói Danielson's có chương trình khuyến mãi đặc biệt cuối tuần này.",
+      "choices": {
+        "A": "Thứ Bảy tuần trước tôi thư giãn ở nhà.",
+        "B": "Cô ấy đang cố quảng bá cuốn sách mới.",
+        "C": "Đúng vậy. Mọi thứ đều đang giảm giá."
+      }
+    },
+    {
+      "number": 30,
+      "text": "Bạn thích mua sắm trực tuyến hay đến trung tâm mua sắm hơn?",
+      "choices": {
+        "A": "Hôm nay hãy đi mua sắm trực tiếp.",
+        "B": "Tôi dành vài giờ mỗi ngày trên Internet.",
+        "C": "Một trung tâm mua sắm mới vừa khai trương ở trung tâm thành phố tuần trước."
+      }
+    },
+    {
+      "number": 31,
+      "text": "Bạn đã trả lời tất cả câu hỏi trên mẫu đơn chưa?",
+      "choices": {
+        "A": "Tôi làm sai câu hai và câu chín.",
+        "B": "Tôi khá chắc là đã trả lời hết.",
+        "C": "Cho tôi xem các câu trả lời của bạn."
+      }
+    },
+    {
+      "number": 32,
+      "text": "Những người nói chủ yếu đang thảo luận về điều gì?",
+      "choices": {
+        "A": "Cách bố trí mới của văn phòng",
+        "B": "Công việc các thực tập sinh sẽ làm",
+        "C": "Một số thiết bị văn phòng họ cần",
+        "D": "Kế hoạch mùa hè của họ"
+      }
+    },
+    {
+      "number": 33,
+      "text": "Người phụ nữ sẽ làm gì với khu vực cạnh cửa sổ?",
+      "choices": {
+        "A": "Chuyển bàn làm việc đến đó",
+        "B": "Lắp một số máy tính ở đó",
+        "C": "Đặt máy photocopy ở đó",
+        "D": "Đặt một số vách ngăn làm việc ở đó"
+      }
+    },
+    {
+      "number": 34,
+      "text": "Theo người đàn ông, điều gì đã xảy ra với các thực tập sinh năm ngoái?",
+      "choices": {
+        "A": "Họ đã làm phiền các nhân viên khác.",
+        "B": "Tất cả họ đều có bàn làm việc riêng.",
+        "C": "Họ thực hiện nhiệm vụ tốt.",
+        "D": "Họ được dùng để sao chép tài liệu."
+      }
+    },
+    {
+      "number": 35,
+      "text": "Người đàn ông yêu cầu người phụ nữ làm gì?",
+      "choices": {
+        "A": "Ký hợp đồng",
+        "B": "Làm một bài thuyết trình",
+        "C": "Giao một số tài liệu",
+        "D": "Nói chuyện với khách hàng"
+      }
+    },
+    {
+      "number": 36,
+      "text": "Ông Murphy là ai?",
+      "choices": {
+        "A": "Một nhân viên giao hàng",
+        "B": "Một luật sư",
+        "C": "Một khách hàng",
+        "D": "Một người thuyết trình"
+      }
+    },
+    {
+      "number": 37,
+      "text": "Người phụ nữ đề xuất điều gì?",
+      "choices": {
+        "A": "Xin gia hạn",
+        "B": "Sử dụng công ty giao hàng",
+        "C": "Đàm phán lại với khách hàng",
+        "D": "Gửi một số món đồ bằng fax"
+      }
+    },
+    {
+      "number": 38,
+      "text": "Người đàn ông và người phụ nữ đang nói về điều gì?",
+      "choices": {
+        "A": "Thời điểm sản phẩm của công ty được phát hành",
+        "B": "Kết quả khảo sát một số công nhân",
+        "C": "Giá của các mặt hàng mới mua",
+        "D": "Một số sản phẩm mua từ công ty khác"
+      }
+    },
+    {
+      "number": 39,
+      "text": "Người đàn ông bảo người phụ nữ làm gì?",
+      "choices": {
+        "A": "Thỏa thuận với một nhà cung cấp",
+        "B": "Nói chuyện với một số công nhân dây chuyền lắp ráp",
+        "C": "Viết thư cho Lewis Manufacturing",
+        "D": "Đến nhà máy của khách hàng"
+      }
+    },
+    {
+      "number": 40,
+      "text": "Người phụ nữ cho biết điều gì về Jeff Lambert?",
+      "choices": {
+        "A": "Cô ấy quen ông ấy.",
+        "B": "Ông ấy thuộc ban quản lý cấp cao.",
+        "C": "Ông ấy có bằng kỹ sư. .",
+        "D": "Cô ấy thích hợp tác với ông ấy."
+      }
+    },
+    {
+      "number": 41,
+      "text": "Người phụ nữ rất có thể làm việc ở đâu?",
+      "choices": {
+        "A": "Tại nhà hàng",
+        "B": "Tại khách sạn",
+        "C": "Tại công ty cung cấp dịch vụ ăn uống",
+        "D": "Tại siêu thị"
+      }
+    },
+    {
+      "number": 42,
+      "text": "Người đàn ông đề cập vấn đề gì?",
+      "choices": {
+        "A": "Anh ấy bị tính quá nhiều tiền cho một bữa ăn.",
+        "B": "Một số món anh ấy đặt chưa bao giờ được giao.",
+        "C": "Món ăn của anh ấy được chế biến không đúng.",
+        "D": "Thực phẩm anh ấy mua đã bị hỏng."
+      }
+    },
+    {
+      "number": 43,
+      "text": "Người phụ nữ có thể sẽ làm gì tiếp theo?",
+      "choices": {
+        "A": "Gọi điện thoại",
+        "B": "Nói chuyện với đầu bếp",
+        "C": "Lập hóa đơn mới cho người đàn ông",
+        "D": "Hoàn lại tiền cho người đàn ông"
+      }
+    },
+    {
+      "number": 44,
+      "text": "Cuộc trò chuyện diễn ra ở đâu?",
+      "choices": {
+        "A": "Qua điện thoại",
+        "B": "Tại phòng vé",
+        "C": "Trên sân khấu",
+        "D": "Tại quầy bán đồ ăn"
+      }
+    },
+    {
+      "number": 45,
+      "text": "Người đàn ông muốn xem gì?",
+      "choices": {
+        "A": "Một vở nhạc kịch",
+        "B": "Một buổi hòa nhạc",
+        "C": "Một vở kịch",
+        "D": "Một bộ phim"
+      }
+    },
+    {
+      "number": 46,
+      "text": "Người đàn ông sẽ xem sự kiện lúc mấy giờ?",
+      "choices": {
+        "A": "Lúc 4:00",
+        "B": "Lúc 5:30",
+        "C": "Lúc 7:00",
+        "D": "Lúc 9:15"
+      }
+    },
+    {
+      "number": 47,
+      "text": "Người đàn ông có ý gì khi nói: “Tôi e là không”?",
+      "choices": {
+        "A": "Anh ấy không thể thay đổi số tiền ước tính.",
+        "B": "Đội của anh ấy không thể làm việc tại nhà người phụ nữ.",
+        "C": "Đội của anh ấy không thể bắt đầu làm việc cho đến tuần sau.",
+        "D": "Anh ấy sẽ không thể thực hiện các sửa chữa người phụ nữ muốn."
+      }
+    },
+    {
+      "number": 48,
+      "text": "Theo người đàn ông, ngôi nhà của người phụ nữ có vấn đề gì?",
+      "choices": {
+        "A": "Hệ thống dây điện được làm không tốt.",
+        "B": "Đường ống bị rò rỉ.",
+        "C": "Ngôi nhà rất cũ.",
+        "D": "Sàn nhà cần được thay."
+      }
+    },
+    {
+      "number": 49,
+      "text": "Người phụ nữ nói với người đàn ông rằng cô ấy sẽ làm gì?",
+      "choices": {
+        "A": "Gửi cho anh ấy một tấm séc vào ngày mai",
+        "B": "Nói chuyện với một nhà thầu khác",
+        "C": "Trả số tiền anh ấy đã nêu",
+        "D": "Quyết định sau"
+      }
+    },
+    {
+      "number": 50,
+      "text": "Người đàn ông rất có thể là ai?",
+      "choices": {
+        "A": "Một kiến trúc sư",
+        "B": "Một khách hàng",
+        "C": "Một điện thoại viên",
+        "D": "Một nhân viên cửa hàng kim khí"
+      }
+    },
+    {
+      "number": 51,
+      "text": "Người đàn ông hỏi về điều gì?",
+      "choices": {
+        "A": "Một số mặt hàng bị thiếu",
+        "B": "Một đợt giảm giá sắp tới",
+        "C": "Một mức giảm giá đặc biệt",
+        "D": "Một hóa đơn anh ấy nhận được"
+      }
+    },
+    {
+      "number": 52,
+      "text": "Người phụ nữ nói điều gì sẽ xảy ra chiều nay?",
+      "choices": {
+        "A": "Cửa hàng sẽ nhận một số sản phẩm.",
+        "B": "Trang web sẽ được cập nhật.",
+        "C": "Đợt giảm giá tại cửa hàng sẽ kết thúc.",
+        "D": "Đơn hàng của người đàn ông sẽ được gửi đi."
+      }
+    },
+    {
+      "number": 53,
+      "text": "Ngày mai người đàn ông sẽ làm gì?",
+      "choices": {
+        "A": "Đi tham quan ở L.A.",
+        "B": "Đến thăm một đồng nghiệp",
+        "C": "Phỏng vấn cho một vị trí",
+        "D": "Gặp một khách hàng tiềm năng"
+      }
+    },
+    {
+      "number": 54,
+      "text": "Điều gì được đề cập về James Hooper?",
+      "choices": {
+        "A": "Anh ấy bị thương trong một tai nạn.",
+        "B": "Anh ấy sẽ đi cùng người đàn ông.",
+        "C": "Anh ấy đang tham dự một sự kiện ở Toronto.",
+        "D": "Anh ấy và người đàn ông không có quan hệ thân thiện."
+      }
+    },
+    {
+      "number": 55,
+      "text": "Tại sao người đàn ông nói: “Có vẻ chúng ta có thể sẽ thiếu người”?",
+      "choices": {
+        "A": "Để nói rằng công ty sẽ không tuyển nhân viên mới",
+        "B": "Để cho biết có thể không có nhân viên thay thế",
+        "C": "Để đề cập rằng một thành viên trong đội đã từ chức",
+        "D": "Để lập luận rằng đội của anh ấy có thể tự đảm nhận nhiệm vụ"
+      }
+    },
+    {
+      "number": 56,
+      "text": "Người phụ nữ rất có thể làm việc ở đâu?",
+      "choices": {
+        "A": "Tại tiệm giặt khô",
+        "B": "Tại nhà thuốc",
+        "C": "Tại cửa hàng tạp hóa",
+        "D": "Tại cửa hàng in ấn"
+      }
+    },
+    {
+      "number": 57,
+      "text": "Vấn đề là gì?",
+      "choices": {
+        "A": "Một phiếu giảm giá của người đàn ông không còn giá trị.",
+        "B": "Cửa hàng không có mặt hàng người đàn ông muốn.",
+        "C": "Người đàn ông không có đủ tiền.",
+        "D": "Đợt giảm giá đã kết thúc ngày hôm trước."
+      }
+    },
+    {
+      "number": 58,
+      "text": "Người đàn ông đưa cho người phụ nữ thứ gì?",
+      "choices": {
+        "A": "Một tấm séc",
+        "B": "Giấy phép lái xe",
+        "C": "Thẻ ngân hàng",
+        "D": "Phiếu quà tặng"
+      }
+    },
+    {
+      "number": 59,
+      "text": "Người phụ nữ muốn làm gì?",
+      "choices": {
+        "A": "Đi ăn trưa ngay",
+        "B": "Tải một chương trình máy tính",
+        "C": "Hoàn thành công việc đang làm",
+        "D": "Nghỉ giải lao ngắn"
+      }
+    },
+    {
+      "number": 60,
+      "text": "Người phụ nữ có ý gì khi nói: “Thực ra, tôi hoàn toàn không biết”?",
+      "choices": {
+        "A": "Cô ấy không biết nhà hàng nằm ở đâu.",
+        "B": "Cô ấy không chắc máy tính gặp vấn đề gì.",
+        "C": "Cô ấy không biết người đàn ông đã quên ăn sáng.",
+        "D": "Cô ấy không nhớ mình và người đàn ông đã nói về điều gì."
+      }
+    },
+    {
+      "number": 61,
+      "text": "Tại sao người đàn ông ngạc nhiên?",
+      "choices": {
+        "A": "Máy tính của anh ấy đã ngừng hoạt động đúng cách.",
+        "B": "Người phụ nữ chưa từng ăn tại Papa Gino's.",
+        "C": "Anh ấy tưởng chương trình đã được viết xong.",
+        "D": "Người phụ nữ định chuyển đến một khu phố mới."
+      }
+    },
+    {
+      "number": 62,
+      "text": "Công việc của người phụ nữ là gì?",
+      "choices": {
+        "A": "Đầu bếp",
+        "B": "Nhân viên phục vụ",
+        "C": "Nhân viên rửa bát",
+        "D": "Thu ngân"
+      }
+    },
+    {
+      "number": 63,
+      "text": "Người phụ nữ sẽ mang gì đến cho những người đàn ông?",
+      "choices": {
+        "A": "Một ít cà phê",
+        "B": "Một ít món tráng miệng",
+        "C": "Một số thực đơn",
+        "D": "Hóa đơn"
+      }
+    },
+    {
+      "number": 64,
+      "text": "Người phụ nữ có thể sẽ làm gì tiếp theo?",
+      "choices": {
+        "A": "Chuẩn bị một ít thức ăn",
+        "B": "Đi vào bếp",
+        "C": "Rót đồ uống",
+        "D": "Mang thức ăn đến"
+      }
+    },
+    {
+      "number": 65,
+      "text": "Người đàn ông hỏi về điều gì?",
+      "choices": {
+        "A": "Cuộc họp với nhân viên",
+        "B": "Việc sắp xếp lại bộ phận của anh ấy",
+        "C": "Sự xuất hiện của một số nhân viên mới",
+        "D": "Việc cải tạo văn phòng"
+      }
+    },
+    {
+      "number": 66,
+      "text": "Nhìn vào hình. Văn phòng mới của người đàn ông ở đâu?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      }
+    },
+    {
+      "number": 67,
+      "text": "Tại sao người đàn ông hài lòng?",
+      "choices": {
+        "A": "Anh ấy được cho thêm thời gian nghỉ.",
+        "B": "Cuộc họp với một người mua diễn ra tốt đẹp.",
+        "C": "Anh ấy không phải chuyển đi đâu.",
+        "D": "Anh ấy sẽ có một văn phòng lớn hơn."
+      }
+    },
+    {
+      "number": 68,
+      "text": "Người đàn ông rất có thể làm việc ở đâu?",
+      "choices": {
+        "A": "Tại hãng hàng không",
+        "B": "Tại ga tàu",
+        "C": "Tại đại lý du lịch",
+        "D": "Tại công ty cho thuê xe"
+      }
+    },
+    {
+      "number": 69,
+      "text": "Nhìn vào hình. Người phụ nữ cần thay đổi kế hoạch đi lại vào ngày nào?",
+      "choices": {
+        "A": "Ngày 12 tháng 10",
+        "B": "Ngày 16 tháng 10",
+        "C": "Ngày 20 tháng 10",
+        "D": "Ngày 22 tháng 10"
+      }
+    },
+    {
+      "number": 70,
+      "text": "Người đàn ông đề nghị làm gì?",
+      "choices": {
+        "A": "Gọi cho hãng hàng không",
+        "B": "Gửi lịch trình chuyến đi mới cho người phụ nữ",
+        "C": "Tính lại hóa đơn",
+        "D": "Nâng người phụ nữ lên hạng nhất"
+      }
+    },
+    {
+      "number": 71,
+      "text": "Mục đích cuộc gọi là gì?",
+      "choices": {
+        "A": "Hủy kế hoạch gặp nhau",
+        "B": "Yêu cầu hạn chót muộn hơn",
+        "C": "Nhờ giúp đỡ một báo cáo",
+        "D": "Xem xét một dự án đang thực hiện"
+      }
+    },
+    {
+      "number": 72,
+      "text": "Tina Westerly rất có thể làm việc ở đâu?",
+      "choices": {
+        "A": "Trong Phòng Kinh doanh",
+        "B": "Trong Phòng Tiếp thị",
+        "C": "Trong Phòng Kế toán",
+        "D": "Trong Phòng Vận chuyển"
+      }
+    },
+    {
+      "number": 73,
+      "text": "Người nói cho biết mình cần làm gì?",
+      "choices": {
+        "A": "Chuyển sang bộ phận khác",
+        "B": "Tham dự cuộc họp với sếp",
+        "C": "Làm nhanh hơn nhiệm vụ của mình",
+        "D": "Giúp đồng nghiệp làm một dự án"
+      }
+    },
+    {
+      "number": 74,
+      "text": "Người nói nói gì về các thợ máy tại West Side Auto Repairs?",
+      "choices": {
+        "A": "Họ được đào tạo đặc biệt mỗi năm.",
+        "B": "Họ chỉ đủ trình độ làm việc trên ô tô và xe tải.",
+        "C": "Họ đã làm nghề này lâu năm.",
+        "D": "Họ luôn làm việc theo cặp trên mọi phương tiện."
+      }
+    },
+    {
+      "number": 75,
+      "text": "Các thợ máy sẽ làm gì trước khi làm việc trên một phương tiện?",
+      "choices": {
+        "A": "Yêu cầu khách hàng ký hợp đồng",
+        "B": "Giải thích tại sao công việc cần được thực hiện",
+        "C": "Đưa cho khách hàng một số phương án sửa chữa",
+        "D": "Nêu giá của công việc họ sẽ làm"
+      }
+    },
+    {
+      "number": 76,
+      "text": "Điều gì được cho biết về West Side Auto Repairs?",
+      "choices": {
+        "A": "Cơ sở nằm ở ngoại ô.",
+        "B": "Cơ sở có chỗ cho năm phương tiện.",
+        "C": "Cơ sở chuyên về xe máy.",
+        "D": "Cơ sở mở cửa quanh năm."
+      }
+    },
+    {
+      "number": 77,
+      "text": "Người nói chủ yếu đang thảo luận về điều gì?",
+      "choices": {
+        "A": "Hiệu suất của một số nhân viên",
+        "B": "Nhu cầu tuyển thêm nhân viên",
+        "C": "Một buổi đào tạo sẽ được tổ chức",
+        "D": "Cách giảm khiếu nại của khách hàng"
+      }
+    },
+    {
+      "number": 78,
+      "text": "Người nói có ý gì khi nói: “Tôi sẽ rất cảm kích nếu các bạn làm điều đó cho tôi”?",
+      "choices": {
+        "A": "Cô ấy muốn người nghe làm việc chăm chỉ hơn.",
+        "B": "Cô ấy muốn người nghe hỗ trợ một số nhân viên khác.",
+        "C": "Cô ấy muốn người nghe lịch sự hơn với khách hàng.",
+        "D": "Cô ấy muốn người nghe thực hiện nhiệm vụ tốt hơn nhiều."
+      }
+    },
+    {
+      "number": 79,
+      "text": "Người nói gợi ý điều gì có thể xảy ra?",
+      "choices": {
+        "A": "Một số cửa hàng có thể đóng cửa.",
+        "B": "Giá dịch vụ có thể tăng.",
+        "C": "Buổi định hướng có thể bị hủy.",
+        "D": "Một số người có thể mất việc."
+      }
+    },
+    {
+      "number": 80,
+      "text": "Bài nói này rất có thể diễn ra ở đâu?",
+      "choices": {
+        "A": "Trong bãi đỗ xe",
+        "B": "Trong văn phòng",
+        "C": "Tại công viên",
+        "D": "Trong cửa hàng"
+      }
+    },
+    {
+      "number": 81,
+      "text": "Vấn đề là gì?",
+      "choices": {
+        "A": "Một chiếc xe đang đỗ sai chỗ.",
+        "B": "Không còn chỗ đỗ xe.",
+        "C": "Các cửa trước bị khóa.",
+        "D": "Mọi người không thể ra khỏi tòa nhà."
+      }
+    },
+    {
+      "number": 82,
+      "text": "Người nói yêu cầu điều gì?",
+      "choices": {
+        "A": "Thanh toán một khoản phí",
+        "B": "Mở một cánh cửa",
+        "C": "Di chuyển một phương tiện",
+        "D": "Một người giữ im lặng"
+      }
+    },
+    {
+      "number": 83,
+      "text": "Người nói đề cập điều gì về kết quả hoạt động gần đây của công ty?",
+      "choices": {
+        "A": "Công ty kiếm được nửa triệu đô la.",
+        "B": "Công ty phát hành sáu sản phẩm mới.",
+        "C": "Công ty có doanh thu thấp hơn trước.",
+        "D": "Công ty có tháng tốt nhất trong nhiều năm."
+      }
+    },
+    {
+      "number": 84,
+      "text": "Khách hàng cảm thấy thế nào về dòng sản phẩm mới?",
+      "choices": {
+        "A": "Họ cho rằng giá quá cao.",
+        "B": "Họ thấy sản phẩm dễ sử dụng.",
+        "C": "Họ đã phản hồi tích cực.",
+        "D": "Họ cho rằng sản phẩm được làm kém."
+      }
+    },
+    {
+      "number": 85,
+      "text": "Người nói yêu cầu người nghe làm gì?",
+      "choices": {
+        "A": "Cố gắng bán thêm các mặt hàng mới",
+        "B": "Nghĩ ra một số giải pháp",
+        "C": "Đề xuất sản phẩm thay thế",
+        "D": "Nói chuyện với một số khách hàng"
+      }
+    },
+    {
+      "number": 86,
+      "text": "Điều gì sẽ xảy ra lúc 6:30?",
+      "choices": {
+        "A": "Một cuộc họp nhân viên sẽ được tổ chức.",
+        "B": "Một sự kiện ăn tối sẽ bắt đầu.",
+        "C": "Mọi người sẽ khởi hành cho chuyến đi của công ty.",
+        "D": "Một lễ trao giải sẽ được cung cấp đồ ăn."
+      }
+    },
+    {
+      "number": 87,
+      "text": "Tại sao người nói nói: “Tôi không chắc chuyện đó đã xảy ra thế nào”?",
+      "choices": {
+        "A": "Để viện lý do vì Amy không được mời",
+        "B": "Để giải thích tại sao Amy không nhận được chỉ đường",
+        "C": "Để xin lỗi vì Amy không nhận được giải thưởng",
+        "D": "Để nói rằng anh ấy không biết tại sao sự kiện thay đổi"
+      }
+    },
+    {
+      "number": 88,
+      "text": "Người nói đề nghị Amy làm gì?",
+      "choices": {
+        "A": "Tải chỉ đường từ một trang web",
+        "B": "Gửi e-mail cho anh ấy trước khi hết giờ làm",
+        "C": "Đi nhờ xe với một đồng nghiệp",
+        "D": "Xác nhận rằng cô ấy muốn chuyển công tác"
+      }
+    },
+    {
+      "number": 89,
+      "text": "Bài nói này rất có thể diễn ra ở đâu?",
+      "choices": {
+        "A": "Trong thư viện",
+        "B": "Tại hiệu sách",
+        "C": "Tại trường học",
+        "D": "Tại công ty xuất bản"
+      }
+    },
+    {
+      "number": 90,
+      "text": "Ông Hooper sẽ làm gì trước tiên?",
+      "choices": {
+        "A": "Trả lời câu hỏi",
+        "B": "Phát biểu",
+        "C": "Đọc một đoạn trong sách",
+        "D": "Ký tên vào các bản sách"
+      }
+    },
+    {
+      "number": 91,
+      "text": "Người nói nói gì về sách của ông Hooper?",
+      "choices": {
+        "A": "Sách đang được bán.",
+        "B": "Tất cả sách đã được mượn.",
+        "C": "Đó là các tác phẩm phi hư cấu.",
+        "D": "Sách có thể được mượn."
+      }
+    },
+    {
+      "number": 92,
+      "text": "Cô Wallace ở đâu?",
+      "choices": {
+        "A": "Trong xe truyền hình",
+        "B": "Trong trường quay",
+        "C": "Tại đài phát thanh",
+        "D": "Trong trực thăng"
+      }
+    },
+    {
+      "number": 93,
+      "text": "Nhìn vào hình. Khu vực nào của thành phố đã xảy ra tai nạn giao thông?",
+      "choices": {
+        "A": "Khu vực số 1",
+        "B": "Khu vực số 2",
+        "C": "Khu vực số 3",
+        "D": "Khu vực số 4"
+      }
+    },
+    {
+      "number": 94,
+      "text": "Khi nào cô Wallace sẽ đưa ra bản tin giao thông khác?",
+      "choices": {
+        "A": "Trong 5 phút",
+        "B": "Trong mười lăm phút",
+        "C": "Trong nửa giờ",
+        "D": "Trong một giờ"
+      }
+    },
+    {
+      "number": 95,
+      "text": "Người nói cho biết điều gì về việc giao hàng?",
+      "choices": {
+        "A": "Việc giao hàng rất nhanh.",
+        "B": "Chi phí quá cao.",
+        "C": "Việc giao hàng chậm hơn bình thường.",
+        "D": "Việc giao hàng nhanh hơn thường lệ."
+      }
+    },
+    {
+      "number": 96,
+      "text": "Nhìn vào hình. Ông Tenaglia cần bao nhiêu mặt hàng mới?",
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "14"
+      }
+    },
+    {
+      "number": 97,
+      "text": "Người nói muốn gì?",
+      "choices": {
+        "A": "Địa chỉ của một cửa hàng địa phương mà ông có thể đến",
+        "B": "Thông tin về cách nhận các mặt hàng còn thiếu",
+        "C": "Hoàn lại toàn bộ tiền cho các mặt hàng bị hỏng",
+        "D": "Cách trả lại các mặt hàng không đúng cho công ty"
+      }
+    },
+    {
+      "number": 98,
+      "text": "Mục đích của bài nói là gì?",
+      "choices": {
+        "A": "Yêu cầu toàn thể khán giả tham gia",
+        "B": "Giới thiệu diễn giả chính",
+        "C": "Khuyến khích mọi người đăng ký",
+        "D": "Chào mừng khách đến sự kiện"
+      }
+    },
+    {
+      "number": 99,
+      "text": "Mary Lattimore là ai?",
+      "choices": {
+        "A": "Một tiểu thuyết gia",
+        "B": "Một giáo sư sáng tác văn học",
+        "C": "Một nhà thơ",
+        "D": "Người dẫn chương trình"
+      }
+    },
+    {
+      "number": 100,
+      "text": "Nhìn vào hình. Lisa Delacruz sẽ phát biểu lúc mấy giờ?",
+      "choices": {
+        "A": "Lúc 10:30",
+        "B": "Lúc 11:15",
+        "C": "Lúc 1:00",
+        "D": "Lúc 2:00"
+      }
+    },
+    {
+      "number": 101,
+      "text": "Trừ khi quỹ được bổ sung vào _____, dự án sẽ không thể hoàn thành đúng hạn.",
+      "choices": {
+        "A": "phòng thí nghiệm",
+        "B": "ngân sách",
+        "C": "cuộc bầu cử",
+        "D": "đề xuất"
+      }
+    },
+    {
+      "number": 102,
+      "text": "Quyết định sản xuất dòng xe mới phải được đưa ra sớm _____ chiến dịch tiếp thị năm sau.",
+      "choices": {
+        "A": "chuẩn bị",
+        "B": "đang chuẩn bị",
+        "C": "sẽ chuẩn bị",
+        "D": "để chuẩn bị"
+      }
+    },
+    {
+      "number": 103,
+      "text": "_____ khách sạn mới nhất của thành phố đang mất nhiều thời gian hơn dự kiến và sẽ hoàn thành chậm tiến độ.",
+      "choices": {
+        "A": "Xây dựng",
+        "B": "Mang tính xây dựng",
+        "C": "Việc xây dựng",
+        "D": "Đang xây dựng"
+      }
+    },
+    {
+      "number": 104,
+      "text": "Cô Hall đề nghị khách du lịch tìm một khách sạn gần sân bay hơn _____ một khách sạn ở vùng nông thôn.",
+      "choices": {
+        "A": "đối lập với",
+        "B": "theo",
+        "C": "thay vì",
+        "D": "do"
+      }
+    },
+    {
+      "number": 105,
+      "text": "Đơn xin _____ đến các chi nhánh ở nước ngoài phải được nhận không muộn hơn thứ Sáu tuần thứ ba của tháng Mười Một.",
+      "choices": {
+        "A": "thuyên chuyển",
+        "B": "được thuyên chuyển",
+        "C": "có thể thuyên chuyển",
+        "D": "sự chuyển giao"
+      }
+    },
+    {
+      "number": 106,
+      "text": "Giám đốc Phòng Kinh doanh _____ Karen Wolf, phó chủ tịch, sẽ tham dự cuộc họp nhân viên.",
+      "choices": {
+        "A": "và",
+        "B": "hoặc",
+        "C": "cũng",
+        "D": "vì vậy"
+      }
+    },
+    {
+      "number": 107,
+      "text": "Sức hấp dẫn của sản phẩm đối với mọi nhóm tuổi đã dẫn đến doanh số cao hơn _____.",
+      "choices": {
+        "A": "được phê duyệt",
+        "B": "được xem xét",
+        "C": "dự kiến",
+        "D": "được giải quyết"
+      }
+    },
+    {
+      "number": 108,
+      "text": "Tất cả khách hàng lần đầu _____ giảm 15% cho đơn hàng khi mua tại cửa hàng trực tuyến.",
+      "choices": {
+        "A": "nhận",
+        "B": "chờ đợi",
+        "C": "mua",
+        "D": "đổi"
+      }
+    },
+    {
+      "number": 109,
+      "text": "Khách được đặc biệt khuyến nghị _____ đặt phòng với khách sạn trong mùa cao điểm.",
+      "choices": {
+        "A": "xác nhận",
+        "B": "đang xác nhận",
+        "C": "đã được xác nhận",
+        "D": "để xác nhận"
+      }
+    },
+    {
+      "number": 110,
+      "text": "Việc cải tạo Dynasty Hotel phải hoàn thành không muộn _____ thời điểm bắt đầu mùa hè.",
+      "choices": {
+        "A": "hơn",
+        "B": "cái mà",
+        "C": "khi",
+        "D": "như vậy"
+      }
+    },
+    {
+      "number": 111,
+      "text": "Theo lịch trình, cô Harper sẽ trình bày bài phát biểu _____ tại hội nghị ở Boise.",
+      "choices": {
+        "A": "mở",
+        "B": "khai mạc",
+        "C": "người mở đầu",
+        "D": "đã mở"
+      }
+    },
+    {
+      "number": 112,
+      "text": "Ngay khi việc sáp nhập hai công ty hoàn tất, một số nhân viên được _____ rằng họ sẽ bị cho thôi việc.",
+      "choices": {
+        "A": "tiếp cận",
+        "B": "báo cáo",
+        "C": "thông báo",
+        "D": "dự kiến"
+      }
+    },
+    {
+      "number": 113,
+      "text": "Nhiều cửa hàng lưu niệm nằm ở khu vực thành phố _____ khách du lịch thường ghé thăm.",
+      "choices": {
+        "A": "khi",
+        "B": "mà",
+        "C": "như thế nào",
+        "D": "sau đó"
+      }
+    },
+    {
+      "number": 114,
+      "text": "Sau khi các _____ được cô Murrell ký, chúng sẽ được chuyển đến Phòng Pháp chế.",
+      "choices": {
+        "A": "tài liệu",
+        "B": "phim tài liệu",
+        "C": "được lập thành tài liệu",
+        "D": "đang lập tài liệu"
+      }
+    },
+    {
+      "number": 115,
+      "text": "Nhiều hành khách bị _____ tại sân bay qua đêm khi thời tiết xấu khiến chuyến bay bị hủy.",
+      "choices": {
+        "A": "lên máy bay",
+        "B": "chờ",
+        "C": "chuyển",
+        "D": "mắc kẹt"
+      }
+    },
+    {
+      "number": 116,
+      "text": "Cô Lakewood _____ với căn nhà nhân viên môi giới đã cho xem và quyết định mua bất động sản ngay tại chỗ.",
+      "choices": {
+        "A": "gây ấn tượng",
+        "B": "sẽ được gây ấn tượng",
+        "C": "đã bị ấn tượng",
+        "D": "đã gây ấn tượng"
+      }
+    },
+    {
+      "number": 117,
+      "text": "Quản lý cửa hàng hứa sẽ cho giao đồ nội thất đến văn phòng _____ cuối ngày.",
+      "choices": {
+        "A": "cho đến",
+        "B": "trong",
+        "C": "vào",
+        "D": "trước"
+      }
+    },
+    {
+      "number": 118,
+      "text": "Những người _____ vào nghiên cứu sẽ được tặng phiếu quà tặng có thể sử dụng tại các cơ sở địa phương.",
+      "choices": {
+        "A": "người tham gia",
+        "B": "có tính tham gia",
+        "C": "tham gia",
+        "D": "tham gia"
+      }
+    },
+    {
+      "number": 119,
+      "text": "Mỗi mùa xuân, Westside Construction _____ một số người cho các vị trí mới tại nhiều công trường.",
+      "choices": {
+        "A": "sa thải",
+        "B": "thuyên chuyển",
+        "C": "tuyển dụng",
+        "D": "đề nghị"
+      }
+    },
+    {
+      "number": 120,
+      "text": "Nếu cần gia hạn hạn chót, vui lòng _____ cho chúng tôi càng sớm càng tốt.",
+      "choices": {
+        "A": "thông báo",
+        "B": "để thông báo",
+        "C": "đang thông báo",
+        "D": "được thông báo"
+      }
+    },
+    {
+      "number": 121,
+      "text": "Ông Worthy chưa đưa ra dấu hiệu nào về việc _____ khi nào hợp đồng lao động sẽ được ký.",
+      "choices": {
+        "A": "biết",
+        "B": "kiến thức",
+        "C": "biết",
+        "D": "có thể biết"
+      }
+    },
+    {
+      "number": 122,
+      "text": "Một thông báo cho biết Travis Bean đã được _____ làm trưởng Phòng Kế toán mới nhất của công ty.",
+      "choices": {
+        "A": "tuyển dụng",
+        "B": "bổ nhiệm",
+        "C": "đề xuất",
+        "D": "đồng ý"
+      }
+    },
+    {
+      "number": 123,
+      "text": "_____ trong số những người tham dự biết rằng Judy Garcia, diễn giả chính, vẫn chưa đến.",
+      "choices": {
+        "A": "Không ai",
+        "B": "Không người nào",
+        "C": "Nhiều người",
+        "D": "Nhiều"
+      }
+    },
+    {
+      "number": 124,
+      "text": "Limnos, Inc. _____ dòng thiết bị gia dụng mới nhất tại triển lãm bán hàng ở New Orleans vào tuần tới.",
+      "choices": {
+        "A": "đã giới thiệu",
+        "B": "đã giới thiệu",
+        "C": "sẽ giới thiệu",
+        "D": "sẽ được giới thiệu"
+      }
+    },
+    {
+      "number": 125,
+      "text": "Dirk Powers, người đứng đầu công đoàn, bị bắt vì bị nghi đưa _____ cho các chính trị gia.",
+      "choices": {
+        "A": "một khoản hối lộ",
+        "B": "các khoản hối lộ",
+        "C": "đã hối lộ",
+        "D": "việc hối lộ"
+      }
+    },
+    {
+      "number": 126,
+      "text": "Cuộc kiểm tra đột xuất _____ rằng nhiều công nhân nhà máy không tuân thủ các tiêu chuẩn an toàn.",
+      "choices": {
+        "A": "cảnh báo",
+        "B": "cho thấy",
+        "C": "nghi ngờ",
+        "D": "hoàn thành"
+      }
+    },
+    {
+      "number": 127,
+      "text": "Ông Dawson cố gắng _____ các đồng nghiệp ủng hộ mình trong nỗ lực trở thành thành viên hội đồng quản trị.",
+      "choices": {
+        "A": "bầu",
+        "B": "xem xét",
+        "C": "tiếp cận",
+        "D": "thuyết phục"
+      }
+    },
+    {
+      "number": 128,
+      "text": "_____ được đề nghị thăng chức và tăng lương đáng kể, cô Lansing đã từ chức và nhận việc tại một công ty khác.",
+      "choices": {
+        "A": "Mặc dù",
+        "B": "Trên thực tế",
+        "C": "Tuy nhiên",
+        "D": "Liên quan đến"
+      }
+    },
+    {
+      "number": 129,
+      "text": "Một số kỹ sư đã bị thay thế khi nhiều khách hàng _____ khiếu nại về thiết kế sản phẩm tại Weber, Inc.",
+      "choices": {
+        "A": "đang nộp",
+        "B": "đã nộp",
+        "C": "đã nộp",
+        "D": "đã được nộp"
+      }
+    },
+    {
+      "number": 130,
+      "text": "Quản lý cửa hàng đã thay đổi _____ của cửa hàng để đặt quần áo nam ngay cạnh cửa trước.",
+      "choices": {
+        "A": "bố cục",
+        "B": "ngân sách",
+        "C": "quảng cáo",
+        "D": "lịch trình"
+      }
+    },
+    {
+      "number": 131,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 131.",
+      "choices": {
+        "A": "qua",
+        "B": "trong",
+        "C": "xung quanh",
+        "D": "trong vòng"
+      }
+    },
+    {
+      "number": 132,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 132.",
+      "choices": {
+        "A": "linh trưởng",
+        "B": "chính",
+        "C": "đã sẵn sàng",
+        "D": "đang chuẩn bị"
+      }
+    },
+    {
+      "number": 133,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 133.",
+      "choices": {
+        "A": "Hành khách đã khen chất lượng các mặt hàng bán trong cửa hàng.",
+        "B": "Ngoài ra, các cửa lên máy bay được thiết kế riêng cho máy bay chở khách cỡ nhỏ.",
+        "C": "Dự kiến chúng sẽ mang lại hàng triệu đô la doanh thu mỗi năm.",
+        "D": "Tuy nhiên, vẫn chưa có nơi nào để hành khách ăn uống hoặc mua sắm."
+      }
+    },
+    {
+      "number": 134,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 134.",
+      "choices": {
+        "A": "bị tính phí",
+        "B": "được nhận vào",
+        "C": "được cử đi",
+        "D": "được đặt"
+      }
+    },
+    {
+      "number": 135,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 135.",
+      "choices": {
+        "A": "và",
+        "B": "vì vậy",
+        "C": "hoặc",
+        "D": "rằng"
+      }
+    },
+    {
+      "number": 136,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 136.",
+      "choices": {
+        "A": "Rất tiếc hiện không còn chỗ nào cho thuê.",
+        "B": "Không ai trong các bạn cần ký hợp đồng thuê mới nếu không muốn.",
+        "C": "Tất cả người thuê phải thương lượng lại tiền thuê trong tuần này.",
+        "D": "Tiền thuê đang được tăng để bù cho mức tăng giá tiện ích gần đây."
+      }
+    },
+    {
+      "number": 137,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 137.",
+      "choices": {
+        "A": "loại bỏ",
+        "B": "bán",
+        "C": "sửa chữa",
+        "D": "dọn khỏi"
+      }
+    },
+    {
+      "number": 138,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 138.",
+      "choices": {
+        "A": "đã được trả lại",
+        "B": "đã trả lại",
+        "C": "sẽ được trả lại",
+        "D": "đã được trả lại"
+      }
+    },
+    {
+      "number": 139,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 139.",
+      "choices": {
+        "A": "thành công",
+        "B": "sự thành công",
+        "C": "sự kế tiếp",
+        "D": "đang thành công"
+      }
+    },
+    {
+      "number": 140,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 140.",
+      "choices": {
+        "A": "nổi tiếng",
+        "B": "bắt chước",
+        "C": "người mới",
+        "D": "bất tài"
+      }
+    },
+    {
+      "number": 141,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 141.",
+      "choices": {
+        "A": "được loại trừ",
+        "B": "được tránh",
+        "C": "được hưởng quyền",
+        "D": "được báo cáo"
+      }
+    },
+    {
+      "number": 142,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 142.",
+      "choices": {
+        "A": "Cảm ơn bạn đã tham dự sự kiện.",
+        "B": "Mọi người đã có khoảng thời gian tuyệt vời.",
+        "C": "Chúng tôi hy vọng gặp lại bạn vào tháng Chín.",
+        "D": "Các cuộc gọi liên quan đến vấn đề này sẽ bị bỏ qua."
+      }
+    },
+    {
+      "number": 143,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 143.",
+      "choices": {
+        "A": "được đề cử",
+        "B": "được báo cáo",
+        "C": "được nêu tên",
+        "D": "được tuyên bố"
+      }
+    },
+    {
+      "number": 144,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 144.",
+      "choices": {
+        "A": "Ông thuộc một đội đã ngăn lũ lụt ảnh hưởng đến toàn thành phố.",
+        "B": "Nỗ lực của ông giúp cứu 20 người khỏi những ngôi nhà bị sập.",
+        "C": "Các nhóm đó cảnh báo cư dân địa phương về lốc xoáy và dẫn họ đến nơi an toàn.",
+        "D": "Số tiền ông cung cấp đã giúp sửa những ngôi nhà bị cháy."
+      }
+    },
+    {
+      "number": 145,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 145.",
+      "choices": {
+        "A": "quyên góp",
+        "B": "gửi vào",
+        "C": "đầu tư",
+        "D": "ký hợp đồng"
+      }
+    },
+    {
+      "number": 146,
+      "text": "Chọn phương án tốt nhất cho chỗ trống 146.",
+      "choices": {
+        "A": "mọi người",
+        "B": "bất kỳ ai",
+        "C": "ai đó",
+        "D": "không ai"
+      }
+    },
+    {
+      "number": 147,
+      "text": "Tại sao cô McClain viết e-mail?",
+      "choices": {
+        "A": "Để phàn nàn về dịch vụ cô đã nhận",
+        "B": "Để hỏi về sản phẩm được bán tại Perseus Mart",
+        "C": "Để biết địa điểm Perseus Mart ở Freeport",
+        "D": "Để khen một nhân viên về cách anh ấy hành xử"
+      }
+    },
+    {
+      "number": 148,
+      "text": "Điều gì được cho biết trong e-mail?",
+      "choices": {
+        "A": "Cô McClain định quay lại Perseus Mart.",
+        "B": "Electromart có giá thấp hơn Perseus Mart.",
+        "C": "Cô McClain chuyển từ Albany đến Freeport.",
+        "D": "Tim Nelson là quản lý tại Perseus Mart."
+      }
+    },
+    {
+      "number": 149,
+      "text": "Mục đích của đợt giảm giá là gì?",
+      "choices": {
+        "A": "Cửa hàng sắp ngừng kinh doanh.",
+        "B": "Đang kỷ niệm ngày thành lập.",
+        "C": "Các mặt hàng năm ngoái cần được bán hết.",
+        "D": "Cửa hàng đang tổ chức lễ khai trương."
+      }
+    },
+    {
+      "number": 150,
+      "text": "Tất cả khách hàng mua hàng ngày 24 tháng 9 sẽ nhận được gì?",
+      "choices": {
+        "A": "Giảm giá",
+        "B": "Cơ hội giành giải thưởng",
+        "C": "Phiếu quà tặng",
+        "D": "Phiếu giảm giá"
+      }
+    },
+    {
+      "number": 151,
+      "text": "Lúc 9:49 sáng, tại sao cô Chin viết: “Cô không cần tôi giao nó, đúng không?”",
+      "choices": {
+        "A": "Để cho biết cô ấy không có thời gian đến gặp cô Davis",
+        "B": "Để từ chối yêu cầu giao một số món đồ",
+        "C": "Để chỉ ra rằng giao hàng không nằm trong mô tả công việc của cô ấy",
+        "D": "Để hỏi cô Davis nên gặp cô ấy ở đâu"
+      }
+    },
+    {
+      "number": 152,
+      "text": "Cô Chin có thể sẽ làm gì tiếp theo?",
+      "choices": {
+        "A": "Kiểm tra e-mail",
+        "B": "Đến gặp ông Chatterley",
+        "C": "Quét một tài liệu",
+        "D": "Tham dự cuộc họp"
+      }
+    },
+    {
+      "number": 153,
+      "text": "Các cuộc kiểm tra có thể diễn ra bao lâu một lần?",
+      "choices": {
+        "A": "Mỗi tháng",
+        "B": "Bốn tháng một lần",
+        "C": "Sáu tháng một lần",
+        "D": "Mỗi năm"
+      }
+    },
+    {
+      "number": 154,
+      "text": "Cư dân được yêu cầu làm gì?",
+      "choices": {
+        "A": "Báo cáo mọi vấn đề với đồng hồ đo cho City Gas",
+        "B": "Tạo điều kiện để nhân viên kiểm tra đồng hồ đo",
+        "C": "Ghi mức sử dụng gas bên dưới đồng hồ đo",
+        "D": "Đặt biển báo cho biết họ có vật nuôi trong sân"
+      }
+    },
+    {
+      "number": 155,
+      "text": "Câu sau phù hợp nhất ở vị trí nào được đánh dấu [1], [2], [3] và [4]? “Những cư dân không tuân thủ và vì vậy ngăn cản nhân viên City Gas thực hiện công việc sẽ bị phạt.”",
+      "choices": {
+        "A": "[1]",
+        "B": "[2]",
+        "C": "[3]",
+        "D": "[4]"
+      }
+    },
+    {
+      "number": 156,
+      "text": "Theo lá thư, điều gì đúng về ông Shaver?",
+      "choices": {
+        "A": "Ông đã làm việc tại Knight's Home Repair Warehouse hai năm.",
+        "B": "Ông đang giữ vị trí quản lý.",
+        "C": "Ông nhận được phiếu bầu của mọi quản lý cửa hàng cho giải thưởng tháng Bảy.",
+        "D": "Ông đã giúp tiến hành khảo sát mức độ hài lòng của khách hàng gần đây."
+      }
+    },
+    {
+      "number": 157,
+      "text": "Ông Shaver KHÔNG nhận được gì khi giành giải thưởng?",
+      "choices": {
+        "A": "Tiền thưởng",
+        "B": "Quà tặng miễn phí",
+        "C": "Chỗ đỗ xe",
+        "D": "Một ngày nghỉ"
+      }
+    },
+    {
+      "number": 158,
+      "text": "Điều gì được gợi ý về cô Smith?",
+      "choices": {
+        "A": "Cô ấy sẽ chụp ảnh ông Shaver.",
+        "B": "Cô ấy làm việc trong Phòng Quan hệ Công chúng.",
+        "C": "Cô ấy từng giành giải thưởng trước đây.",
+        "D": "Cô ấy làm việc chặt chẽ với ông Knight."
+      }
+    },
+    {
+      "number": 159,
+      "text": "Quảng cáo này rất có thể được tìm thấy ở đâu?",
+      "choices": {
+        "A": "Trong một tờ báo địa phương",
+        "B": "Trong một tạp chí kinh tế",
+        "C": "Trong một tạp chí toàn quốc",
+        "D": "Trong bản tin của trung tâm cộng đồng"
+      }
+    },
+    {
+      "number": 160,
+      "text": "Gia đình có con nhỏ sẽ quan tâm nhất đến ngôi nhà nào?",
+      "choices": {
+        "A": "904 Erickson Street",
+        "B": "1954 Hidalgo Road",
+        "C": "32 Guadalupe Drive",
+        "D": "483 Desert Avenue"
+      }
+    },
+    {
+      "number": 161,
+      "text": "Mọi người được khuyến nghị tìm hiểu về các ngôi nhà khác đang rao bán bằng cách nào?",
+      "choices": {
+        "A": "Gọi một số điện thoại",
+        "B": "Đến trực tiếp công ty môi giới",
+        "C": "Viết thư",
+        "D": "Truy cập một trang web"
+      }
+    },
+    {
+      "number": 162,
+      "text": "Tại sao ông Folsom viết e-mail cho ông Carter?",
+      "choices": {
+        "A": "Để đề nghị ông ứng tuyển một vị trí khác",
+        "B": "Để mời ông làm việc tại Viscount Publishing",
+        "C": "Để từ chối đề xuất sách thiếu nhi của ông",
+        "D": "Để khen một tác phẩm do ông viết"
+      }
+    },
+    {
+      "number": 163,
+      "text": "Điều gì được đề cập về ông Carter?",
+      "choices": {
+        "A": "Ông là tác giả sách thiếu nhi.",
+        "B": "Ông hiện sáng tác tiểu thuyết dành cho thanh thiếu niên.",
+        "C": "Ông làm biên tập viên tại Milton, Inc.",
+        "D": "Ông là đồng nghiệp của Mary Farnsworth."
+      }
+    },
+    {
+      "number": 164,
+      "text": "Ông Carter cần làm gì trước ngày 29 tháng 9?",
+      "choices": {
+        "A": "Phản hồi lời mời làm việc đã nhận",
+        "B": "Sắp xếp thời gian và ngày phỏng vấn",
+        "C": "Nộp lý lịch cho một người tại Milton, Inc.",
+        "D": "Quyết định có muốn được cân nhắc cho vị trí hay không"
+      }
+    },
+    {
+      "number": 165,
+      "text": "Tại sao ông Matters muốn mua một sản phẩm từ Walker Resources?",
+      "choices": {
+        "A": "Giá mặt hàng thấp hơn các sản phẩm khác trên thị trường.",
+        "B": "Công ty của ông từng làm việc với Walker Resources.",
+        "C": "Ông không thể mua sản phẩm tương tự từ công ty nào khác.",
+        "D": "Mặt hàng sẽ là bản nâng cấp so với sản phẩm công ty đang dùng."
+      }
+    },
+    {
+      "number": 166,
+      "text": "Điều gì được đề cập về Ramos Manufacturing?",
+      "choices": {
+        "A": "Công ty nằm ở Birmingham.",
+        "B": "Công ty tham gia liên doanh với RX Products.",
+        "C": "Gần đây công ty ngừng sản xuất một loại máy.",
+        "D": "Công ty đang gặp khó khăn khi xây nhà máy mới nhất."
+      }
+    },
+    {
+      "number": 167,
+      "text": "Ông Matters yêu cầu điều gì?",
+      "choices": {
+        "A": "Một tờ giới thiệu",
+        "B": "Giảm giá khi mua số lượng lớn",
+        "C": "Mẫu dùng thử miễn phí",
+        "D": "Buổi trình diễn sản phẩm"
+      }
+    },
+    {
+      "number": 168,
+      "text": "Điều gì chủ yếu đang được thảo luận?",
+      "choices": {
+        "A": "Việc hợp tác với Whitewater Consulting",
+        "B": "Cách cải thiện hiệu suất công ty",
+        "C": "Ý kiến về một bài thuyết trình",
+        "D": "Tầm quan trọng của thị trường nước ngoài và trong nước"
+      }
+    },
+    {
+      "number": 169,
+      "text": "Ông Daniels cảm thấy thế nào về bài thuyết trình?",
+      "choices": {
+        "A": "Bài thuyết trình chứng minh công ty ông có thể thâm nhập thị trường nước ngoài.",
+        "B": "Bài thuyết trình thuyết phục ông rằng nên thuê Whitewater Consulting.",
+        "C": "Bài thuyết trình giải thích các vấn đề khi bán hàng trong nước.",
+        "D": "Bài thuyết trình cho thấy Whitewater Consulting có thể giúp công ty ông thế nào."
+      }
+    },
+    {
+      "number": 170,
+      "text": "Lúc 10:59 sáng, cô McCartney có ý gì khi viết: “Tôi nghĩ tôi hiểu cô đang định nói gì”?",
+      "choices": {
+        "A": "Cô ấy phải đi dự cuộc họp với cô Patrick.",
+        "B": "Cô ấy biết cô Patrick sẽ viết gì tiếp theo.",
+        "C": "Cô ấy sắp tham dự một bài thuyết trình.",
+        "D": "Cô ấy muốn cô Patrick cung cấp thêm chi tiết."
+      }
+    },
+    {
+      "number": 171,
+      "text": "Cô Patrick gợi ý điều gì về cô Sanders?",
+      "choices": {
+        "A": "Cô Sanders đã sai khi bỏ qua thị trường Hoa Kỳ.",
+        "B": "Bài thuyết trình của cô Sanders đã nêu một số điểm hợp lý.",
+        "C": "Công ty của cô Sanders có thể giúp công ty của cô ấy.",
+        "D": "Cô Sanders cần làm rõ một số lập luận."
+      }
+    },
+    {
+      "number": 172,
+      "text": "Tại sao cô Gathers viết thư?",
+      "choices": {
+        "A": "Để mời cô Rice ứng tuyển",
+        "B": "Để đưa ra lời mời làm việc",
+        "C": "Để quảng bá công ty với một ứng viên",
+        "D": "Để liệt kê nhiệm vụ công việc của cô Rice"
+      }
+    },
+    {
+      "number": 173,
+      "text": "Điều nào sau đây KHÔNG thuộc gói đãi ngộ của cô Rice?",
+      "choices": {
+        "A": "Tham gia một chương trình phúc lợi",
+        "B": "Được tăng lương mỗi năm",
+        "C": "Nghỉ phép và nghỉ ốm có lương",
+        "D": "Tiền thưởng khi làm việc tốt"
+      }
+    },
+    {
+      "number": 174,
+      "text": "Điều gì được nêu trong thư?",
+      "choices": {
+        "A": "Evercrest Shipping hoạt động chính trị tại San Fernando.",
+        "B": "Cô Rice đã phỏng vấn cho vị trí hai lần.",
+        "C": "Các điều khoản hợp đồng không thể thay đổi.",
+        "D": "Cô Gathers phụ trách mọi quyết định tuyển dụng."
+      }
+    },
+    {
+      "number": 175,
+      "text": "Câu sau phù hợp nhất ở vị trí nào được đánh dấu [1], [2], [3] và [4]? “Bạn có thể liên hệ Vince Hoover theo số 950-1434 để biết thêm chi tiết về việc chuyển sang đây.”",
+      "choices": {
+        "A": "[1]",
+        "B": "[2]",
+        "C": "[3]",
+        "D": "[4]"
+      }
+    },
+    {
+      "number": 176,
+      "text": "Mục đích của e-mail đầu tiên là gì?",
+      "choices": {
+        "A": "Để hỏi tại sao giá gần đây tăng",
+        "B": "Để xác nhận đã nhận một số sản phẩm",
+        "C": "Để đề cập chất lượng kém của một sản phẩm đã mua",
+        "D": "Để phàn nàn về một số mặt hàng bị thiếu"
+      }
+    },
+    {
+      "number": 177,
+      "text": "Cô Flanagan cho biết có thể sẽ làm gì trong tương lai?",
+      "choices": {
+        "A": "Nói với bạn bè về dịch vụ kém",
+        "B": "Ngừng mua sắm tại Broadway Electronics",
+        "C": "Yêu cầu hoàn tiền cho một số món đã mua",
+        "D": "Đến một cửa hàng trực tiếp của Broadway Electronics"
+      }
+    },
+    {
+      "number": 178,
+      "text": "Trong e-mail thứ hai, từ “ensure” ở đoạn 1, dòng 2 gần nghĩa nhất với:",
+      "choices": {
+        "A": "bảo đảm",
+        "B": "dự đoán",
+        "C": "thừa nhận",
+        "D": "xác nhận"
+      }
+    },
+    {
+      "number": 179,
+      "text": "Cô Diego đã đặt mặt hàng nào từ nhà sản xuất?",
+      "choices": {
+        "A": "Mực đen TR440",
+        "B": "Mực đen TR687",
+        "C": "Máy ảnh kỹ thuật số Montague P2000",
+        "D": "Sách hướng dẫn sử dụng máy ảnh kỹ thuật số Montague P2000"
+      }
+    },
+    {
+      "number": 180,
+      "text": "Vấn đề nào cô Flanagan nêu nhưng cô Diego KHÔNG phản hồi trong e-mail?",
+      "choices": {
+        "A": "Cách ngừng nhận sai mặt hàng",
+        "B": "Cách trả một mặt hàng về công ty",
+        "C": "Cách nhận các mặt hàng đã đặt",
+        "D": "Cách nhận hàng nhanh hơn"
+      }
+    },
+    {
+      "number": 181,
+      "text": "Ông Simmons KHÔNG được lên lịch làm gì trong chuyến đi?",
+      "choices": {
+        "A": "Tham dự hội nghị",
+        "B": "Đàm phán với một công ty",
+        "C": "Tham gia chuyến tham quan",
+        "D": "Trình diễn cách sử dụng một sản phẩm"
+      }
+    },
+    {
+      "number": 182,
+      "text": "Ông Simmons sẽ ở đâu vào ngày 17 tháng 9?",
+      "choices": {
+        "A": "Tại Ames",
+        "B": "Tại Chicago",
+        "C": "Tại Springfield",
+        "D": "Tại Peoria"
+      }
+    },
+    {
+      "number": 183,
+      "text": "Ông Lyons gửi gì cho ông Simmons kèm theo lá thư?",
+      "choices": {
+        "A": "Một hóa đơn",
+        "B": "Một vé máy bay",
+        "C": "Một mã xác nhận",
+        "D": "Một lịch trình chuyến đi"
+      }
+    },
+    {
+      "number": 184,
+      "text": "Ông Lyons đề cập điều gì về xe thuê của ông Simmons?",
+      "choices": {
+        "A": "Xe có đầy bình xăng.",
+        "B": "Xe có giá như thường lệ.",
+        "C": "Xe nhỏ hơn bình thường.",
+        "D": "Xe có thể được nhận tại Peoria."
+      }
+    },
+    {
+      "number": 185,
+      "text": "Điều gì được cho biết về Welcome Inn?",
+      "choices": {
+        "A": "Đó là khách sạn mới nhất ở Ames.",
+        "B": "Chủ khách sạn cũng điều hành Paradise Hotel.",
+        "C": "Khách sạn hiện đã kín phòng.",
+        "D": "Khách sạn đắt hơn Traveler's Inn."
+      }
+    },
+    {
+      "number": 186,
+      "text": "Điều nào sau đây được đề cập về Seaside Resort?",
+      "choices": {
+        "A": "Khu nghỉ dưỡng cung cấp buffet trưa miễn phí cho khách.",
+        "B": "Khu nghỉ dưỡng có nhiều loại hình giải trí.",
+        "C": "Khách có thể được giá rẻ hơn khi ở một tuần.",
+        "D": "Các tiện nghi được xếp hạng năm sao."
+      }
+    },
+    {
+      "number": 187,
+      "text": "Tại sao ông Walker sẽ đi Fort Lauderdale?",
+      "choices": {
+        "A": "Để công tác",
+        "B": "Để đi nghỉ",
+        "C": "Để thăm họ hàng",
+        "D": "Để tham dự hội nghị"
+      }
+    },
+    {
+      "number": 188,
+      "text": "Ông Walker sẽ trả bao nhiêu?",
+      "choices": {
+        "A": "$129.99 mỗi đêm",
+        "B": "$159.99 mỗi đêm",
+        "C": "$209.99 mỗi đêm",
+        "D": "$259.99 mỗi đêm"
+      }
+    },
+    {
+      "number": 189,
+      "text": "Tại sao ông Walker rất có thể liên hệ ông Swan?",
+      "choices": {
+        "A": "Để sắp xếp học quần vợt",
+        "B": "Để học bơi",
+        "C": "Để đi du thuyền",
+        "D": "Để sắp xếp một buổi lặn"
+      }
+    },
+    {
+      "number": 190,
+      "text": "Cô McDougal KHÔNG trả lời câu hỏi nào của ông Walker?",
+      "choices": {
+        "A": "Có những hoạt động nào cho trẻ em",
+        "B": "Có được hưởng mức giá rẻ hơn không",
+        "C": "Khách có thể mang theo động vật không",
+        "D": "Hành khách có thể ghé những nơi nào trong các chuyến đi thuyền"
+      }
+    },
+    {
+      "number": 191,
+      "text": "Ông Mooney cho biết điều gì trong bài đánh giá?",
+      "choices": {
+        "A": "Self-Improvement: A Guide có bản bìa mềm.",
+        "B": "Các câu chuyện trong Self-Improvement: A Guide là phần hay nhất.",
+        "C": "Ông đã tặng các bản Self-Improvement: A Guide cho bạn bè.",
+        "D": "Ông không thích mọi khía cạnh của Self-Improvement: A Guide."
+      }
+    },
+    {
+      "number": 192,
+      "text": "Trong bài đánh giá, từ “witty” ở dòng 4 gần nghĩa nhất với:",
+      "choices": {
+        "A": "rõ ràng",
+        "B": "hữu ích",
+        "C": "hóm hỉnh",
+        "D": "chu đáo"
+      }
+    },
+    {
+      "number": 193,
+      "text": "Điều gì được gợi ý về cuốn sách ‘Cách trở thành nhà lãnh đạo’?",
+      "choices": {
+        "A": "Cuốn sách được xuất bản trước ‘Tự hoàn thiện: Cẩm nang hướng dẫn’.",
+        "B": "Sách bán được nhiều bản hơn bất kỳ cuốn nào khác của cô Lattimore.",
+        "C": "Đó là cuốn sách đầu tiên cô Lattimore viết.",
+        "D": "Tất cả nhân viên Murray Consulting đã đọc sách."
+      }
+    },
+    {
+      "number": 194,
+      "text": "Theo lá thư, ông Murray đã làm gì tối thứ Sáu?",
+      "choices": {
+        "A": "Ăn tối cùng đồng nghiệp",
+        "B": "Mua Self-Improvement: A Guide",
+        "C": "Tổ chức một sự kiện đặc biệt tại nơi làm việc",
+        "D": "Đặt một số câu hỏi cho cô Lattimore"
+      }
+    },
+    {
+      "number": 195,
+      "text": "Ông Murray yêu cầu cô Lattimore làm gì?",
+      "choices": {
+        "A": "Có một bài phát biểu khác trong tương lai",
+        "B": "Ký tên vào một số bản sách",
+        "C": "Đưa ra lời khuyên về cuốn sách ông đang viết",
+        "D": "Trả lời một số câu hỏi qua e-mail"
+      }
+    },
+    {
+      "number": 196,
+      "text": "Khách hàng có thể nhận được gì khi hoàn thành khảo sát?",
+      "choices": {
+        "A": "Một món quà miễn phí",
+        "B": "Phiếu giảm giá",
+        "C": "Đồ uống",
+        "D": "Phiếu quà tặng"
+      }
+    },
+    {
+      "number": 197,
+      "text": "Ông Toole đề cập điều gì về nhân viên Best Value?",
+      "choices": {
+        "A": "Họ cần được đào tạo tốt hơn.",
+        "B": "Họ không thực hiện nhiệm vụ tốt.",
+        "C": "Họ có thể trả lời các câu hỏi của ông.",
+        "D": "Đôi khi họ nói chuyện thô lỗ với ông."
+      }
+    },
+    {
+      "number": 198,
+      "text": "Ở hạng mục nào đánh giá của ông Toole khác với đa số người trả lời?",
+      "choices": {
+        "A": "Giá cả",
+        "B": "Sự lựa chọn",
+        "C": "Giờ mở cửa",
+        "D": "Nhân viên"
+      }
+    },
+    {
+      "number": 199,
+      "text": "Ông Dupree đề xuất làm gì?",
+      "choices": {
+        "A": "Bắt đầu một chương trình mới",
+        "B": "Giảm giá các mặt hàng",
+        "C": "Sa thải một số nhân viên",
+        "D": "Ngăn doanh số giảm"
+      }
+    },
+    {
+      "number": 200,
+      "text": "Kimberly Charles là ai?",
+      "choices": {
+        "A": "Một quản lý Best Value",
+        "B": "Một khách hàng Best Value",
+        "C": "Một nhân viên Best Value",
+        "D": "CEO của Best Value"
+      }
+    }
+  ]
+}
